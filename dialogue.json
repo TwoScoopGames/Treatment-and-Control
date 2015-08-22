@@ -1,0 +1,51 @@
+{
+  "peopleGreyResponses":
+  [
+    "...",
+    "I need to get back to work.",
+    "I'm not on your list."
+  ],
+  "peopleMediumResponses":
+  [
+    "How are you today?",
+    "Did you see the sunset lastnight?",
+    "How is your family?",
+    "This job is boring.",
+    "This job is boring, I wish I could work at the refinery.",
+    "<name> hasen't showed up in a few days...",
+    "I wish I was chosen to be a cook."
+  ],
+  "peopleColorfullResponses":
+  [
+    "I don't think we really need these pills.",
+    "I'm tired of this place.",
+    "We aren't criminals, why are we treated like this?",
+    "My brother was assigned to the refinery and we haven't seen him since.",
+    "People are dissapearing and nobody seems to care."
+  ],
+  "bluePillResponses":
+  [
+    "Thanks.",
+    "Time for my medicine?",
+    "It's that time again.",
+    "Can't they make these taste better?",
+    "..."
+  ],
+  "bluePillResponsesSkeptical":
+  [
+    "If I have to...",
+    "Do we really need these?",
+    "There hasen't been an incident in years, do we still need these pills?"
+  ],
+  "redPillResponses":
+  [
+    "This is different than the usual pills.",
+    "Are these a new flavor?",
+    "What is this one for?"
+  ],
+  "redPillResponsesSkeptical":
+  [
+    "They game <name> one of these snd they havent been back to work.",
+    "Isn't this what <name> takes? Where are they...?"
+  ],
+}
