@@ -12,5 +12,47 @@
     }
    }
   }
+ ],
+ "cartboy": [
+  {
+   "time": 100,
+   "properties": {
+    "image": {
+     "name": "cartboy",
+     "sourceX": 0,
+     "sourceY": 0,
+     "sourceWidth": 12,
+     "sourceHeight": 23
+    }
+   }
+  }
+ ],
+ "desk": [
+  {
+   "time": 100,
+   "properties": {
+    "image": {
+     "name": "desk",
+     "sourceX": 0,
+     "sourceY": 0,
+     "sourceWidth": 29,
+     "sourceHeight": 24
+    }
+   }
+  }
+ ],
+ "test-spritesheet": [
+  {
+   "time": 100,
+   "properties": {
+    "image": {
+     "name": "test-spritesheet",
+     "sourceX": 0,
+     "sourceY": 0,
+     "sourceWidth": 64,
+     "sourceHeight": 64
+    }
+   }
+  }
  ]
 }

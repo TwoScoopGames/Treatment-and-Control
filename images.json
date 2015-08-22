@@ -1,3 +1,6 @@
 {
- "eggplant": "images/eggplant.png"
+ "cartboy": "images/cartboy.png",
+ "desk": "images/desk.png",
+ "eggplant": "images/eggplant.png",
+ "test-spritesheet": "images/test-spritesheet.png"
 }
