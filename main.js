@@ -45,17 +45,23 @@ function initShaders(gl) {
 
 	shaderProgram.vertexPositionAttribute = gl.getAttribLocation(shaderProgram, "aVertexPosition");
 	gl.enableVertexAttribArray(shaderProgram.vertexPositionAttribute);
+
+	shaderProgram.textureCoordAttribute = gl.getAttribLocation(shaderProgram, "aTextureCoord");
+	gl.enableVertexAttribArray(shaderProgram.textureCoordAttribute);
+
 	shaderProgram.pMatrixUniform = gl.getUniformLocation(shaderProgram, "uPMatrix");
 	shaderProgram.mvMatrixUniform = gl.getUniformLocation(shaderProgram, "uMVMatrix");
+	shaderProgram.samplerUniform = gl.getUniformLocation(shaderProgram, "uSampler");
+
 	return shaderProgram;
 }
 
-function buildBuffer(gl, vertices) {
+function buildBuffer(gl, size, vertices) {
 	var buffer = gl.createBuffer();
 	gl.bindBuffer(gl.ARRAY_BUFFER, buffer);
 	gl.bufferData(gl.ARRAY_BUFFER, new Float32Array(vertices), gl.STATIC_DRAW);
-	buffer.itemSize = 3;
-	buffer.numItems = vertices.length / 3;
+	buffer.itemSize = size;
+	buffer.numItems = vertices.length / size;
 	return buffer;
 }
 
@@ -65,7 +71,7 @@ var mat4 = require("gl-matrix").mat4;
 var mvMatrix = mat4.create();
 var pMatrix = mat4.create();
 
-function drawScene(gl, shaderProgram, triangleVertexPositionBuffer, squareVertexPositionBuffer) {
+function drawScene(gl, shaderProgram, triangleVertexPositionBuffer, squareVertexPositionBuffer, texture, textureCoords) {
 	gl.viewport(0, 0, canvas.width, canvas.height);
 	gl.clear(gl.COLOR_BUFFER_BIT | gl.DEPTH_BUFFER_BIT);
 	mat4.perspective(pMatrix, 45 * Math.PI / 180.0, canvas.width / canvas.height, 0.1, 100.0);
@@ -73,14 +79,21 @@ function drawScene(gl, shaderProgram, triangleVertexPositionBuffer, squareVertex
 	mat4.identity(mvMatrix);
 
 	mat4.translate(mvMatrix, mvMatrix, [-1.5, 0.0, -7.0]);
-	gl.bindBuffer(gl.ARRAY_BUFFER, triangleVertexPositionBuffer);
-	gl.vertexAttribPointer(shaderProgram.vertexPositionAttribute, triangleVertexPositionBuffer.itemSize, gl.FLOAT, false, 0, 0);
-	setMatrixUniforms(gl);
-	gl.drawArrays(gl.TRIANGLES, 0, triangleVertexPositionBuffer.numItems);
+	// gl.bindBuffer(gl.ARRAY_BUFFER, triangleVertexPositionBuffer);
+	// gl.vertexAttribPointer(shaderProgram.vertexPositionAttribute, triangleVertexPositionBuffer.itemSize, gl.FLOAT, false, 0, 0);
+	// setMatrixUniforms(gl);
+	// gl.drawArrays(gl.TRIANGLES, 0, triangleVertexPositionBuffer.numItems);
 
 	mat4.translate(mvMatrix, mvMatrix, [3.0, 0.0, 0.0]);
 	gl.bindBuffer(gl.ARRAY_BUFFER, squareVertexPositionBuffer);
 	gl.vertexAttribPointer(shaderProgram.vertexPositionAttribute, squareVertexPositionBuffer.itemSize, gl.FLOAT, false, 0, 0);
+
+	gl.bindBuffer(gl.ARRAY_BUFFER, textureCoords);
+	gl.vertexAttribPointer(shaderProgram.textureCoordAttribute, textureCoords.itemSize, gl.FLOAT, false, 0, 0);
+	gl.activeTexture(gl.TEXTURE0);
+	gl.bindTexture(gl.TEXTURE_2D, texture);
+	gl.uniform1i(shaderProgram.samplerUniform, 0);
+
 	setMatrixUniforms(gl);
 	gl.drawArrays(gl.TRIANGLE_STRIP, 0, squareVertexPositionBuffer.numItems);
 }
@@ -90,20 +103,58 @@ function setMatrixUniforms(gl) {
 	gl.uniformMatrix4fv(shaderProgram.mvMatrixUniform, false, mvMatrix);
 }
 
+function initTexture(gl) {
+	var texture = gl.createTexture();
+	var image = new Image();
+	image.onload = function() {
+		handleLoadedTexture(gl, texture, image);
+	}
+	image.src = "images/eggplant.png";
+	return texture;
+}
+
+function handleLoadedTexture(gl, texture, image) {
+	gl.bindTexture(gl.TEXTURE_2D, texture);
+	gl.pixelStorei(gl.UNPACK_FLIP_Y_WEBGL, true);
+	gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGBA, gl.RGBA, gl.UNSIGNED_BYTE, image);
+	// gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MAG_FILTER, gl.NEAREST);
+	// gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MIN_FILTER, gl.NEAREST);
+	gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MAG_FILTER, gl.LINEAR);
+	gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MIN_FILTER, gl.LINEAR);
+	gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_S, gl.CLAMP_TO_EDGE);
+	gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_T, gl.CLAMP_TO_EDGE);
+
+	gl.bindTexture(gl.TEXTURE_2D, null);
+}
+
 var canvas = document.getElementById("canvas");
 var gl = canvas.getContext("webgl");
+if (!gl) {
+	console.error("Failed to initialize WebGL");
+}
 var shaderProgram = initShaders(gl);
-var triangleVertexPositionBuffer = buildBuffer(gl, [
+var triangleVertexPositionBuffer = buildBuffer(gl, 3, [
 	 0.0,  1.0,  0.0,
 	-1.0, -1.0,  0.0,
 	 1.0, -1.0,  0.0
 ]);
-var squareVertexPositionBuffer = buildBuffer(gl, [
-	 1.0,  1.0,  0.0,
-	-1.0,  1.0,  0.0,
-	 1.0, -1.0,  0.0,
-	-1.0, -1.0,  0.0
+var squareVertexPositionBuffer = buildBuffer(gl, 3, [
+	 1.0,  1.0,  0.0, // top right
+	-1.0,  1.0,  0.0, // top left
+	 1.0, -1.0,  0.0, // bottom right
+	-1.0, -1.0,  0.0 // bottom left
 ]);
+var textureCoords = buildBuffer(gl, 2, [
+	1.0, 1.0,
+	0.0, 1.0,
+	1.0, 0.0,
+	0.0, 0.0,
+]);
+var texture = initTexture(gl);
 gl.clearColor(0.0, 0.0, 0.0, 1.0);
 gl.enable(gl.DEPTH_TEST);
-drawScene(gl, shaderProgram, triangleVertexPositionBuffer, squareVertexPositionBuffer);
+function render() {
+	drawScene(gl, shaderProgram, triangleVertexPositionBuffer, squareVertexPositionBuffer, texture, textureCoords);
+	window.requestAnimationFrame(render);
+}
+window.requestAnimationFrame(render);
