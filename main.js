@@ -34,29 +34,30 @@ var mat4 = require("gl-matrix").mat4;
 var mvMatrix = mat4.create();
 var pMatrix = mat4.create();
 
-function drawScene(gl, shaderProgram, squareVertexPositionBuffer, spriteName) {
+function drawScene(gl, shaderProgram, sprite) {
 	gl.viewport(0, 0, canvas.width, canvas.height);
 	gl.clear(gl.COLOR_BUFFER_BIT | gl.DEPTH_BUFFER_BIT);
 	mat4.perspective(pMatrix, 45 * Math.PI / 180.0, canvas.width / canvas.height, 0.1, 100.0);
 
 	mat4.identity(mvMatrix);
 
-	mat4.translate(mvMatrix, mvMatrix, [1.5, 0.0, -7.0]);
-	gl.bindBuffer(gl.ARRAY_BUFFER, squareVertexPositionBuffer);
-	gl.vertexAttribPointer(shaderProgram.vertexPositionAttribute, squareVertexPositionBuffer.itemSize, gl.FLOAT, false, 0, 0);
-
-	var sprite = sprites[spriteName];
-	if (sprite) {
-		var coords = sprite.coords
-		gl.bindBuffer(gl.ARRAY_BUFFER, coords);
-		gl.vertexAttribPointer(shaderProgram.textureCoordAttribute, coords.itemSize, gl.FLOAT, false, 0, 0);
-		gl.activeTexture(gl.TEXTURE0);
-		gl.bindTexture(gl.TEXTURE_2D, sprite.texture);
-		gl.uniform1i(shaderProgram.samplerUniform, 0);
+	if (!sprite) {
+		return;
 	}
 
+	mat4.translate(mvMatrix, mvMatrix, [1.5, 0.0, -7.0]);
+	gl.bindBuffer(gl.ARRAY_BUFFER, sprite.vertexCoords);
+	gl.vertexAttribPointer(shaderProgram.vertexPositionAttribute, sprite.vertexCoords.itemSize, gl.FLOAT, false, 0, 0);
+
+	var coords = sprite.textureCoords
+	gl.bindBuffer(gl.ARRAY_BUFFER, coords);
+	gl.vertexAttribPointer(shaderProgram.textureCoordAttribute, coords.itemSize, gl.FLOAT, false, 0, 0);
+	gl.activeTexture(gl.TEXTURE0);
+	gl.bindTexture(gl.TEXTURE_2D, sprite.texture);
+	gl.uniform1i(shaderProgram.samplerUniform, 0);
+
 	setMatrixUniforms(gl);
-	gl.drawArrays(gl.TRIANGLE_STRIP, 0, squareVertexPositionBuffer.numItems);
+	gl.drawArrays(gl.TRIANGLE_STRIP, 0, sprite.vertexCoords.numItems);
 }
 
 function setMatrixUniforms(gl) {
@@ -96,12 +97,13 @@ function parseSpritesFromTexture(gl, texture, json) {
 		var bottom = (texture.height - frame.frame.y - frame.frame.h) / texture.height;
 		sprites[frame.filename] = {
 			texture: texture,
-			coords: buildBuffer(gl, 2, [
+			textureCoords: buildBuffer(gl, 2, [
 				right, top,
 				left, top,
 				right, bottom,
 				left, bottom
 			]),
+			vertexCoords: buildBuffer(gl, 3, makeRectangleCoords(frame.frame.w, frame.frame.h)),
 			width: frame.frame.w,
 			height: frame.frame.h
 		};
@@ -110,23 +112,27 @@ function parseSpritesFromTexture(gl, texture, json) {
 	}, sprites);
 }
 
+var pixelsPerUnit = 20;
+function makeRectangleCoords(w, h) {
+	return [
+		 0.5 / pixelsPerUnit * w,  0.5 / pixelsPerUnit * h,  0.0, // top right
+		-0.5 / pixelsPerUnit * w,  0.5 / pixelsPerUnit * h,  0.0, // top left
+		 0.5 / pixelsPerUnit * w, -0.5 / pixelsPerUnit * h,  0.0, // bottom right
+		-0.5 / pixelsPerUnit * w, -0.5 / pixelsPerUnit * h,  0.0 // bottom left
+	];
+}
+
 var canvas = document.getElementById("canvas");
 var gl = canvas.getContext("webgl");
 if (!gl) {
 	console.error("Failed to initialize WebGL");
 }
 var shaderProgram = initShaders(gl);
-var squareVertexPositionBuffer = buildBuffer(gl, 3, [
-	 1.0,  1.0,  0.0, // top right
-	-1.0,  1.0,  0.0, // top left
-	 1.0, -1.0,  0.0, // bottom right
-	-1.0, -1.0,  0.0 // bottom left
-]);
 initTexture(gl);
 gl.clearColor(0.0, 0.0, 0.0, 1.0);
 gl.enable(gl.DEPTH_TEST);
 function render() {
-	drawScene(gl, shaderProgram, squareVertexPositionBuffer, "cartboy.png");
+	drawScene(gl, shaderProgram, sprites["cartboy.png"]);
 	window.requestAnimationFrame(render);
 }
 window.requestAnimationFrame(render);
