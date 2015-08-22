@@ -1,31 +1,33 @@
 "use strict";
 
+function compileShader(gl, type, src) {
+	if (!type) {
+		console.error("Invalid shader type: " + type);
+		return null;
+	}
+	var shader = gl.createShader(gl[type]);
+	gl.shaderSource(shader, src);
+	gl.compileShader(shader);
+	if (!gl.getShaderParameter(shader, gl.COMPILE_STATUS)) {
+		console.error(gl.getShaderInfoLog(shader));
+		return null;
+	}
+	return shader;
+}
+
+var shaderTypes = {
+	"x-shader/x-fragment": "FRAGMENT_SHADER",
+	"x-shader/x-vertex": "VERTEX_SHADER"
+};
+
 function getShader(gl, id) {
 	var shaderScript = document.getElementById(id);
 	if (!shaderScript) {
 		return null;
 	}
 
-	var str = shaderScript.textContent;
-
-	var shader;
-	if (shaderScript.type == "x-shader/x-fragment") {
-		shader = gl.createShader(gl.FRAGMENT_SHADER);
-	} else if (shaderScript.type == "x-shader/x-vertex") {
-		shader = gl.createShader(gl.VERTEX_SHADER);
-	} else {
-		return null;
-	}
-
-	gl.shaderSource(shader, str);
-	gl.compileShader(shader);
-
-	if (!gl.getShaderParameter(shader, gl.COMPILE_STATUS)) {
-		console.error(gl.getShaderInfoLog(shader));
-		return null;
-	}
-
-	return shader;
+	var src = shaderScript.textContent;
+	return compileShader(gl, shaderTypes[shaderScript.type], src);
 }
 
 function initShaders(gl) {
