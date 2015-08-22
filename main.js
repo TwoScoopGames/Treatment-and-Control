@@ -122,14 +122,12 @@ function parseSpritesFromTexture(gl, texture, json) {
 
 var pixelsPerUnit = 100;
 function makeRectangleCoords(w, h) {
-	console.log(w, h);
 	var c = [
 		 w / pixelsPerUnit,  h / pixelsPerUnit,  0.0, // top right
 		-w / pixelsPerUnit,  h / pixelsPerUnit,  0.0, // top left
 		 w / pixelsPerUnit, -h / pixelsPerUnit,  0.0, // bottom right
 		-w / pixelsPerUnit, -h / pixelsPerUnit,  0.0 // bottom left
 	];
-	console.log(c);
 	return c;
 }
 
