@@ -34,7 +34,24 @@ var mat4 = require("gl-matrix").mat4;
 var mvMatrix = mat4.create();
 var pMatrix = mat4.create();
 
+var defaultCoords;
 function drawScene(gl, shaderProgram, triangleVertexPositionBuffer, squareVertexPositionBuffer, texture, textureCoords) {
+	var coords;
+	if (texture.coords) {
+		coords = texture.coords[textureCoords];
+		console.log(coords);
+	} else {
+		if (!defaultCoords) {
+			defaultCoords = buildBuffer(gl, 2, [
+				0.0, 0.0,
+				0.0, 0.0,
+				0.0, 0.0,
+				0.0, 0.0
+			]);
+		}
+		coords = defaultCoords;
+	}
+
 	gl.viewport(0, 0, canvas.width, canvas.height);
 	gl.clear(gl.COLOR_BUFFER_BIT | gl.DEPTH_BUFFER_BIT);
 	mat4.perspective(pMatrix, 45 * Math.PI / 180.0, canvas.width / canvas.height, 0.1, 100.0);
@@ -51,8 +68,8 @@ function drawScene(gl, shaderProgram, triangleVertexPositionBuffer, squareVertex
 	gl.bindBuffer(gl.ARRAY_BUFFER, squareVertexPositionBuffer);
 	gl.vertexAttribPointer(shaderProgram.vertexPositionAttribute, squareVertexPositionBuffer.itemSize, gl.FLOAT, false, 0, 0);
 
-	gl.bindBuffer(gl.ARRAY_BUFFER, textureCoords);
-	gl.vertexAttribPointer(shaderProgram.textureCoordAttribute, textureCoords.itemSize, gl.FLOAT, false, 0, 0);
+	gl.bindBuffer(gl.ARRAY_BUFFER, coords);
+	gl.vertexAttribPointer(shaderProgram.textureCoordAttribute, coords.itemSize, gl.FLOAT, false, 0, 0);
 	gl.activeTexture(gl.TEXTURE0);
 	gl.bindTexture(gl.TEXTURE_2D, texture);
 	gl.uniform1i(shaderProgram.samplerUniform, 0);
@@ -66,13 +83,33 @@ function setMatrixUniforms(gl) {
 	gl.uniformMatrix4fv(shaderProgram.mvMatrixUniform, false, mvMatrix);
 }
 
+var textureJson = require("./images/test-spritesheet.json");
+function loadTexture(gl, image, json) {
+	return json.frames.reduce(function(sprites, frame) {
+		var left = frame.frame.x / image.width;
+		var top = 1.0 - (frame.frame.y / image.height);
+		var right = (frame.frame.x + frame.frame.w) / image.width;
+		var bottom = (image.height - frame.frame.y - frame.frame.h) / image.height;
+		sprites[frame.filename] = buildBuffer(gl, 2, [
+			right, top,
+			left, top,
+			right, bottom,
+			left, bottom
+		]);
+
+		return sprites;
+	}, {});
+}
+
 function initTexture(gl) {
 	var texture = gl.createTexture();
 	var image = new Image();
 	image.onload = function() {
 		handleLoadedTexture(gl, texture, image);
+		texture.coords = loadTexture(gl, image, textureJson);
+		window.requestAnimationFrame(render);
 	}
-	image.src = "images/eggplant.png";
+	image.src = "images/test-spritesheet.png";
 	return texture;
 }
 
@@ -80,13 +117,8 @@ function handleLoadedTexture(gl, texture, image) {
 	gl.bindTexture(gl.TEXTURE_2D, texture);
 	gl.pixelStorei(gl.UNPACK_FLIP_Y_WEBGL, true);
 	gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGBA, gl.RGBA, gl.UNSIGNED_BYTE, image);
-	// gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MAG_FILTER, gl.NEAREST);
-	// gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MIN_FILTER, gl.NEAREST);
-	gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MAG_FILTER, gl.LINEAR);
-	gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MIN_FILTER, gl.LINEAR);
-	gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_S, gl.CLAMP_TO_EDGE);
-	gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_T, gl.CLAMP_TO_EDGE);
-
+	gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MAG_FILTER, gl.NEAREST);
+	gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MIN_FILTER, gl.NEAREST);
 	gl.bindTexture(gl.TEXTURE_2D, null);
 }
 
@@ -117,7 +149,7 @@ var texture = initTexture(gl);
 gl.clearColor(0.0, 0.0, 0.0, 1.0);
 gl.enable(gl.DEPTH_TEST);
 function render() {
-	drawScene(gl, shaderProgram, triangleVertexPositionBuffer, squareVertexPositionBuffer, texture, textureCoords);
-	window.requestAnimationFrame(render);
+	drawScene(gl, shaderProgram, triangleVertexPositionBuffer, squareVertexPositionBuffer, texture, "cartboy.png");
+	// window.requestAnimationFrame(render);
 }
-window.requestAnimationFrame(render);
+// window.requestAnimationFrame(render);
