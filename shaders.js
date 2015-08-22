@@ -30,7 +30,25 @@ function get(gl, id) {
 	return compile(gl, shaderTypes[shaderScript.type], src);
 }
 
+function link(gl, shaders) {
+	var program = gl.createProgram();
+
+	for (var i = 0; i < shaders.length; i++) {
+		gl.attachShader(program, shaders[i]);
+	}
+
+	gl.linkProgram(program);
+	if (!gl.getProgramParameter(program, gl.LINK_STATUS)) {
+		console.error("Could not initialise shaders");
+		return null;
+	}
+
+	gl.useProgram(program);
+	return program;
+}
+
 module.exports = {
 	compile: compile,
-	get: get
+	get: get,
+	link: link
 };

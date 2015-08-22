@@ -3,19 +3,9 @@
 var shaders = require("./shaders");
 
 function initShaders(gl) {
-	var fragmentShader = shaders.get(gl, "shader-fs");
-	var vertexShader = shaders.get(gl, "shader-vs");
-
-	var shaderProgram = gl.createProgram();
-	gl.attachShader(shaderProgram, vertexShader);
-	gl.attachShader(shaderProgram, fragmentShader);
-	gl.linkProgram(shaderProgram);
-
-	if (!gl.getProgramParameter(shaderProgram, gl.LINK_STATUS)) {
-		console.error("Could not initialise shaders");
-	}
-
-	gl.useProgram(shaderProgram);
+	var shaderNames = [ "shader-fs", "shader-vs" ];
+	var s = shaderNames.map(shaders.get.bind(undefined, gl));
+	var shaderProgram = shaders.link(gl, s);
 
 	shaderProgram.vertexPositionAttribute = gl.getAttribLocation(shaderProgram, "aVertexPosition");
 	gl.enableVertexAttribArray(shaderProgram.vertexPositionAttribute);
