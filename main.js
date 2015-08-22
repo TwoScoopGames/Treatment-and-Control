@@ -5,19 +5,18 @@ var shaders = require("./shaders");
 function initShaders(gl) {
 	var shaderNames = [ "shader-fs", "shader-vs" ];
 	var s = shaderNames.map(shaders.get.bind(undefined, gl));
-	var shaderProgram = shaders.link(gl, s);
 
-	shaderProgram.vertexPositionAttribute = gl.getAttribLocation(shaderProgram, "aVertexPosition");
-	gl.enableVertexAttribArray(shaderProgram.vertexPositionAttribute);
+	var vertexAttribArrays = {
+		vertexPositionAttribute: "aVertexPosition",
+		textureCoordAttribute: "aTextureCoord"
+	};
 
-	shaderProgram.textureCoordAttribute = gl.getAttribLocation(shaderProgram, "aTextureCoord");
-	gl.enableVertexAttribArray(shaderProgram.textureCoordAttribute);
-
-	shaderProgram.pMatrixUniform = gl.getUniformLocation(shaderProgram, "uPMatrix");
-	shaderProgram.mvMatrixUniform = gl.getUniformLocation(shaderProgram, "uMVMatrix");
-	shaderProgram.samplerUniform = gl.getUniformLocation(shaderProgram, "uSampler");
-
-	return shaderProgram;
+	var uniformVars = {
+		pMatrixUniform: "uPMatrix",
+		mvMatrixUniform: "uMVMatrix",
+		samplerUniform: "uSampler"
+	};
+	return shaders.link(gl, s, vertexAttribArrays, uniformVars);
 }
 
 function buildBuffer(gl, size, vertices) {

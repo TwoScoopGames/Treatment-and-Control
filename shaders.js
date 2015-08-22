@@ -30,7 +30,7 @@ function get(gl, id) {
 	return compile(gl, shaderTypes[shaderScript.type], src);
 }
 
-function link(gl, shaders) {
+function link(gl, shaders, vertexAttribArrays, uniformVars) {
 	var program = gl.createProgram();
 
 	for (var i = 0; i < shaders.length; i++) {
@@ -44,7 +44,24 @@ function link(gl, shaders) {
 	}
 
 	gl.useProgram(program);
+
+	bindVertexAttribArrays(gl, program, vertexAttribArrays);
+	bindUniformVars(gl, program, uniformVars);
+
 	return program;
+}
+
+function bindVertexAttribArrays(gl, shaderProgram, vertexAttribArrays) {
+	Object.keys(vertexAttribArrays).forEach(function(key) {
+		shaderProgram[key] = gl.getAttribLocation(shaderProgram, vertexAttribArrays[key]);
+		gl.enableVertexAttribArray(shaderProgram[key]);
+	});
+}
+
+function bindUniformVars(gl, shaderProgram, uniformVars) {
+	Object.keys(uniformVars).forEach(function(key) {
+		shaderProgram[key] = gl.getUniformLocation(shaderProgram, uniformVars[key]);
+	});
 }
 
 module.exports = {
