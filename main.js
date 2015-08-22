@@ -25,19 +25,27 @@ var mat4 = require("gl-matrix").mat4;
 var mvMatrix = mat4.create();
 var pMatrix = mat4.create();
 
+var cx = 0.0;
+var cy = 0.0;
+
 function drawScene(gl, shaderProgram) {
 	gl.viewport(0, 0, canvas.width, canvas.height);
 	gl.clear(gl.COLOR_BUFFER_BIT | gl.DEPTH_BUFFER_BIT);
 	mat4.perspective(pMatrix, 45 * Math.PI / 180.0, canvas.width / canvas.height, 0.1, 100.0);
 
-	mat4.identity(mvMatrix);
-	mat4.translate(mvMatrix, mvMatrix, [0.0, 0.0, -7.0]);
+	var camera = mat4.create();
+	mat4.translate(camera, camera, [-cx, -cy, -7.0]);
 
+	mat4.copy(mvMatrix, camera);
 	mat4.translate(mvMatrix, mvMatrix, [-1.5, 0.0, 0.0]);
 	drawSprite(gl, shaderProgram, sprites["desk.png"]);
 
-	mat4.translate(mvMatrix, mvMatrix, [3.0, 0.0, 0.0]);
+	mat4.copy(mvMatrix, camera);
+	mat4.translate(mvMatrix, mvMatrix, [1.5, 0.0, 0.0]);
 	drawSprite(gl, shaderProgram, sprites["cartboy.png"]);
+
+	cx += 0.01;
+	cy -= 0.01;
 }
 
 function drawSprite(gl, shaderProgram, sprite) {
