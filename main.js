@@ -34,45 +34,25 @@ var mat4 = require("gl-matrix").mat4;
 var mvMatrix = mat4.create();
 var pMatrix = mat4.create();
 
-var defaultCoords;
-function drawScene(gl, shaderProgram, triangleVertexPositionBuffer, squareVertexPositionBuffer, texture, textureCoords) {
-	var coords;
-	if (texture.coords) {
-		coords = texture.coords[textureCoords];
-		console.log(coords);
-	} else {
-		if (!defaultCoords) {
-			defaultCoords = buildBuffer(gl, 2, [
-				0.0, 0.0,
-				0.0, 0.0,
-				0.0, 0.0,
-				0.0, 0.0
-			]);
-		}
-		coords = defaultCoords;
-	}
-
+function drawScene(gl, shaderProgram, squareVertexPositionBuffer, texture, textureCoords) {
 	gl.viewport(0, 0, canvas.width, canvas.height);
 	gl.clear(gl.COLOR_BUFFER_BIT | gl.DEPTH_BUFFER_BIT);
 	mat4.perspective(pMatrix, 45 * Math.PI / 180.0, canvas.width / canvas.height, 0.1, 100.0);
 
 	mat4.identity(mvMatrix);
 
-	mat4.translate(mvMatrix, mvMatrix, [-1.5, 0.0, -7.0]);
-	// gl.bindBuffer(gl.ARRAY_BUFFER, triangleVertexPositionBuffer);
-	// gl.vertexAttribPointer(shaderProgram.vertexPositionAttribute, triangleVertexPositionBuffer.itemSize, gl.FLOAT, false, 0, 0);
-	// setMatrixUniforms(gl);
-	// gl.drawArrays(gl.TRIANGLES, 0, triangleVertexPositionBuffer.numItems);
-
-	mat4.translate(mvMatrix, mvMatrix, [3.0, 0.0, 0.0]);
+	mat4.translate(mvMatrix, mvMatrix, [1.5, 0.0, -7.0]);
 	gl.bindBuffer(gl.ARRAY_BUFFER, squareVertexPositionBuffer);
 	gl.vertexAttribPointer(shaderProgram.vertexPositionAttribute, squareVertexPositionBuffer.itemSize, gl.FLOAT, false, 0, 0);
 
-	gl.bindBuffer(gl.ARRAY_BUFFER, coords);
-	gl.vertexAttribPointer(shaderProgram.textureCoordAttribute, coords.itemSize, gl.FLOAT, false, 0, 0);
-	gl.activeTexture(gl.TEXTURE0);
-	gl.bindTexture(gl.TEXTURE_2D, texture);
-	gl.uniform1i(shaderProgram.samplerUniform, 0);
+	if (texture.coords) {
+		var coords = texture.coords[textureCoords].buffer;
+		gl.bindBuffer(gl.ARRAY_BUFFER, coords);
+		gl.vertexAttribPointer(shaderProgram.textureCoordAttribute, coords.itemSize, gl.FLOAT, false, 0, 0);
+		gl.activeTexture(gl.TEXTURE0);
+		gl.bindTexture(gl.TEXTURE_2D, texture);
+		gl.uniform1i(shaderProgram.samplerUniform, 0);
+	}
 
 	setMatrixUniforms(gl);
 	gl.drawArrays(gl.TRIANGLE_STRIP, 0, squareVertexPositionBuffer.numItems);
@@ -90,12 +70,16 @@ function loadTexture(gl, image, json) {
 		var top = 1.0 - (frame.frame.y / image.height);
 		var right = (frame.frame.x + frame.frame.w) / image.width;
 		var bottom = (image.height - frame.frame.y - frame.frame.h) / image.height;
-		sprites[frame.filename] = buildBuffer(gl, 2, [
-			right, top,
-			left, top,
-			right, bottom,
-			left, bottom
-		]);
+		sprites[frame.filename] = {
+			buffer: buildBuffer(gl, 2, [
+				right, top,
+				left, top,
+				right, bottom,
+				left, bottom
+			]),
+			width: frame.frame.w,
+			height: frame.frame.h
+		};
 
 		return sprites;
 	}, {});
@@ -107,7 +91,6 @@ function initTexture(gl) {
 	image.onload = function() {
 		handleLoadedTexture(gl, texture, image);
 		texture.coords = loadTexture(gl, image, textureJson);
-		window.requestAnimationFrame(render);
 	}
 	image.src = "images/test-spritesheet.png";
 	return texture;
@@ -128,28 +111,17 @@ if (!gl) {
 	console.error("Failed to initialize WebGL");
 }
 var shaderProgram = initShaders(gl);
-var triangleVertexPositionBuffer = buildBuffer(gl, 3, [
-	 0.0,  1.0,  0.0,
-	-1.0, -1.0,  0.0,
-	 1.0, -1.0,  0.0
-]);
 var squareVertexPositionBuffer = buildBuffer(gl, 3, [
 	 1.0,  1.0,  0.0, // top right
 	-1.0,  1.0,  0.0, // top left
 	 1.0, -1.0,  0.0, // bottom right
 	-1.0, -1.0,  0.0 // bottom left
 ]);
-var textureCoords = buildBuffer(gl, 2, [
-	1.0, 1.0,
-	0.0, 1.0,
-	1.0, 0.0,
-	0.0, 0.0,
-]);
 var texture = initTexture(gl);
 gl.clearColor(0.0, 0.0, 0.0, 1.0);
 gl.enable(gl.DEPTH_TEST);
 function render() {
-	drawScene(gl, shaderProgram, triangleVertexPositionBuffer, squareVertexPositionBuffer, texture, "cartboy.png");
-	// window.requestAnimationFrame(render);
+	drawScene(gl, shaderProgram, squareVertexPositionBuffer, texture, "cartboy.png");
+	window.requestAnimationFrame(render);
 }
-// window.requestAnimationFrame(render);
+window.requestAnimationFrame(render);
