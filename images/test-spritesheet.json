@@ -2,8 +2,8 @@
 
 {
 	"filename": "cartboy.png",
-	"frame": {"x":33,"y":2,"w":12,"h":23},
-	"rotated": true,
+	"frame": {"x":2,"y":28,"w":12,"h":23},
+	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":12,"h":23},
 	"sourceSize": {"w":12,"h":23},
@@ -25,6 +25,6 @@
 	"format": "RGBA8888",
 	"size": {"w":64,"h":64},
 	"scale": "1",
-	"smartupdate": "$TexturePacker:SmartUpdate:bd93f2a44ae8f7565f54506a333c2bae:db622dae920af874a1c578007e31011a:895c37f165541290c34ad37ba8b72c6e$"
+	"smartupdate": "$TexturePacker:SmartUpdate:7adb03e4dd8a3a3c5f227c1254bd9c59:db622dae920af874a1c578007e31011a:895c37f165541290c34ad37ba8b72c6e$"
 }
 }
