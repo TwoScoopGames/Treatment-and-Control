@@ -34,18 +34,26 @@ var mat4 = require("gl-matrix").mat4;
 var mvMatrix = mat4.create();
 var pMatrix = mat4.create();
 
-function drawScene(gl, shaderProgram, sprite) {
+function drawScene(gl, shaderProgram) {
 	gl.viewport(0, 0, canvas.width, canvas.height);
 	gl.clear(gl.COLOR_BUFFER_BIT | gl.DEPTH_BUFFER_BIT);
 	mat4.perspective(pMatrix, 45 * Math.PI / 180.0, canvas.width / canvas.height, 0.1, 100.0);
 
 	mat4.identity(mvMatrix);
+	mat4.translate(mvMatrix, mvMatrix, [0.0, 0.0, -7.0]);
 
+	mat4.translate(mvMatrix, mvMatrix, [-1.5, 0.0, 0.0]);
+	drawSprite(gl, shaderProgram, sprites["desk.png"]);
+
+	mat4.translate(mvMatrix, mvMatrix, [3.0, 0.0, 0.0]);
+	drawSprite(gl, shaderProgram, sprites["cartboy.png"]);
+}
+
+function drawSprite(gl, shaderProgram, sprite) {
 	if (!sprite) {
 		return;
 	}
 
-	mat4.translate(mvMatrix, mvMatrix, [1.5, 0.0, -7.0]);
 	gl.bindBuffer(gl.ARRAY_BUFFER, sprite.vertexCoords);
 	gl.vertexAttribPointer(shaderProgram.vertexPositionAttribute, sprite.vertexCoords.itemSize, gl.FLOAT, false, 0, 0);
 
@@ -112,14 +120,17 @@ function parseSpritesFromTexture(gl, texture, json) {
 	}, sprites);
 }
 
-var pixelsPerUnit = 20;
+var pixelsPerUnit = 100;
 function makeRectangleCoords(w, h) {
-	return [
-		 0.5 / pixelsPerUnit * w,  0.5 / pixelsPerUnit * h,  0.0, // top right
-		-0.5 / pixelsPerUnit * w,  0.5 / pixelsPerUnit * h,  0.0, // top left
-		 0.5 / pixelsPerUnit * w, -0.5 / pixelsPerUnit * h,  0.0, // bottom right
-		-0.5 / pixelsPerUnit * w, -0.5 / pixelsPerUnit * h,  0.0 // bottom left
+	console.log(w, h);
+	var c = [
+		 w / pixelsPerUnit,  h / pixelsPerUnit,  0.0, // top right
+		-w / pixelsPerUnit,  h / pixelsPerUnit,  0.0, // top left
+		 w / pixelsPerUnit, -h / pixelsPerUnit,  0.0, // bottom right
+		-w / pixelsPerUnit, -h / pixelsPerUnit,  0.0 // bottom left
 	];
+	console.log(c);
+	return c;
 }
 
 var canvas = document.getElementById("canvas");
@@ -132,7 +143,7 @@ initTexture(gl);
 gl.clearColor(0.0, 0.0, 0.0, 1.0);
 gl.enable(gl.DEPTH_TEST);
 function render() {
-	drawScene(gl, shaderProgram, sprites["cartboy.png"]);
+	drawScene(gl, shaderProgram);
 	window.requestAnimationFrame(render);
 }
 window.requestAnimationFrame(render);
