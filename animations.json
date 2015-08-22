@@ -1,2 +1,16 @@
 {
+ "eggplant": [
+  {
+   "time": 100,
+   "properties": {
+    "image": {
+     "name": "eggplant",
+     "sourceX": 0,
+     "sourceY": 0,
+     "sourceWidth": 94,
+     "sourceHeight": 46
+    }
+   }
+  }
+ ]
 }
