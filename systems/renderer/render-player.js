@@ -5,13 +5,26 @@ module.exports = function(ecs, data) { // eslint-disable-line no-unused-vars
 		var x = 0;
       	var y = 436;
       
-      	if (!entity.message) {
-          return;
+      if (entity.target && entity.clipboard) {
+          var cart = data.entities.entities[3];
+
+	      context.drawImage(data.images.get("clipboard-big"), 400, 50);
+          context.font = "24px minecraftia";
+          context.fillStyle = "#666";
+        
+        	for (var i = 0; i < cart.deliveries.length; i++) {
+              	var y = 150 + (i * 60);
+          		context.fillText(cart.deliveries[i].name, 550, y + 30);
+              	context.drawImage(data.images.get("pill-" + cart.deliveries[i].pill), 450, y);
+            }
+      }
+      	if (entity.message) {      
+          context.drawImage(data.images.get("textbox-big"), x, y);
+          context.fillStyle = "white";
+          context.font = "24px minecraftia";
+          var msg = entity.message.text.substr(0, entity.message.len);
+          context.fillText(msg, x + 64, y + 64);
         }
-		context.drawImage(data.images.get("textbox-big"), x, y);
-      	context.fillStyle = "white";
-		context.font = "24px minecraftia";
-		var msg = entity.message.text.substr(0, entity.message.len);
-		context.fillText(msg, x + 64, y + 64);
+
 	}, ["actionZone"]);
 };

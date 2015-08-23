@@ -112,6 +112,9 @@ module.exports = function(ecs, data) { // eslint-disable-line no-unused-vars
               	entity.message = undefined;
                 data.sounds.play("textpopup10");
               }
+            } else if (entity.clipboard) {
+                entity.clipboard = undefined;
+                data.sounds.play("textpopup10");
             } else {
               for (var i = 0; i < entity.collisions.length; i++) {
                 var other = data.entities.entities[entity.collisions[i]];
@@ -131,7 +134,8 @@ module.exports = function(ecs, data) { // eslint-disable-line no-unused-vars
 	                  showMessage(data, entity, "No pills left");
                   } else {
                    	  entity.target = left[0];
-	                  showMessage(data, entity, left[0].name + " gets the\n" + left[0].pill + " pill.");
+	                    entity.clipboard = true;
+                      data.sounds.play("textpopup2");
                   }
                 }
               }

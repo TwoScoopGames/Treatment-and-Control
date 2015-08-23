@@ -161,7 +161,7 @@
    },
    "collisions": [],
    "fadePercent": {
-    "fadePercent": 0
+    "fadePercent": 100
    },
    "skeptical": {
     "skeptical": ""
