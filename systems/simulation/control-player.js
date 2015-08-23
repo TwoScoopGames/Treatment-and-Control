@@ -28,6 +28,7 @@ module.exports = function(ecs, data) {
                 entity.message.len = entity.message.text.length;
               } else {
               	entity.message = undefined;
+                data.sounds.play("textpopup10");
               }
             } else {
               for (var i = 0; i < entity.collisions.length; i++) {
@@ -37,6 +38,7 @@ module.exports = function(ecs, data) {
                 }
                 entity.message = { text: other.message.text, len: 0 };
                 entity.timers.text.running = true;
+                data.sounds.play("textpopup2");
                 break;
               }
             }
