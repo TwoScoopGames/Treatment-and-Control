@@ -132,7 +132,8 @@
     "destinationY": -27,
     "destinationWidth": 42,
     "destinationHeight": 63
-   }
+   },
+   "collisions": []
   },
   {
    "id": 4,
