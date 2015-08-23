@@ -96,5 +96,19 @@
     }
    }
   }
+ ],
+ "cartboy-walk-left-3x": [
+  {
+   "time": 100,
+   "properties": {
+    "image": {
+     "name": "cartboy-walk-left-3x",
+     "sourceX": 0,
+     "sourceY": 0,
+     "sourceWidth": 99,
+     "sourceHeight": 69
+    }
+   }
+  }
  ]
 }
