@@ -52,6 +52,10 @@
  "renderer": [
   {
    "name": "splatjs:clearScreen",
+   "scenes": []
+  },
+  {
+   "name": "./systems/renderer/drawBackground",
    "scenes": [
     "main"
    ]
@@ -85,10 +89,6 @@
    "scenes": [
     "main"
    ]
-  },
-  {
-   "name": "./systems/renderer/drawBackground",
-   "scenes": []
   }
  ]
 }
