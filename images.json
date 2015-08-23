@@ -1,7 +1,9 @@
 {
  "bg": "images/bg.png",
+ "cartboy-walk-down-3x": "images/cartboy-walk-down-3x.png",
+ "cartboy-walk-right-3x": "images/cartboy-walk-right-3x.png",
+ "cartboy-walk-up-3x": "images/cartboy-walk-up-3x.png",
  "cartboy": "images/cartboy.png",
  "desk": "images/desk.png",
- "eggplant": "images/eggplant.png",
  "test-spritesheet": "images/test-spritesheet.png"
 }

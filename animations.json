@@ -1,14 +1,56 @@
 {
- "eggplant": [
+ "bg": [
   {
    "time": 100,
    "properties": {
     "image": {
-     "name": "eggplant",
+     "name": "bg",
      "sourceX": 0,
      "sourceY": 0,
-     "sourceWidth": 94,
-     "sourceHeight": 46
+     "sourceWidth": 335,
+     "sourceHeight": 398
+    }
+   }
+  }
+ ],
+ "cartboy-walk-down-3x": [
+  {
+   "time": 100,
+   "properties": {
+    "image": {
+     "name": "cartboy-walk-down-3x",
+     "sourceX": 0,
+     "sourceY": 0,
+     "sourceWidth": 108,
+     "sourceHeight": 69
+    }
+   }
+  }
+ ],
+ "cartboy-walk-right-3x": [
+  {
+   "time": 100,
+   "properties": {
+    "image": {
+     "name": "cartboy-walk-right-3x",
+     "sourceX": 0,
+     "sourceY": 0,
+     "sourceWidth": 99,
+     "sourceHeight": 69
+    }
+   }
+  }
+ ],
+ "cartboy-walk-up-3x": [
+  {
+   "time": 100,
+   "properties": {
+    "image": {
+     "name": "cartboy-walk-up-3x",
+     "sourceX": 0,
+     "sourceY": 0,
+     "sourceWidth": 108,
+     "sourceHeight": 69
     }
    }
   }
@@ -51,20 +93,6 @@
      "sourceY": 0,
      "sourceWidth": 64,
      "sourceHeight": 64
-    }
-   }
-  }
- ],
- "bg": [
-  {
-   "time": 100,
-   "properties": {
-    "image": {
-     "name": "bg",
-     "sourceX": 0,
-     "sourceY": 0,
-     "sourceWidth": 335,
-     "sourceHeight": 398
     }
    }
   }
