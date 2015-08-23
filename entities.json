@@ -39,7 +39,7 @@
    "id": 1,
    "name": "desk 1",
    "position": {
-    "x": 61,
+    "x": 160,
     "y": 600
    },
    "size": {
@@ -127,8 +127,8 @@
    "id": 4,
    "name": "worker 1",
    "position": {
-    "x": 100,
-    "y": 500
+    "x": 182,
+    "y": 553
    },
    "size": {
     "width": 36,
@@ -166,8 +166,8 @@
    "id": 5,
    "name": "worker 2",
    "position": {
-    "x": 200,
-    "y": 500
+    "x": 340,
+    "y": 555
    },
    "size": {
     "width": 36,
@@ -300,6 +300,225 @@
    "velocity": {
     "x": 0,
     "y": 0
+   }
+  },
+  {
+   "id": 12,
+   "name": "desk 2",
+   "position": {
+    "x": 315,
+    "y": 600
+   },
+   "size": {
+    "width": 87,
+    "height": 36
+   },
+   "velocity": {
+    "x": 0,
+    "y": 0
+   },
+   "animation": {
+    "time": 0,
+    "frame": 0,
+    "loop": true,
+    "speed": 1,
+    "name": "desk-3x"
+   },
+   "image": {
+    "sourceX": 0,
+    "sourceY": 0,
+    "sourceWidth": 0,
+    "sourceHeight": 0,
+    "destinationX": 0,
+    "destinationY": -36,
+    "destinationWidth": 87,
+    "destinationHeight": 72
+   },
+   "collisions": []
+  },
+  {
+   "id": 13,
+   "name": "desk 3",
+   "position": {
+    "x": 588,
+    "y": 600
+   },
+   "size": {
+    "width": 87,
+    "height": 36
+   },
+   "velocity": {
+    "x": 0,
+    "y": 0
+   },
+   "animation": {
+    "time": 0,
+    "frame": 0,
+    "loop": true,
+    "speed": 1,
+    "name": "desk-3x"
+   },
+   "image": {
+    "sourceX": 0,
+    "sourceY": 0,
+    "sourceWidth": 0,
+    "sourceHeight": 0,
+    "destinationX": 0,
+    "destinationY": -36,
+    "destinationWidth": 87,
+    "destinationHeight": 72
+   },
+   "collisions": []
+  },
+  {
+   "id": 14,
+   "name": "desk 4",
+   "position": {
+    "x": 745,
+    "y": 600
+   },
+   "size": {
+    "width": 87,
+    "height": 36
+   },
+   "velocity": {
+    "x": 0,
+    "y": 0
+   },
+   "animation": {
+    "time": 0,
+    "frame": 0,
+    "loop": true,
+    "speed": 1,
+    "name": "desk-3x"
+   },
+   "image": {
+    "sourceX": 0,
+    "sourceY": 0,
+    "sourceWidth": 0,
+    "sourceHeight": 0,
+    "destinationX": 0,
+    "destinationY": -36,
+    "destinationWidth": 87,
+    "destinationHeight": 72
+   },
+   "collisions": []
+  },
+  {
+   "id": 15,
+   "name": "gaurd",
+   "position": {
+    "x": 477,
+    "y": 397
+   },
+   "size": {
+    "width": 36,
+    "height": 36
+   },
+   "animation": {
+    "time": 0,
+    "frame": 0,
+    "loop": true,
+    "speed": 1,
+    "name": "gaurd-1"
+   },
+   "image": {
+    "sourceX": 0,
+    "sourceY": 0,
+    "sourceWidth": 0,
+    "sourceHeight": 0,
+    "destinationX": -6,
+    "destinationY": -47,
+    "destinationWidth": 48,
+    "destinationHeight": 81
+   },
+   "message": {
+    "text": "sweet"
+   },
+   "collisions": [],
+   "fadePercent": {
+    "fadePercent": "100"
+   },
+   "skeptical": {
+    "skeptical": ""
+   }
+  },
+  {
+   "id": 16,
+   "name": "worker 3",
+   "position": {
+    "x": 602,
+    "y": 552
+   },
+   "size": {
+    "width": 36,
+    "height": 36
+   },
+   "animation": {
+    "time": 0,
+    "frame": 0,
+    "loop": true,
+    "speed": 1,
+    "name": "worker-3"
+   },
+   "image": {
+    "sourceX": 0,
+    "sourceY": 0,
+    "sourceWidth": 0,
+    "sourceHeight": 0,
+    "destinationX": 0,
+    "destinationY": -29,
+    "destinationWidth": 36,
+    "destinationHeight": 69
+   },
+   "message": {
+    "text": "leave me alone"
+   },
+   "collisions": [],
+   "fadePercent": {
+    "fadePercent": "100"
+   },
+   "skeptical": {
+    "skeptical": ""
+   }
+  },
+  {
+   "id": 17,
+   "name": "worker 4",
+   "position": {
+    "x": 761,
+    "y": 552
+   },
+   "size": {
+    "width": 36,
+    "height": 36
+   },
+   "animation": {
+    "time": 0,
+    "frame": 0,
+    "loop": true,
+    "speed": 1,
+    "name": "worker-4"
+   },
+   "image": {
+    "sourceX": 0,
+    "sourceY": 0,
+    "sourceWidth": 0,
+    "sourceHeight": 0,
+    "destinationX": 0,
+    "destinationY": -29,
+    "destinationWidth": 36,
+    "destinationHeight": 66
+   },
+   "message": {
+    "text": "leave me alone"
+   },
+   "collisions": [],
+   "fadePercent": {
+    "fadePercent": "100"
+   },
+   "skeptical": {
+    "skeptical": ""
    }
   }
  ]
