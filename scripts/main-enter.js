@@ -31,6 +31,8 @@ module.exports = function(data) {
   data.sounds.play("day1", true);
   var names = starterNames.slice(0);
   shuffle(names);
+  
+  
   Object.keys(data.entities.entities).forEach(function(id) {
     var entity = data.entities.entities[id];
     if (entity.fadePercent === undefined) {
@@ -40,8 +42,11 @@ module.exports = function(data) {
   });
   
   var cart = data.entities.entities[3];
+  cart.deliveries = [];
   
-  cart.deliveries = [
-    { name: "Rex", pill: "blue" }
-  ];
+  var pillNames = starterNames.slice(0);
+  shuffle(pillNames);
+  for (var i = 0; i < 5; i++) {
+    cart.deliveries.push({ name: pillNames[i], pill: "blue" });
+  }
 };
