@@ -8,6 +8,7 @@ module.exports = function(ecs, data) { // eslint-disable-line no-unused-vars
 		context.drawImage(data.images.get("textbox"), 100, 100);
       	context.fillStyle = "red";
 		context.font = "50px sans-serif";
-		context.fillText(entity.message.text, 200, 200);
+		var msg = entity.message.text.substr(0, entity.message.len);
+		context.fillText(msg, 200, 200);
 	}, ["player", "message"]);
 };

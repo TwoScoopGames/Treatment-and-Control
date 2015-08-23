@@ -1,4 +1,4 @@
- "use strict";
+"use strict";
 
 module.exports = function(ecs, data) {
 	ecs.addEach(function(entity, elapsed) { // jshint ignore:line
@@ -24,14 +24,20 @@ module.exports = function(ecs, data) {
             console.log("action");
           
             if (entity.message) {
-              entity.message = undefined;
+              if (entity.message.len < entity.message.text.length) {
+                entity.message.len = entity.message.text.length;
+              } else {
+              	entity.message = undefined;
+              }
             } else {
               for (var i = 0; i < entity.collisions.length; i++) {
                 var other = data.entities.entities[entity.collisions[i]];
                 if (!other.message) {
                   continue;
                 }
-                entity.message = { text: other.message.text };
+                entity.message = { text: other.message.text, len: 0 };
+                entity.timers.text.running = true;
+                break;
               }
             }
           }

@@ -33,7 +33,15 @@
     "destinationWidth": 36,
     "destinationHeight": 69
    },
-   "collisions": []
+   "collisions": [],
+   "timers": {
+    "text": {
+     "running": false,
+     "time": 0,
+     "max": 100,
+     "script": "./scripts/new-script-0"
+    }
+   }
   },
   {
    "id": 1,
