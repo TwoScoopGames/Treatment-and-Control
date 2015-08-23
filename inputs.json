@@ -50,5 +50,18 @@
     "key": "right"
    }
   ]
+ },
+ "action": {
+  "type": "button",
+  "inputs": [
+   {
+    "device": "keyboard",
+    "key": "space"
+   },
+   {
+    "device": "keyboard",
+    "key": "enter"
+   }
+  ]
  }
 }
