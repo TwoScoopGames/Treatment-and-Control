@@ -33,7 +33,15 @@
     "destinationWidth": 36,
     "destinationHeight": 69
    },
-   "collisions": []
+   "collisions": [],
+   "timers": {
+    "text": {
+     "running": false,
+     "time": 0,
+     "max": 100,
+     "script": "./scripts/new-script-0"
+    }
+   }
   },
   {
    "id": 1,
@@ -45,6 +53,10 @@
    "size": {
     "width": 87,
     "height": 36
+   },
+   "velocity": {
+    "x": 0,
+    "y": 0
    },
    "animation": {
     "time": 0,
@@ -257,7 +269,7 @@
    "name": "camera",
    "position": {
     "x": 0,
-    "y": 0
+    "y": 700
    },
    "size": {
     "width": 1136,
@@ -286,20 +298,6 @@
    "follow": {
     "id": 0,
     "distance": 0
-   },
-   "actionZone": {},
-   "collisions": [],
-   "timers": {
-    "text": {
-     "running": false,
-     "time": 0,
-     "max": 100,
-     "script": "./scripts/new-script-0"
-    }
-   },
-   "velocity": {
-    "x": 0,
-    "y": 0
    }
   },
   {
@@ -512,6 +510,1174 @@
    },
    "message": {
     "text": "leave me alone"
+   },
+   "collisions": [],
+   "fadePercent": {
+    "fadePercent": "100"
+   },
+   "skeptical": {
+    "skeptical": ""
+   }
+  },
+  {
+   "id": 18,
+   "name": "desk 16",
+   "position": {
+    "x": 745,
+    "y": 976
+   },
+   "size": {
+    "width": 87,
+    "height": 36
+   },
+   "velocity": {
+    "x": 0,
+    "y": 0
+   },
+   "animation": {
+    "time": 0,
+    "frame": 0,
+    "loop": true,
+    "speed": 1,
+    "name": "desk-3x"
+   },
+   "image": {
+    "sourceX": 0,
+    "sourceY": 0,
+    "sourceWidth": 0,
+    "sourceHeight": 0,
+    "destinationX": 0,
+    "destinationY": -36,
+    "destinationWidth": 87,
+    "destinationHeight": 72
+   },
+   "collisions": []
+  },
+  {
+   "id": 19,
+   "name": "worker 16",
+   "position": {
+    "x": 761,
+    "y": 931
+   },
+   "size": {
+    "width": 36,
+    "height": 36
+   },
+   "animation": {
+    "time": 0,
+    "frame": 0,
+    "loop": true,
+    "speed": 1,
+    "name": "worker-2"
+   },
+   "image": {
+    "sourceX": 0,
+    "sourceY": 0,
+    "sourceWidth": 0,
+    "sourceHeight": 0,
+    "destinationX": 0,
+    "destinationY": -29,
+    "destinationWidth": 36,
+    "destinationHeight": 66
+   },
+   "message": {
+    "text": "leave me alone"
+   },
+   "collisions": [],
+   "fadePercent": {
+    "fadePercent": "100"
+   },
+   "skeptical": {
+    "skeptical": ""
+   }
+  },
+  {
+   "id": 20,
+   "name": "desk 15",
+   "position": {
+    "x": 588,
+    "y": 976
+   },
+   "size": {
+    "width": 87,
+    "height": 36
+   },
+   "velocity": {
+    "x": 0,
+    "y": 0
+   },
+   "animation": {
+    "time": 0,
+    "frame": 0,
+    "loop": true,
+    "speed": 1,
+    "name": "desk-3x"
+   },
+   "image": {
+    "sourceX": 0,
+    "sourceY": 0,
+    "sourceWidth": 0,
+    "sourceHeight": 0,
+    "destinationX": 0,
+    "destinationY": -36,
+    "destinationWidth": 87,
+    "destinationHeight": 72
+   },
+   "collisions": []
+  },
+  {
+   "id": 21,
+   "name": "worker 15",
+   "position": {
+    "x": 602,
+    "y": 931
+   },
+   "size": {
+    "width": 36,
+    "height": 36
+   },
+   "animation": {
+    "time": 0,
+    "frame": 0,
+    "loop": true,
+    "speed": 1,
+    "name": "worker-3"
+   },
+   "image": {
+    "sourceX": 0,
+    "sourceY": 0,
+    "sourceWidth": 0,
+    "sourceHeight": 0,
+    "destinationX": 0,
+    "destinationY": -29,
+    "destinationWidth": 36,
+    "destinationHeight": 69
+   },
+   "message": {
+    "text": "leave me alone"
+   },
+   "collisions": [],
+   "fadePercent": {
+    "fadePercent": "100"
+   },
+   "skeptical": {
+    "skeptical": ""
+   }
+  },
+  {
+   "id": 22,
+   "name": "desk 14",
+   "position": {
+    "x": 315,
+    "y": 976
+   },
+   "size": {
+    "width": 87,
+    "height": 36
+   },
+   "velocity": {
+    "x": 0,
+    "y": 0
+   },
+   "animation": {
+    "time": 0,
+    "frame": 0,
+    "loop": true,
+    "speed": 1,
+    "name": "desk-3x"
+   },
+   "image": {
+    "sourceX": 0,
+    "sourceY": 0,
+    "sourceWidth": 0,
+    "sourceHeight": 0,
+    "destinationX": 0,
+    "destinationY": -36,
+    "destinationWidth": 87,
+    "destinationHeight": 72
+   },
+   "collisions": []
+  },
+  {
+   "id": 23,
+   "name": "desk 13",
+   "position": {
+    "x": 160,
+    "y": 976
+   },
+   "size": {
+    "width": 87,
+    "height": 36
+   },
+   "velocity": {
+    "x": 0,
+    "y": 0
+   },
+   "animation": {
+    "time": 0,
+    "frame": 0,
+    "loop": true,
+    "speed": 1,
+    "name": "desk-3x"
+   },
+   "image": {
+    "sourceX": 0,
+    "sourceY": 0,
+    "sourceWidth": 0,
+    "sourceHeight": 0,
+    "destinationX": 0,
+    "destinationY": -36,
+    "destinationWidth": 87,
+    "destinationHeight": 72
+   },
+   "collisions": []
+  },
+  {
+   "id": 24,
+   "name": "worker 13",
+   "position": {
+    "x": 182,
+    "y": 931
+   },
+   "size": {
+    "width": 36,
+    "height": 36
+   },
+   "animation": {
+    "time": 0,
+    "frame": 0,
+    "loop": true,
+    "speed": 1,
+    "name": "worker-1"
+   },
+   "image": {
+    "sourceX": 0,
+    "sourceY": 0,
+    "sourceWidth": 0,
+    "sourceHeight": 0,
+    "destinationX": 0,
+    "destinationY": -29,
+    "destinationWidth": 36,
+    "destinationHeight": 63
+   },
+   "message": {
+    "text": "beans"
+   },
+   "collisions": [],
+   "fadePercent": {
+    "fadePercent": "100"
+   },
+   "skeptical": {
+    "skeptical": ""
+   }
+  },
+  {
+   "id": 25,
+   "name": "worker 14",
+   "position": {
+    "x": 340,
+    "y": 931
+   },
+   "size": {
+    "width": 36,
+    "height": 36
+   },
+   "animation": {
+    "time": 0,
+    "frame": 0,
+    "loop": true,
+    "speed": 1,
+    "name": "worker-2"
+   },
+   "image": {
+    "sourceX": 0,
+    "sourceY": 0,
+    "sourceWidth": 0,
+    "sourceHeight": 0,
+    "destinationX": 0,
+    "destinationY": -29,
+    "destinationWidth": 36,
+    "destinationHeight": 66
+   },
+   "message": {
+    "text": "leave me alone"
+   },
+   "collisions": [],
+   "fadePercent": {
+    "fadePercent": "100"
+   },
+   "skeptical": {
+    "skeptical": ""
+   }
+  },
+  {
+   "id": 26,
+   "name": "worker 10",
+   "position": {
+    "x": 340,
+    "y": 803
+   },
+   "size": {
+    "width": 36,
+    "height": 36
+   },
+   "animation": {
+    "time": 0,
+    "frame": 0,
+    "loop": true,
+    "speed": 1,
+    "name": "worker-2"
+   },
+   "image": {
+    "sourceX": 0,
+    "sourceY": 0,
+    "sourceWidth": 0,
+    "sourceHeight": 0,
+    "destinationX": 0,
+    "destinationY": -29,
+    "destinationWidth": 36,
+    "destinationHeight": 66
+   },
+   "message": {
+    "text": "leave me alone"
+   },
+   "collisions": [],
+   "fadePercent": {
+    "fadePercent": "100"
+   },
+   "skeptical": {
+    "skeptical": ""
+   }
+  },
+  {
+   "id": 27,
+   "name": "desk 10",
+   "position": {
+    "x": 315,
+    "y": 848
+   },
+   "size": {
+    "width": 87,
+    "height": 36
+   },
+   "velocity": {
+    "x": 0,
+    "y": 0
+   },
+   "animation": {
+    "time": 0,
+    "frame": 0,
+    "loop": true,
+    "speed": 1,
+    "name": "desk-3x"
+   },
+   "image": {
+    "sourceX": 0,
+    "sourceY": 0,
+    "sourceWidth": 0,
+    "sourceHeight": 0,
+    "destinationX": 0,
+    "destinationY": -36,
+    "destinationWidth": 87,
+    "destinationHeight": 72
+   },
+   "collisions": []
+  },
+  {
+   "id": 28,
+   "name": "worker 11",
+   "position": {
+    "x": 602,
+    "y": 803
+   },
+   "size": {
+    "width": 36,
+    "height": 36
+   },
+   "animation": {
+    "time": 0,
+    "frame": 0,
+    "loop": true,
+    "speed": 1,
+    "name": "worker-3"
+   },
+   "image": {
+    "sourceX": 0,
+    "sourceY": 0,
+    "sourceWidth": 0,
+    "sourceHeight": 0,
+    "destinationX": 0,
+    "destinationY": -29,
+    "destinationWidth": 36,
+    "destinationHeight": 69
+   },
+   "message": {
+    "text": "leave me alone"
+   },
+   "collisions": [],
+   "fadePercent": {
+    "fadePercent": "100"
+   },
+   "skeptical": {
+    "skeptical": ""
+   }
+  },
+  {
+   "id": 29,
+   "name": "desk 11",
+   "position": {
+    "x": 588,
+    "y": 848
+   },
+   "size": {
+    "width": 87,
+    "height": 36
+   },
+   "velocity": {
+    "x": 0,
+    "y": 0
+   },
+   "animation": {
+    "time": 0,
+    "frame": 0,
+    "loop": true,
+    "speed": 1,
+    "name": "desk-3x"
+   },
+   "image": {
+    "sourceX": 0,
+    "sourceY": 0,
+    "sourceWidth": 0,
+    "sourceHeight": 0,
+    "destinationX": 0,
+    "destinationY": -36,
+    "destinationWidth": 87,
+    "destinationHeight": 72
+   },
+   "collisions": []
+  },
+  {
+   "id": 30,
+   "name": "worker 12",
+   "position": {
+    "x": 761,
+    "y": 803
+   },
+   "size": {
+    "width": 36,
+    "height": 36
+   },
+   "animation": {
+    "time": 0,
+    "frame": 0,
+    "loop": true,
+    "speed": 1,
+    "name": "worker-2"
+   },
+   "image": {
+    "sourceX": 0,
+    "sourceY": 0,
+    "sourceWidth": 0,
+    "sourceHeight": 0,
+    "destinationX": 0,
+    "destinationY": -29,
+    "destinationWidth": 36,
+    "destinationHeight": 66
+   },
+   "message": {
+    "text": "leave me alone"
+   },
+   "collisions": [],
+   "fadePercent": {
+    "fadePercent": "100"
+   },
+   "skeptical": {
+    "skeptical": ""
+   }
+  },
+  {
+   "id": 31,
+   "name": "desk 12",
+   "position": {
+    "x": 745,
+    "y": 848
+   },
+   "size": {
+    "width": 87,
+    "height": 36
+   },
+   "velocity": {
+    "x": 0,
+    "y": 0
+   },
+   "animation": {
+    "time": 0,
+    "frame": 0,
+    "loop": true,
+    "speed": 1,
+    "name": "desk-3x"
+   },
+   "image": {
+    "sourceX": 0,
+    "sourceY": 0,
+    "sourceWidth": 0,
+    "sourceHeight": 0,
+    "destinationX": 0,
+    "destinationY": -36,
+    "destinationWidth": 87,
+    "destinationHeight": 72
+   },
+   "collisions": []
+  },
+  {
+   "id": 32,
+   "name": "desk 9",
+   "position": {
+    "x": 160,
+    "y": 848
+   },
+   "size": {
+    "width": 87,
+    "height": 36
+   },
+   "velocity": {
+    "x": 0,
+    "y": 0
+   },
+   "animation": {
+    "time": 0,
+    "frame": 0,
+    "loop": true,
+    "speed": 1,
+    "name": "desk-3x"
+   },
+   "image": {
+    "sourceX": 0,
+    "sourceY": 0,
+    "sourceWidth": 0,
+    "sourceHeight": 0,
+    "destinationX": 0,
+    "destinationY": -36,
+    "destinationWidth": 87,
+    "destinationHeight": 72
+   },
+   "collisions": []
+  },
+  {
+   "id": 33,
+   "name": "worker 9",
+   "position": {
+    "x": 182,
+    "y": 803
+   },
+   "size": {
+    "width": 36,
+    "height": 36
+   },
+   "animation": {
+    "time": 0,
+    "frame": 0,
+    "loop": true,
+    "speed": 1,
+    "name": "worker-1"
+   },
+   "image": {
+    "sourceX": 0,
+    "sourceY": 0,
+    "sourceWidth": 0,
+    "sourceHeight": 0,
+    "destinationX": 0,
+    "destinationY": -29,
+    "destinationWidth": 36,
+    "destinationHeight": 63
+   },
+   "message": {
+    "text": "beans"
+   },
+   "collisions": [],
+   "fadePercent": {
+    "fadePercent": "100"
+   },
+   "skeptical": {
+    "skeptical": ""
+   }
+  },
+  {
+   "id": 34,
+   "name": "worker 5",
+   "position": {
+    "x": 182,
+    "y": 675
+   },
+   "size": {
+    "width": 36,
+    "height": 36
+   },
+   "animation": {
+    "time": 0,
+    "frame": 0,
+    "loop": true,
+    "speed": 1,
+    "name": "worker-1"
+   },
+   "image": {
+    "sourceX": 0,
+    "sourceY": 0,
+    "sourceWidth": 0,
+    "sourceHeight": 0,
+    "destinationX": 0,
+    "destinationY": -29,
+    "destinationWidth": 36,
+    "destinationHeight": 63
+   },
+   "message": {
+    "text": "sweet"
+   },
+   "collisions": [],
+   "fadePercent": {
+    "fadePercent": "100"
+   },
+   "skeptical": {
+    "skeptical": ""
+   }
+  },
+  {
+   "id": 35,
+   "name": "desk 5",
+   "position": {
+    "x": 160,
+    "y": 720
+   },
+   "size": {
+    "width": 87,
+    "height": 36
+   },
+   "velocity": {
+    "x": 0,
+    "y": 0
+   },
+   "animation": {
+    "time": 0,
+    "frame": 0,
+    "loop": true,
+    "speed": 1,
+    "name": "desk-3x"
+   },
+   "image": {
+    "sourceX": 0,
+    "sourceY": 0,
+    "sourceWidth": 0,
+    "sourceHeight": 0,
+    "destinationX": 0,
+    "destinationY": -36,
+    "destinationWidth": 87,
+    "destinationHeight": 72
+   },
+   "collisions": []
+  },
+  {
+   "id": 36,
+   "name": "worker 6",
+   "position": {
+    "x": 340,
+    "y": 675
+   },
+   "size": {
+    "width": 36,
+    "height": 36
+   },
+   "animation": {
+    "time": 0,
+    "frame": 0,
+    "loop": true,
+    "speed": 1,
+    "name": "worker-2"
+   },
+   "image": {
+    "sourceX": 0,
+    "sourceY": 0,
+    "sourceWidth": 0,
+    "sourceHeight": 0,
+    "destinationX": 0,
+    "destinationY": -29,
+    "destinationWidth": 36,
+    "destinationHeight": 66
+   },
+   "message": {
+    "text": "leave me alone"
+   },
+   "collisions": [],
+   "fadePercent": {
+    "fadePercent": "100"
+   },
+   "skeptical": {
+    "skeptical": ""
+   }
+  },
+  {
+   "id": 37,
+   "name": "desk 6",
+   "position": {
+    "x": 315,
+    "y": 720
+   },
+   "size": {
+    "width": 87,
+    "height": 36
+   },
+   "velocity": {
+    "x": 0,
+    "y": 0
+   },
+   "animation": {
+    "time": 0,
+    "frame": 0,
+    "loop": true,
+    "speed": 1,
+    "name": "desk-3x"
+   },
+   "image": {
+    "sourceX": 0,
+    "sourceY": 0,
+    "sourceWidth": 0,
+    "sourceHeight": 0,
+    "destinationX": 0,
+    "destinationY": -36,
+    "destinationWidth": 87,
+    "destinationHeight": 72
+   },
+   "collisions": []
+  },
+  {
+   "id": 38,
+   "name": "desk 7",
+   "position": {
+    "x": 588,
+    "y": 720
+   },
+   "size": {
+    "width": 87,
+    "height": 36
+   },
+   "velocity": {
+    "x": 0,
+    "y": 0
+   },
+   "animation": {
+    "time": 0,
+    "frame": 0,
+    "loop": true,
+    "speed": 1,
+    "name": "desk-3x"
+   },
+   "image": {
+    "sourceX": 0,
+    "sourceY": 0,
+    "sourceWidth": 0,
+    "sourceHeight": 0,
+    "destinationX": 0,
+    "destinationY": -36,
+    "destinationWidth": 87,
+    "destinationHeight": 72
+   },
+   "collisions": []
+  },
+  {
+   "id": 39,
+   "name": "desk 8",
+   "position": {
+    "x": 745,
+    "y": 720
+   },
+   "size": {
+    "width": 87,
+    "height": 36
+   },
+   "velocity": {
+    "x": 0,
+    "y": 0
+   },
+   "animation": {
+    "time": 0,
+    "frame": 0,
+    "loop": true,
+    "speed": 1,
+    "name": "desk-3x"
+   },
+   "image": {
+    "sourceX": 0,
+    "sourceY": 0,
+    "sourceWidth": 0,
+    "sourceHeight": 0,
+    "destinationX": 0,
+    "destinationY": -36,
+    "destinationWidth": 87,
+    "destinationHeight": 72
+   },
+   "collisions": []
+  },
+  {
+   "id": 40,
+   "name": "worker 7",
+   "position": {
+    "x": 602,
+    "y": 675
+   },
+   "size": {
+    "width": 36,
+    "height": 36
+   },
+   "animation": {
+    "time": 0,
+    "frame": 0,
+    "loop": true,
+    "speed": 1,
+    "name": "worker-3"
+   },
+   "image": {
+    "sourceX": 0,
+    "sourceY": 0,
+    "sourceWidth": 0,
+    "sourceHeight": 0,
+    "destinationX": 0,
+    "destinationY": -29,
+    "destinationWidth": 36,
+    "destinationHeight": 69
+   },
+   "message": {
+    "text": "leave me alone"
+   },
+   "collisions": [],
+   "fadePercent": {
+    "fadePercent": "100"
+   },
+   "skeptical": {
+    "skeptical": ""
+   }
+  },
+  {
+   "id": 41,
+   "name": "worker 8",
+   "position": {
+    "x": 761,
+    "y": 675
+   },
+   "size": {
+    "width": 36,
+    "height": 36
+   },
+   "animation": {
+    "time": 0,
+    "frame": 0,
+    "loop": true,
+    "speed": 1,
+    "name": "worker-4"
+   },
+   "image": {
+    "sourceX": 0,
+    "sourceY": 0,
+    "sourceWidth": 0,
+    "sourceHeight": 0,
+    "destinationX": 0,
+    "destinationY": -29,
+    "destinationWidth": 36,
+    "destinationHeight": 66
+   },
+   "message": {
+    "text": "leave me alone"
+   },
+   "collisions": [],
+   "fadePercent": {
+    "fadePercent": "100"
+   },
+   "skeptical": {
+    "skeptical": ""
+   }
+  },
+  {
+   "id": 42,
+   "name": "worker 20",
+   "position": {
+    "x": 761,
+    "y": 1059
+   },
+   "size": {
+    "width": 36,
+    "height": 36
+   },
+   "animation": {
+    "time": 0,
+    "frame": 0,
+    "loop": true,
+    "speed": 1,
+    "name": "worker-4"
+   },
+   "image": {
+    "sourceX": 0,
+    "sourceY": 0,
+    "sourceWidth": 0,
+    "sourceHeight": 0,
+    "destinationX": 0,
+    "destinationY": -29,
+    "destinationWidth": 36,
+    "destinationHeight": 66
+   },
+   "message": {
+    "text": "leave me alone"
+   },
+   "collisions": [],
+   "fadePercent": {
+    "fadePercent": "100"
+   },
+   "skeptical": {
+    "skeptical": ""
+   }
+  },
+  {
+   "id": 43,
+   "name": "desk 20",
+   "position": {
+    "x": 745,
+    "y": 1104
+   },
+   "size": {
+    "width": 87,
+    "height": 36
+   },
+   "velocity": {
+    "x": 0,
+    "y": 0
+   },
+   "animation": {
+    "time": 0,
+    "frame": 0,
+    "loop": true,
+    "speed": 1,
+    "name": "desk-3x"
+   },
+   "image": {
+    "sourceX": 0,
+    "sourceY": 0,
+    "sourceWidth": 0,
+    "sourceHeight": 0,
+    "destinationX": 0,
+    "destinationY": -36,
+    "destinationWidth": 87,
+    "destinationHeight": 72
+   },
+   "collisions": []
+  },
+  {
+   "id": 44,
+   "name": "desk 19",
+   "position": {
+    "x": 588,
+    "y": 1104
+   },
+   "size": {
+    "width": 87,
+    "height": 36
+   },
+   "velocity": {
+    "x": 0,
+    "y": 0
+   },
+   "animation": {
+    "time": 0,
+    "frame": 0,
+    "loop": true,
+    "speed": 1,
+    "name": "desk-3x"
+   },
+   "image": {
+    "sourceX": 0,
+    "sourceY": 0,
+    "sourceWidth": 0,
+    "sourceHeight": 0,
+    "destinationX": 0,
+    "destinationY": -36,
+    "destinationWidth": 87,
+    "destinationHeight": 72
+   },
+   "collisions": []
+  },
+  {
+   "id": 45,
+   "name": "worker 20",
+   "position": {
+    "x": 602,
+    "y": 1059
+   },
+   "size": {
+    "width": 36,
+    "height": 36
+   },
+   "animation": {
+    "time": 0,
+    "frame": 0,
+    "loop": true,
+    "speed": 1,
+    "name": "worker-3"
+   },
+   "image": {
+    "sourceX": 0,
+    "sourceY": 0,
+    "sourceWidth": 0,
+    "sourceHeight": 0,
+    "destinationX": 0,
+    "destinationY": -29,
+    "destinationWidth": 36,
+    "destinationHeight": 69
+   },
+   "message": {
+    "text": "leave me alone"
+   },
+   "collisions": [],
+   "fadePercent": {
+    "fadePercent": "100"
+   },
+   "skeptical": {
+    "skeptical": ""
+   }
+  },
+  {
+   "id": 46,
+   "name": "desk 18",
+   "position": {
+    "x": 315,
+    "y": 1104
+   },
+   "size": {
+    "width": 87,
+    "height": 36
+   },
+   "velocity": {
+    "x": 0,
+    "y": 0
+   },
+   "animation": {
+    "time": 0,
+    "frame": 0,
+    "loop": true,
+    "speed": 1,
+    "name": "desk-3x"
+   },
+   "image": {
+    "sourceX": 0,
+    "sourceY": 0,
+    "sourceWidth": 0,
+    "sourceHeight": 0,
+    "destinationX": 0,
+    "destinationY": -36,
+    "destinationWidth": 87,
+    "destinationHeight": 72
+   },
+   "collisions": []
+  },
+  {
+   "id": 47,
+   "name": "worker 20",
+   "position": {
+    "x": 340,
+    "y": 1059
+   },
+   "size": {
+    "width": 36,
+    "height": 36
+   },
+   "animation": {
+    "time": 0,
+    "frame": 0,
+    "loop": true,
+    "speed": 1,
+    "name": "worker-2"
+   },
+   "image": {
+    "sourceX": 0,
+    "sourceY": 0,
+    "sourceWidth": 0,
+    "sourceHeight": 0,
+    "destinationX": 0,
+    "destinationY": -29,
+    "destinationWidth": 36,
+    "destinationHeight": 66
+   },
+   "message": {
+    "text": "leave me alone"
+   },
+   "collisions": [],
+   "fadePercent": {
+    "fadePercent": "100"
+   },
+   "skeptical": {
+    "skeptical": ""
+   }
+  },
+  {
+   "id": 48,
+   "name": "desk 17",
+   "position": {
+    "x": 160,
+    "y": 1104
+   },
+   "size": {
+    "width": 87,
+    "height": 36
+   },
+   "velocity": {
+    "x": 0,
+    "y": 0
+   },
+   "animation": {
+    "time": 0,
+    "frame": 0,
+    "loop": true,
+    "speed": 1,
+    "name": "desk-3x"
+   },
+   "image": {
+    "sourceX": 0,
+    "sourceY": 0,
+    "sourceWidth": 0,
+    "sourceHeight": 0,
+    "destinationX": 0,
+    "destinationY": -36,
+    "destinationWidth": 87,
+    "destinationHeight": 72
+   },
+   "collisions": []
+  },
+  {
+   "id": 49,
+   "name": "worker 17",
+   "position": {
+    "x": 182,
+    "y": 1059
+   },
+   "size": {
+    "width": 36,
+    "height": 36
+   },
+   "animation": {
+    "time": 0,
+    "frame": 0,
+    "loop": true,
+    "speed": 1,
+    "name": "worker-1"
+   },
+   "image": {
+    "sourceX": 0,
+    "sourceY": 0,
+    "sourceWidth": 0,
+    "sourceHeight": 0,
+    "destinationX": 0,
+    "destinationY": -29,
+    "destinationWidth": 36,
+    "destinationHeight": 63
+   },
+   "message": {
+    "text": "sweet"
    },
    "collisions": [],
    "fadePercent": {

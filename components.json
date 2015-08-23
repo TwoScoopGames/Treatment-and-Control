@@ -88,9 +88,5 @@
     "default": 0
    }
   ]
- },
- "actionZone": {
-  "defaults": {},
-  "properties": []
  }
 }
