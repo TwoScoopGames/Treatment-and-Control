@@ -63,7 +63,7 @@ function pickMessage(other) {
     arr = responses.peopleGrey;
   }
   var i = Math.floor(Math.random() * arr.length);
-  return arr[i];
+  return other.name + ": " + arr[i];
 }
 
 function showMessage(data, entity, message) {
