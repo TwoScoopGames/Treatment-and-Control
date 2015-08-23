@@ -260,6 +260,26 @@
     "width": 18,
     "height": 98
    }
+  },
+  {
+   "id": 10,
+   "name": "camera",
+   "position": {
+    "x": 0,
+    "y": 0
+   },
+   "size": {
+    "width": 1136,
+    "height": 640
+   },
+   "follow": {
+    "id": 0,
+    "distance": 100
+   },
+   "camera": {
+    "x": 0,
+    "y": 0
+   }
   }
  ]
 }

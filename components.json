@@ -54,5 +54,39 @@
     "default": ""
    }
   ]
+ },
+ "follow": {
+  "defaults": {},
+  "properties": [
+   {
+    "property": "id",
+    "label": "Id",
+    "type": "number",
+    "default": ""
+   },
+   {
+    "property": "distance",
+    "label": "Distance",
+    "type": "number",
+    "default": 100
+   }
+  ]
+ },
+ "camera": {
+  "defaults": {},
+  "properties": [
+   {
+    "property": "x",
+    "label": "X",
+    "type": "number",
+    "default": 0
+   },
+   {
+    "property": "y",
+    "label": "Y",
+    "type": "number",
+    "default": 0
+   }
+  ]
  }
 }
