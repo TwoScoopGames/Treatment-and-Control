@@ -1,5 +1,77 @@
 "use strict";
 
+var responses = {
+  "peopleGrey":
+  [
+    "...",
+    "I need to get back to work.",
+    "I'm not on your list."
+  ],
+  "peopleMedium":
+  [
+    "How are you today?",
+    "Did you see the sunset last night?",
+    "How is your family?",
+    "This job is boring.",
+    "This job is boring, I wish I could work at the refinery.",
+    "<name> hasn't showed up in a few days...",
+    "I wish I was chosen to be a cook."
+  ],
+  "peopleColorful":
+  [
+    "I don't think we really need these pills.",
+    "I'm tired of this place.",
+    "We aren't criminals, why are we treated like this?",
+    "My brother was assigned to the refinery and we haven't seen him since.",
+    "People are dissapearing and nobody seems to care."
+  ],
+  "bluePill":
+  [
+    "Thanks.",
+    "Time for my medicine?",
+    "It's that time again.",
+    "Can't they make these taste better?",
+    "..."
+  ],
+  "bluePillSkeptical":
+  [
+    "If I have to...",
+    "Do we really need these?",
+    "There hasen't been an incident in years, do we still need these pills?"
+  ],
+  "redPill":
+  [
+    "This is different than the usual pills.",
+    "Are these a new flavor?",
+    "What is this one for?"
+  ],
+  "redPillSkeptical":
+  [
+    "They gave <name> one of these snd they havent been back to work.",
+    "Isn't this what <name> takes? Where are they...?"
+  ],
+};
+
+function pickMessage(other) {
+  var arr = [""];
+  var fade = parseInt(other.fadePercent.fadePercent);
+  if (fade === 0) {
+    arr = responses.peopleColorful;
+  } else if (fade === 50) {
+    arr = responses.peopleMedium;
+  } else if (fade === 100) {
+    arr = responses.peopleGrey;
+  }
+  var i = Math.floor(Math.random() * arr.length);
+  return arr[i];
+}
+
+function showMessage(data, entity, message) {
+  entity.message = { text: message, len: 0 };
+  entity.timers.text.running = true;
+  data.sounds.play("textpopup2");
+}
+
 module.exports = function(ecs, data) { // eslint-disable-line no-unused-vars
 	ecs.addEach(function(entity, elapsed) { // eslint-disable-line no-unused-vars
         if (data.input.button("action")) {
@@ -17,9 +89,11 @@ module.exports = function(ecs, data) { // eslint-disable-line no-unused-vars
               for (var i = 0; i < entity.collisions.length; i++) {
                 var other = data.entities.entities[entity.collisions[i]];
                 if (other.message) {
-                  entity.message = { text: other.message.text, len: 0 };
-                  entity.timers.text.running = true;
-                  data.sounds.play("textpopup2");
+                  showMessage(data, entity, other.message.text);
+                  break;
+                }
+                if (other.fadePercent) {
+                  showMessage(data, entity, pickMessage(other));
                   break;
                 }
                 if (other.deliveries) {
@@ -27,13 +101,9 @@ module.exports = function(ecs, data) { // eslint-disable-line no-unused-vars
                     return !d.done;
                   });
                   if (left.length === 0) {
-                    entity.message = { text: "No pills left.", len: 0 };
-                    entity.timers.text.running = true;
-                    data.sounds.play("textpopup2");                    
+	                  showMessage(data, entity, "No pills left");
                   } else {
-                    entity.message = { text: left[0].name + " gets the\n" + left[0].pill + " pill.", len: 0 };
-                    entity.timers.text.running = true;
-                    data.sounds.play("textpopup2");                                        
+	                  showMessage(data, entity, left[0].name + " gets the\n" + left[0].pill + " pill.");
                   }
                 }
               }

@@ -163,9 +163,6 @@
     "destinationWidth": 36,
     "destinationHeight": 63
    },
-   "message": {
-    "text": "sweet"
-   },
    "collisions": [],
    "fadePercent": {
     "fadePercent": "100"
@@ -201,9 +198,6 @@
     "destinationY": -29,
     "destinationWidth": 36,
     "destinationHeight": 66
-   },
-   "message": {
-    "text": "leave me alone"
    },
    "collisions": [],
    "fadePercent": {
