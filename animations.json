@@ -572,5 +572,19 @@
     }
    }
   }
+ ],
+ "textbox-big": [
+  {
+   "time": 100,
+   "properties": {
+    "image": {
+     "name": "textbox-big",
+     "sourceX": 0,
+     "sourceY": 0,
+     "sourceWidth": 1137,
+     "sourceHeight": 213
+    }
+   }
+  }
  ]
 }
