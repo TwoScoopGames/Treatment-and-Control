@@ -23,7 +23,7 @@ module.exports = function(ecs, data) {
             if (!other.message) {
               continue;
             }
-            console.log(other.message.text);
+            entity.message = { text: other.message.text };
           }
         }
 	}, ["player"]);
