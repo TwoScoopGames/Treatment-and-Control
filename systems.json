@@ -85,6 +85,10 @@
    "scenes": [
     "main"
    ]
+  },
+  {
+   "name": "./systems/renderer/drawBackground",
+   "scenes": []
   }
  ]
 }
