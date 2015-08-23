@@ -15,22 +15,29 @@ module.exports = function(ecs, data) {
 		entity.velocity.x = 0;
 		entity.velocity.y = 0;
      	var speed = 0.2;
+		entity.animation.speed = 0;
+      
 		if (data.input.button("left")) {
 			entity.velocity.x = -speed;
-			setAnimation(entity, "cartboy-walk-left-3x");
+          	if (!data.input.button("up") && !data.input.button("down")) {
+				setAnimation(entity, "cartboy-walk-left-3x");
+            }
 		} else if (data.input.button("right")) {
 			entity.velocity.x = speed;
-			setAnimation(entity, "cartboy-walk-right-3x");
-		} else if (data.input.button("up")) {
+          	if (!data.input.button("up") && !data.input.button("down")) {
+				setAnimation(entity, "cartboy-walk-right-3x");
+            }
+		}
+      	if (data.input.button("up")) {
 			entity.velocity.y = -speed;
 			setAnimation(entity, "cartboy-walk-up-3x");
 		} else if (data.input.button("down")) {
 			entity.velocity.y = speed;
 			setAnimation(entity, "cartboy-walk-down-3x");
-		} else {
-	      	entity.animation.speed = 0;
-          entity.animation.frame = 0;
-          entity.animation.time = 0;
+		}
+      	if (entity.animation.speed === 0) {
+			entity.animation.frame = 0;
+			entity.animation.time = 0;
         }
       	if (data.input.button("action")) {
           var risingEdge = !entity.action;
