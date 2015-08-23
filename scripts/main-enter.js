@@ -33,7 +33,6 @@ module.exports = function(data) {
   var names = starterNames.slice(0);
   shuffle(names);
 
-
   Object.keys(data.entities.entities).forEach(function(id) {
     var entity = data.entities.entities[id];
     if (entity.fadePercent === undefined) {

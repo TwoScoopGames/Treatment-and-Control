@@ -52,7 +52,7 @@ var responses = {
   ],
 };
 
-function pickMessage(other) {
+function pickMessage(entity, other, cart) {
   var arr = [""];
   var fade = parseInt(other.fadePercent.fadePercent);
   if (fade === 0) {
@@ -61,6 +61,18 @@ function pickMessage(other) {
     arr = responses.peopleMedium;
   } else if (fade === 100) {
     arr = responses.peopleGrey;
+  }
+  if (entity.target && entity.target.name === other.name) {
+    if (entity.target.pill === "blue") {
+      arr = responses.bluePill;
+
+      for (var i = 0; i < cart.deliveries.length; i++) {
+        if (cart.deliveries[i].name === entity.target.name) {
+          cart.deliveries[i].done = true;
+        }
+      }
+      entity.target = undefined;
+    }
   }
   var i = Math.floor(Math.random() * arr.length);
   return other.name + ": " + arr[i];
@@ -74,6 +86,8 @@ function showMessage(data, entity, message) {
 
 module.exports = function(ecs, data) { // eslint-disable-line no-unused-vars
 	ecs.addEach(function(entity, elapsed) { // eslint-disable-line no-unused-vars
+      var cart = data.entities.entities[3];
+
         if (data.input.button("action")) {
           var risingEdge = !entity.action;
           entity.action = true;
@@ -93,7 +107,7 @@ module.exports = function(ecs, data) { // eslint-disable-line no-unused-vars
                   break;
                 }
                 if (other.fadePercent) {
-                  showMessage(data, entity, pickMessage(other));
+                  showMessage(data, entity, pickMessage(entity, other, cart));
                   break;
                 }
                 if (other.deliveries) {
@@ -103,6 +117,7 @@ module.exports = function(ecs, data) { // eslint-disable-line no-unused-vars
                   if (left.length === 0) {
 	                  showMessage(data, entity, "No pills left");
                   } else {
+                   	  entity.target = left[0];
 	                  showMessage(data, entity, left[0].name + " gets the\n" + left[0].pill + " pill.");
                   }
                 }
