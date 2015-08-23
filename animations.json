@@ -378,5 +378,31 @@
     }
    }
   }
+ ],
+ "cart-3x-f2": [
+  {
+   "time": 800,
+   "properties": {
+    "image": {
+     "name": "cart-3x-f2",
+     "sourceX": 0,
+     "sourceY": 0,
+     "sourceWidth": 42,
+     "sourceHeight": 63
+    }
+   }
+  },
+  {
+   "time": 100,
+   "properties": {
+    "image": {
+     "name": "cart-3x-f2",
+     "sourceX": 42,
+     "sourceY": 0,
+     "sourceWidth": 42,
+     "sourceHeight": 63
+    }
+   }
+  }
  ]
 }
