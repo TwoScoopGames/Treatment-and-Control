@@ -21,8 +21,6 @@ module.exports = function(ecs, data) {
           var risingEdge = !entity.action;
           entity.action = true;
           if (risingEdge) {
-            console.log("action");
-          
             if (entity.message) {
               if (entity.message.len < entity.message.text.length) {
                 entity.message.len = entity.message.text.length;
