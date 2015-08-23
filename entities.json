@@ -218,7 +218,7 @@
    "name": "boundry",
    "size": {
     "width": 1000,
-    "height": 781
+    "height": 768
    },
    "position": {
     "x": 2,
@@ -269,7 +269,7 @@
    "name": "camera",
    "position": {
     "x": 0,
-    "y": 700
+    "y": 0
    },
    "size": {
     "width": 1136,
@@ -406,7 +406,7 @@
    "id": 15,
    "name": "gaurd",
    "position": {
-    "x": 477,
+    "x": 401,
     "y": 397
    },
    "size": {
@@ -1675,6 +1675,45 @@
     "destinationY": -29,
     "destinationWidth": 36,
     "destinationHeight": 63
+   },
+   "message": {
+    "text": "sweet"
+   },
+   "collisions": [],
+   "fadePercent": {
+    "fadePercent": "100"
+   },
+   "skeptical": {
+    "skeptical": ""
+   }
+  },
+  {
+   "id": 50,
+   "name": "gaurd 2",
+   "position": {
+    "x": 551,
+    "y": 397
+   },
+   "size": {
+    "width": 36,
+    "height": 36
+   },
+   "animation": {
+    "time": 0,
+    "frame": 0,
+    "loop": true,
+    "speed": 1,
+    "name": "gaurd-2"
+   },
+   "image": {
+    "sourceX": 0,
+    "sourceY": 0,
+    "sourceWidth": 0,
+    "sourceHeight": 0,
+    "destinationX": -6,
+    "destinationY": -47,
+    "destinationWidth": 48,
+    "destinationHeight": 78
    },
    "message": {
     "text": "sweet"
