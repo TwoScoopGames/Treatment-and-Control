@@ -2,6 +2,7 @@
 
 function setAnimation(entity, animation) {
 	entity.animation.speed = 1;
+  entity.timers.footsteps.running = true;
   	if (entity.animation.name === animation) {
       return;
     }
@@ -36,6 +37,7 @@ module.exports = function(ecs, data) {
 			setAnimation(entity, "cartboy-walk-down-3x");
 		}
       	if (entity.animation.speed === 0) {
+            entity.timers.footsteps.running = false;
 			entity.animation.frame = 0;
 			entity.animation.time = 0;
         }

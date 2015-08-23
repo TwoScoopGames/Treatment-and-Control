@@ -40,6 +40,12 @@
      "time": 0,
      "max": 100,
      "script": "./scripts/new-script-0"
+    },
+    "footsteps": {
+     "running": false,
+     "time": 0,
+     "max": 300,
+     "script": "./scripts/new-script-1"
     }
    }
   },
