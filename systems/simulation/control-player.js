@@ -1,4 +1,4 @@
-"use strict";
+ "use strict";
 
 module.exports = function(ecs, data) {
 	ecs.addEach(function(entity, elapsed) { // jshint ignore:line
@@ -18,13 +18,25 @@ module.exports = function(ecs, data) {
 			entity.velocity.y = speed;
 		}
       	if (data.input.button("action")) {
-          for (var i = 0; i < entity.collisions.length; i++) {
-            var other = data.entities.entities[entity.collisions[i]];
-            if (!other.message) {
-              continue;
+          var risingEdge = !entity.action;
+          entity.action = true;
+          if (risingEdge) {
+            console.log("action");
+          
+            if (entity.message) {
+              entity.message = undefined;
+            } else {
+              for (var i = 0; i < entity.collisions.length; i++) {
+                var other = data.entities.entities[entity.collisions[i]];
+                if (!other.message) {
+                  continue;
+                }
+                entity.message = { text: other.message.text };
+              }
             }
-            entity.message = { text: other.message.text };
           }
+        } else {
+          entity.action = false;
         }
 	}, ["player"]);
 };
