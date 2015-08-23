@@ -66,5 +66,29 @@ module.exports = function(ecs, data) {
         } else {
           entity.action = false;
         }
+      
+      var bounds = data.entities.entities[6];
+      var player = entity;
+      var playerRight = player.position.x + player.size.width;
+      var playerBottom = player.position.y + player.size.height;
+      var boundsRight = bounds.position.x + bounds.size.width;
+      var boundsBottom = bounds.position.y + bounds.size.height;
+      // left bounds
+      if( player.position.x < bounds.position.x){
+      	player.position.x = bounds.position.x;
+      }
+      // right bounds
+      if( playerRight > boundsRight){
+      	player.position.x = boundsRight - player.size.width;
+      }
+      // top bounds
+      if( player.position.y < bounds.position.y){
+      	player.position.y = bounds.position.y;
+      }
+      // bottom bounds
+      if( playerBottom > boundsBottom){
+      	player.position.y = boundsBottom - player.size.height;
+      }
+                                          
 	}, ["player"]);
 };
