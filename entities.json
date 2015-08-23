@@ -425,7 +425,7 @@
     "destinationHeight": 81
    },
    "message": {
-    "text": "sweet"
+    "text": "Get back to work."
    },
    "collisions": [],
    "fadePercent": {
@@ -463,9 +463,6 @@
     "destinationWidth": 36,
     "destinationHeight": 69
    },
-   "message": {
-    "text": "leave me alone"
-   },
    "collisions": [],
    "fadePercent": {
     "fadePercent": "100"
@@ -501,9 +498,6 @@
     "destinationY": -29,
     "destinationWidth": 36,
     "destinationHeight": 66
-   },
-   "message": {
-    "text": "leave me alone"
    },
    "collisions": [],
    "fadePercent": {
