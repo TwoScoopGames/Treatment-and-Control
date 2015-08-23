@@ -157,7 +157,13 @@
    "message": {
     "text": "sweet"
    },
-   "collisions": []
+   "collisions": [],
+   "fadePercent": {
+    "fadePercent": "100"
+   },
+   "skeptical": {
+    "skeptical": ""
+   }
   },
   {
    "id": 5,
@@ -190,7 +196,13 @@
    "message": {
     "text": "leave me alone"
    },
-   "collisions": []
+   "collisions": [],
+   "fadePercent": {
+    "fadePercent": "100"
+   },
+   "skeptical": {
+    "skeptical": ""
+   }
   }
  ]
 }

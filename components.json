@@ -32,5 +32,27 @@
     "default": "..."
    }
   ]
+ },
+ "fadePercent": {
+  "defaults": {},
+  "properties": [
+   {
+    "property": "fadePercent",
+    "label": "Fade %",
+    "type": "number",
+    "default": "100"
+   }
+  ]
+ },
+ "skeptical": {
+  "defaults": {},
+  "properties": [
+   {
+    "property": "skeptical",
+    "label": "Skeptical",
+    "type": "boolean",
+    "default": ""
+   }
+  ]
  }
 }
