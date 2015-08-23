@@ -53,6 +53,12 @@
    "scenes": [
     "main"
    ]
+  },
+  {
+   "name": "./systems/simulation/set-worker-animation",
+   "scenes": [
+    "main"
+   ]
   }
  ],
  "renderer": [

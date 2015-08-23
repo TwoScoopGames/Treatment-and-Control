@@ -161,7 +161,7 @@
    },
    "collisions": [],
    "fadePercent": {
-    "fadePercent": "100"
+    "fadePercent": 0
    },
    "skeptical": {
     "skeptical": ""
@@ -425,13 +425,7 @@
    "message": {
     "text": "Guard: Get back to work!"
    },
-   "collisions": [],
-   "fadePercent": {
-    "fadePercent": "100"
-   },
-   "skeptical": {
-    "skeptical": ""
-   }
+   "collisions": []
   },
   {
    "id": 16,
@@ -1592,13 +1586,7 @@
    "message": {
     "text": "Guard: Don't you have work to do?"
    },
-   "collisions": [],
-   "fadePercent": {
-    "fadePercent": "100"
-   },
-   "skeptical": {
-    "skeptical": ""
-   }
+   "collisions": []
   }
  ]
 }

@@ -1,5 +1,15 @@
 "use strict";
 
+var bluePillSounds = [
+  "bluepills1",
+  "bluepills2",
+  "bluepills3",
+  "bluepills4",
+  "bluepills5",
+  "bluepills6",
+  "bluepills7",
+  "bluepills8"
+];
 var responses = {
   "peopleGrey":
   [
@@ -52,7 +62,7 @@ var responses = {
   ],
 };
 
-function pickMessage(entity, other, cart) {
+function pickMessage(entity, other, cart, data) {
   var arr = [""];
   var fade = parseInt(other.fadePercent.fadePercent);
   if (fade === 0) {
@@ -72,6 +82,9 @@ function pickMessage(entity, other, cart) {
         }
       }
       entity.target = undefined;
+      other.fadePercent.fadePercent = 100;
+      
+      data.sounds.play(bluePillSounds[Math.floor(Math.random()*bluePillSounds.length)]);
     }
   }
   var i = Math.floor(Math.random() * arr.length);
@@ -107,7 +120,7 @@ module.exports = function(ecs, data) { // eslint-disable-line no-unused-vars
                   break;
                 }
                 if (other.fadePercent) {
-                  showMessage(data, entity, pickMessage(entity, other, cart));
+                  showMessage(data, entity, pickMessage(entity, other, cart, data));
                   break;
                 }
                 if (other.deliveries) {

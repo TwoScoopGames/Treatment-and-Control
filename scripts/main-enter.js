@@ -33,12 +33,16 @@ module.exports = function(data) {
   var names = starterNames.slice(0);
   shuffle(names);
 
+  var nameMap = {};
+  
   Object.keys(data.entities.entities).forEach(function(id) {
     var entity = data.entities.entities[id];
     if (entity.fadePercent === undefined) {
       return;
     }
     entity.name = names.pop();
+    entity.fadePercent.fadePercent = 100;
+    nameMap[entity.name] = entity.id;
   });
 
   var cart = data.entities.entities[3];
@@ -49,6 +53,7 @@ module.exports = function(data) {
   shuffle(pillNames);
   for (var i = 0; i < 5; i++) {
     cart.deliveries.push({ name: pillNames[i], pill: "blue" });
+    var worker = data.entities.entities[nameMap[pillNames[i]]];
+    worker.fadePercent.fadePercent = 0;
   }
-
 };
