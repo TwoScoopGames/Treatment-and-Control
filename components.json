@@ -1,1 +1,25 @@
-{}
+{
+ "zindex": {
+  "defaults": {},
+  "properties": [
+   {
+    "property": "zindex",
+    "label": "Z-Index",
+    "type": "number",
+    "default": 0
+   }
+  ]
+ },
+ "player": {
+  "defaults": {},
+  "properties": [
+   {
+    "property": "player",
+    "label": "player",
+    "type": "boolean",
+    "default": true,
+    "hidden": true
+   }
+  ]
+ }
+}

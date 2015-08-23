@@ -35,6 +35,12 @@
    "scenes": [
     "main"
    ]
+  },
+  {
+   "name": "./systems/simulation/resolveCollisions",
+   "scenes": [
+    "main"
+   ]
   }
  ],
  "renderer": [
@@ -51,13 +57,13 @@
    ]
   },
   {
-   "name": "./systems/renderer/render-player",
+   "name": "splatjs:drawImage",
    "scenes": [
     "main"
    ]
   },
   {
-   "name": "splatjs:drawImage",
+   "name": "./systems/renderer/render-player",
    "scenes": [
     "main"
    ]

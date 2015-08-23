@@ -54,5 +54,19 @@
     }
    }
   }
+ ],
+ "bg": [
+  {
+   "time": 100,
+   "properties": {
+    "image": {
+     "name": "bg",
+     "sourceX": 0,
+     "sourceY": 0,
+     "sourceWidth": 335,
+     "sourceHeight": 398
+    }
+   }
+  }
  ]
 }

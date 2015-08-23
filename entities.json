@@ -6,11 +6,11 @@
    "player": true,
    "position": {
     "x": 100,
-    "y": 100
+    "y": 170
    },
    "size": {
-    "width": 98,
-    "height": 46
+    "width": 12,
+    "height": 8
    },
    "velocity": {
     "x": 0,
@@ -29,22 +29,22 @@
     "sourceWidth": 0,
     "sourceHeight": 0,
     "destinationX": 0,
-    "destinationY": 0,
-    "destinationWidth": 120,
-    "destinationHeight": 230
-   }
+    "destinationY": -15,
+    "destinationWidth": 12,
+    "destinationHeight": 23
+   },
+   "collisions": []
   },
   {
    "id": 1,
-   "name": "desk",
-   "player": true,
+   "name": "desk 1",
    "position": {
-    "x": 300,
-    "y": 100
+    "x": 61,
+    "y": 190
    },
    "size": {
-    "width": 98,
-    "height": 46
+    "width": 29,
+    "height": 12
    },
    "velocity": {
     "x": 0,
@@ -63,10 +63,277 @@
     "sourceWidth": 0,
     "sourceHeight": 0,
     "destinationX": 0,
+    "destinationY": -12,
+    "destinationWidth": 29,
+    "destinationHeight": 24
+   },
+   "collisions": []
+  },
+  {
+   "id": 2,
+   "name": "background",
+   "position": {
+    "x": 0,
+    "y": 0
+   },
+   "animation": {
+    "time": 0,
+    "frame": 0,
+    "loop": true,
+    "speed": 1,
+    "name": "bg"
+   },
+   "image": {
+    "sourceX": 0,
+    "sourceY": 0,
+    "sourceWidth": 0,
+    "sourceHeight": 0,
+    "destinationX": 0,
     "destinationY": 0,
-    "destinationWidth": 290,
-    "destinationHeight": 240
+    "destinationWidth": 335,
+    "destinationHeight": 398
+   },
+   "zindex": {
+    "zindex": -1
    }
+  },
+  {
+   "id": 3,
+   "name": "desk 2",
+   "position": {
+    "x": 109,
+    "y": 190
+   },
+   "size": {
+    "width": 29,
+    "height": 12
+   },
+   "velocity": {
+    "x": 0,
+    "y": 0
+   },
+   "animation": {
+    "time": 0,
+    "frame": 0,
+    "loop": true,
+    "speed": 1,
+    "name": "desk"
+   },
+   "image": {
+    "sourceX": 0,
+    "sourceY": 0,
+    "sourceWidth": 0,
+    "sourceHeight": 0,
+    "destinationX": 0,
+    "destinationY": -12,
+    "destinationWidth": 29,
+    "destinationHeight": 24
+   },
+   "collisions": []
+  },
+  {
+   "id": 4,
+   "name": "desk 3",
+   "position": {
+    "x": 194,
+    "y": 190
+   },
+   "size": {
+    "width": 29,
+    "height": 12
+   },
+   "velocity": {
+    "x": 0,
+    "y": 0
+   },
+   "animation": {
+    "time": 0,
+    "frame": 0,
+    "loop": true,
+    "speed": 1,
+    "name": "desk"
+   },
+   "image": {
+    "sourceX": 0,
+    "sourceY": 0,
+    "sourceWidth": 0,
+    "sourceHeight": 0,
+    "destinationX": 0,
+    "destinationY": -12,
+    "destinationWidth": 29,
+    "destinationHeight": 24
+   },
+   "collisions": []
+  },
+  {
+   "id": 5,
+   "name": "desk 4",
+   "position": {
+    "x": 243,
+    "y": 190
+   },
+   "size": {
+    "width": 29,
+    "height": 12
+   },
+   "velocity": {
+    "x": 0,
+    "y": 0
+   },
+   "animation": {
+    "time": 0,
+    "frame": 0,
+    "loop": true,
+    "speed": 1,
+    "name": "desk"
+   },
+   "image": {
+    "sourceX": 0,
+    "sourceY": 0,
+    "sourceWidth": 0,
+    "sourceHeight": 0,
+    "destinationX": 0,
+    "destinationY": -12,
+    "destinationWidth": 29,
+    "destinationHeight": 24
+   },
+   "collisions": []
+  },
+  {
+   "id": 6,
+   "name": "desk 5",
+   "position": {
+    "x": 61,
+    "y": 240
+   },
+   "size": {
+    "width": 29,
+    "height": 12
+   },
+   "velocity": {
+    "x": 0,
+    "y": 0
+   },
+   "animation": {
+    "time": 0,
+    "frame": 0,
+    "loop": true,
+    "speed": 1,
+    "name": "desk"
+   },
+   "image": {
+    "sourceX": 0,
+    "sourceY": 0,
+    "sourceWidth": 0,
+    "sourceHeight": 0,
+    "destinationX": 0,
+    "destinationY": -12,
+    "destinationWidth": 29,
+    "destinationHeight": 24
+   },
+   "collisions": []
+  },
+  {
+   "id": 7,
+   "name": "desk 6",
+   "position": {
+    "x": 109,
+    "y": 240
+   },
+   "size": {
+    "width": 29,
+    "height": 12
+   },
+   "velocity": {
+    "x": 0,
+    "y": 0
+   },
+   "animation": {
+    "time": 0,
+    "frame": 0,
+    "loop": true,
+    "speed": 1,
+    "name": "desk"
+   },
+   "image": {
+    "sourceX": 0,
+    "sourceY": 0,
+    "sourceWidth": 0,
+    "sourceHeight": 0,
+    "destinationX": 0,
+    "destinationY": -12,
+    "destinationWidth": 29,
+    "destinationHeight": 24
+   },
+   "collisions": []
+  },
+  {
+   "id": 8,
+   "name": "desk 7",
+   "position": {
+    "x": 194,
+    "y": 240
+   },
+   "size": {
+    "width": 29,
+    "height": 12
+   },
+   "velocity": {
+    "x": 0,
+    "y": 0
+   },
+   "animation": {
+    "time": 0,
+    "frame": 0,
+    "loop": true,
+    "speed": 1,
+    "name": "desk"
+   },
+   "image": {
+    "sourceX": 0,
+    "sourceY": 0,
+    "sourceWidth": 0,
+    "sourceHeight": 0,
+    "destinationX": 0,
+    "destinationY": -12,
+    "destinationWidth": 29,
+    "destinationHeight": 24
+   },
+   "collisions": []
+  },
+  {
+   "id": 9,
+   "name": "desk 8",
+   "position": {
+    "x": 243,
+    "y": 240
+   },
+   "size": {
+    "width": 29,
+    "height": 12
+   },
+   "velocity": {
+    "x": 0,
+    "y": 0
+   },
+   "animation": {
+    "time": 0,
+    "frame": 0,
+    "loop": true,
+    "speed": 1,
+    "name": "desk"
+   },
+   "image": {
+    "sourceX": 0,
+    "sourceY": 0,
+    "sourceWidth": 0,
+    "sourceHeight": 0,
+    "destinationX": 0,
+    "destinationY": -12,
+    "destinationWidth": 29,
+    "destinationHeight": 24
+   },
+   "collisions": []
   }
  ]
 }
