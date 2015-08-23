@@ -153,7 +153,44 @@
     "destinationY": -29,
     "destinationWidth": 36,
     "destinationHeight": 63
-   }
+   },
+   "message": {
+    "text": "sweet"
+   },
+   "collisions": []
+  },
+  {
+   "id": 5,
+   "name": "worker 2",
+   "position": {
+    "x": 200,
+    "y": 500
+   },
+   "size": {
+    "width": 36,
+    "height": 36
+   },
+   "animation": {
+    "time": 0,
+    "frame": 0,
+    "loop": true,
+    "speed": 1,
+    "name": "worker-2"
+   },
+   "image": {
+    "sourceX": 0,
+    "sourceY": 0,
+    "sourceWidth": 0,
+    "sourceHeight": 0,
+    "destinationX": 0,
+    "destinationY": -29,
+    "destinationWidth": 36,
+    "destinationHeight": 66
+   },
+   "message": {
+    "text": "leave me alone"
+   },
+   "collisions": []
   }
  ]
 }

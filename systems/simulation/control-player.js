@@ -17,8 +17,14 @@ module.exports = function(ecs, data) {
 		if (data.input.button("down")) {
 			entity.velocity.y = speed;
 		}
-      	if(entity.collisions.length > 0){
-        	console.log(entity.collisions);
+      	if (data.input.button("action")) {
+          for (var i = 0; i < entity.collisions.length; i++) {
+            var other = data.entities.entities[entity.collisions[i]];
+            if (!other.message) {
+              continue;
+            }
+            console.log(other.message.text);
+          }
         }
 	}, ["player"]);
 };

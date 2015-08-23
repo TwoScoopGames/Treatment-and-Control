@@ -21,5 +21,16 @@
     "hidden": true
    }
   ]
+ },
+ "message": {
+  "defaults": {},
+  "properties": [
+   {
+    "property": "text",
+    "label": "Text",
+    "type": "text",
+    "default": "..."
+   }
+  ]
  }
 }
