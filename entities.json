@@ -816,10 +816,6 @@
     "width": 87,
     "height": 36
    },
-   "velocity": {
-    "x": 0,
-    "y": 0
-   },
    "animation": {
     "time": 0,
     "frame": 0,
@@ -885,10 +881,6 @@
    "size": {
     "width": 87,
     "height": 36
-   },
-   "velocity": {
-    "x": 0,
-    "y": 0
    },
    "animation": {
     "time": 0,
@@ -956,10 +948,6 @@
     "width": 87,
     "height": 36
    },
-   "velocity": {
-    "x": 0,
-    "y": 0
-   },
    "animation": {
     "time": 0,
     "frame": 0,
@@ -989,10 +977,6 @@
    "size": {
     "width": 87,
     "height": 36
-   },
-   "velocity": {
-    "x": 0,
-    "y": 0
    },
    "animation": {
     "time": 0,
@@ -1096,10 +1080,6 @@
     "width": 87,
     "height": 36
    },
-   "velocity": {
-    "x": 0,
-    "y": 0
-   },
    "animation": {
     "time": 0,
     "frame": 0,
@@ -1166,10 +1146,6 @@
     "width": 87,
     "height": 36
    },
-   "velocity": {
-    "x": 0,
-    "y": 0
-   },
    "animation": {
     "time": 0,
     "frame": 0,
@@ -1200,10 +1176,6 @@
     "width": 87,
     "height": 36
    },
-   "velocity": {
-    "x": 0,
-    "y": 0
-   },
    "animation": {
     "time": 0,
     "frame": 0,
@@ -1233,10 +1205,6 @@
    "size": {
     "width": 87,
     "height": 36
-   },
-   "velocity": {
-    "x": 0,
-    "y": 0
    },
    "animation": {
     "time": 0,
@@ -1376,10 +1344,6 @@
     "width": 87,
     "height": 36
    },
-   "velocity": {
-    "x": 0,
-    "y": 0
-   },
    "animation": {
     "time": 0,
     "frame": 0,
@@ -1409,10 +1373,6 @@
    "size": {
     "width": 87,
     "height": 36
-   },
-   "velocity": {
-    "x": 0,
-    "y": 0
    },
    "animation": {
     "time": 0,
@@ -1480,10 +1440,6 @@
     "width": 87,
     "height": 36
    },
-   "velocity": {
-    "x": 0,
-    "y": 0
-   },
    "animation": {
     "time": 0,
     "frame": 0,
@@ -1549,10 +1505,6 @@
    "size": {
     "width": 87,
     "height": 36
-   },
-   "velocity": {
-    "x": 0,
-    "y": 0
    },
    "animation": {
     "time": 0,
@@ -1638,7 +1590,7 @@
     "destinationHeight": 78
    },
    "message": {
-    "text": "sweet"
+    "text": "Guard: Don't you have work to do?"
    },
    "collisions": [],
    "fadePercent": {
