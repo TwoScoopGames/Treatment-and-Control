@@ -1,5 +1,15 @@
 "use strict";
 
+function setAnimation(entity, animation) {
+	entity.animation.speed = 1;
+  	if (entity.animation.name === animation) {
+      return;
+    }
+	entity.animation.name = animation;
+  	entity.animation.frame = 0;
+  	entity.animation.time = 0;
+}
+
 module.exports = function(ecs, data) {
 	ecs.addEach(function(entity, elapsed) { // jshint ignore:line
 		entity.velocity.x = 0;
@@ -7,16 +17,21 @@ module.exports = function(ecs, data) {
      	var speed = 0.2;
 		if (data.input.button("left")) {
 			entity.velocity.x = -speed;
-		}
-		if (data.input.button("right")) {
+			setAnimation(entity, "cartboy-walk-left-3x");
+		} else if (data.input.button("right")) {
 			entity.velocity.x = speed;
-		}
-		if (data.input.button("up")) {
+			setAnimation(entity, "cartboy-walk-right-3x");
+		} else if (data.input.button("up")) {
 			entity.velocity.y = -speed;
-		}
-		if (data.input.button("down")) {
+			setAnimation(entity, "cartboy-walk-up-3x");
+		} else if (data.input.button("down")) {
 			entity.velocity.y = speed;
-		}
+			setAnimation(entity, "cartboy-walk-down-3x");
+		} else {
+	      	entity.animation.speed = 0;
+          entity.animation.frame = 0;
+          entity.animation.time = 0;
+        }
       	if (data.input.button("action")) {
           var risingEdge = !entity.action;
           entity.action = true;
