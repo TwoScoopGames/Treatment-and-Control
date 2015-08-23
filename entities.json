@@ -54,10 +54,6 @@
     "width": 87,
     "height": 36
    },
-   "velocity": {
-    "x": 0,
-    "y": 0
-   },
    "animation": {
     "time": 0,
     "frame": 0,
@@ -280,7 +276,7 @@
   },
   {
    "id": 11,
-   "name": "Talk Zone",
+   "name": "action zone",
    "position": {
     "x": 0,
     "y": 0
@@ -292,6 +288,20 @@
    "follow": {
     "id": 0,
     "distance": 0
+   },
+   "collisions": [],
+   "actionZone": {},
+   "velocity": {
+    "x": 0,
+    "y": 0
+   },
+   "timers": {
+    "text": {
+     "running": false,
+     "time": 0,
+     "max": 100,
+     "script": "./scripts/new-script-0"
+    }
    }
   },
   {
@@ -304,10 +314,6 @@
    "size": {
     "width": 87,
     "height": 36
-   },
-   "velocity": {
-    "x": 0,
-    "y": 0
    },
    "animation": {
     "time": 0,
@@ -339,10 +345,6 @@
     "width": 87,
     "height": 36
    },
-   "velocity": {
-    "x": 0,
-    "y": 0
-   },
    "animation": {
     "time": 0,
     "frame": 0,
@@ -372,10 +374,6 @@
    "size": {
     "width": 87,
     "height": 36
-   },
-   "velocity": {
-    "x": 0,
-    "y": 0
    },
    "animation": {
     "time": 0,
@@ -518,10 +516,6 @@
     "width": 87,
     "height": 36
    },
-   "velocity": {
-    "x": 0,
-    "y": 0
-   },
    "animation": {
     "time": 0,
     "frame": 0,
@@ -569,9 +563,6 @@
     "destinationWidth": 36,
     "destinationHeight": 66
    },
-   "message": {
-    "text": "leave me alone"
-   },
    "collisions": [],
    "fadePercent": {
     "fadePercent": "100"
@@ -590,10 +581,6 @@
    "size": {
     "width": 87,
     "height": 36
-   },
-   "velocity": {
-    "x": 0,
-    "y": 0
    },
    "animation": {
     "time": 0,
@@ -642,9 +629,6 @@
     "destinationWidth": 36,
     "destinationHeight": 69
    },
-   "message": {
-    "text": "leave me alone"
-   },
    "collisions": [],
    "fadePercent": {
     "fadePercent": "100"
@@ -663,10 +647,6 @@
    "size": {
     "width": 87,
     "height": 36
-   },
-   "velocity": {
-    "x": 0,
-    "y": 0
    },
    "animation": {
     "time": 0,
@@ -697,10 +677,6 @@
    "size": {
     "width": 87,
     "height": 36
-   },
-   "velocity": {
-    "x": 0,
-    "y": 0
    },
    "animation": {
     "time": 0,
@@ -749,9 +725,6 @@
     "destinationWidth": 36,
     "destinationHeight": 63
    },
-   "message": {
-    "text": "beans"
-   },
    "collisions": [],
    "fadePercent": {
     "fadePercent": "100"
@@ -788,9 +761,6 @@
     "destinationWidth": 36,
     "destinationHeight": 66
    },
-   "message": {
-    "text": "leave me alone"
-   },
    "collisions": [],
    "fadePercent": {
     "fadePercent": "100"
@@ -826,9 +796,6 @@
     "destinationY": -29,
     "destinationWidth": 36,
     "destinationHeight": 66
-   },
-   "message": {
-    "text": "leave me alone"
    },
    "collisions": [],
    "fadePercent": {
@@ -900,9 +867,6 @@
     "destinationWidth": 36,
     "destinationHeight": 69
    },
-   "message": {
-    "text": "leave me alone"
-   },
    "collisions": [],
    "fadePercent": {
     "fadePercent": "100"
@@ -972,9 +936,6 @@
     "destinationY": -29,
     "destinationWidth": 36,
     "destinationHeight": 66
-   },
-   "message": {
-    "text": "leave me alone"
    },
    "collisions": [],
    "fadePercent": {
@@ -1080,9 +1041,6 @@
     "destinationWidth": 36,
     "destinationHeight": 63
    },
-   "message": {
-    "text": "beans"
-   },
    "collisions": [],
    "fadePercent": {
     "fadePercent": "100"
@@ -1118,9 +1076,6 @@
     "destinationY": -29,
     "destinationWidth": 36,
     "destinationHeight": 63
-   },
-   "message": {
-    "text": "sweet"
    },
    "collisions": [],
    "fadePercent": {
@@ -1191,9 +1146,6 @@
     "destinationY": -29,
     "destinationWidth": 36,
     "destinationHeight": 66
-   },
-   "message": {
-    "text": "leave me alone"
    },
    "collisions": [],
    "fadePercent": {
@@ -1333,9 +1285,6 @@
     "destinationWidth": 36,
     "destinationHeight": 69
    },
-   "message": {
-    "text": "leave me alone"
-   },
    "collisions": [],
    "fadePercent": {
     "fadePercent": "100"
@@ -1372,9 +1321,6 @@
     "destinationWidth": 36,
     "destinationHeight": 66
    },
-   "message": {
-    "text": "leave me alone"
-   },
    "collisions": [],
    "fadePercent": {
     "fadePercent": "100"
@@ -1410,9 +1356,6 @@
     "destinationY": -29,
     "destinationWidth": 36,
     "destinationHeight": 66
-   },
-   "message": {
-    "text": "leave me alone"
    },
    "collisions": [],
    "fadePercent": {
@@ -1518,9 +1461,6 @@
     "destinationWidth": 36,
     "destinationHeight": 69
    },
-   "message": {
-    "text": "leave me alone"
-   },
    "collisions": [],
    "fadePercent": {
     "fadePercent": "100"
@@ -1591,9 +1531,6 @@
     "destinationWidth": 36,
     "destinationHeight": 66
    },
-   "message": {
-    "text": "leave me alone"
-   },
    "collisions": [],
    "fadePercent": {
     "fadePercent": "100"
@@ -1663,9 +1600,6 @@
     "destinationY": -29,
     "destinationWidth": 36,
     "destinationHeight": 63
-   },
-   "message": {
-    "text": "sweet"
    },
    "collisions": [],
    "fadePercent": {
