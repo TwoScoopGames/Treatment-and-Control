@@ -13,8 +13,16 @@
  "gaurd-2": "images/gaurd-2.png",
  "test-spritesheet": "images/test-spritesheet.png",
  "textbox": "images/textbox.png",
+ "worker-1-fade0": "images/worker-1-fade0.png",
+ "worker-1-fade50": "images/worker-1-fade50.png",
  "worker-1": "images/worker-1.png",
+ "worker-2-fade0": "images/worker-2-fade0.png",
+ "worker-2-fade50": "images/worker-2-fade50.png",
  "worker-2": "images/worker-2.png",
+ "worker-3-fade0": "images/worker-3-fade0.png",
+ "worker-3-fade50": "images/worker-3-fade50.png",
  "worker-3": "images/worker-3.png",
+ "worker-4-fade0": "images/worker-4-fade0.png",
+ "worker-4-fade50": "images/worker-4-fade50.png",
  "worker-4": "images/worker-4.png"
 }
