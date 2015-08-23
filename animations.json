@@ -404,5 +404,19 @@
     }
    }
   }
+ ],
+ "textbox": [
+  {
+   "time": 100,
+   "properties": {
+    "image": {
+     "name": "textbox",
+     "sourceX": 0,
+     "sourceY": 0,
+     "sourceWidth": 557,
+     "sourceHeight": 333
+    }
+   }
+  }
  ]
 }
