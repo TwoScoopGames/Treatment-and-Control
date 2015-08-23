@@ -586,5 +586,19 @@
     }
    }
   }
+ ],
+ "title-screen": [
+  {
+   "time": 100,
+   "properties": {
+    "image": {
+     "name": "title-screen",
+     "sourceX": 0,
+     "sourceY": 0,
+     "sourceWidth": 1137,
+     "sourceHeight": 640
+    }
+   }
+  }
  ]
 }

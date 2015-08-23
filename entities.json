@@ -1588,5 +1588,37 @@
    },
    "collisions": []
   }
+ ],
+ "New Scene 0": [],
+ "title": [
+  {
+   "id": 0,
+   "name": "titlescreen",
+   "size": {
+    "width": 1137,
+    "height": 640
+   },
+   "position": {
+    "x": 0,
+    "y": 0
+   },
+   "animation": {
+    "time": 0,
+    "frame": 0,
+    "loop": true,
+    "speed": 1,
+    "name": "title-screen"
+   },
+   "image": {
+    "sourceX": 0,
+    "sourceY": 0,
+    "sourceWidth": 0,
+    "sourceHeight": 0,
+    "destinationX": 0,
+    "destinationY": 0,
+    "destinationWidth": 1137,
+    "destinationHeight": 640
+   }
+  }
  ]
 }
