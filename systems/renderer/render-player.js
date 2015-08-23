@@ -1,5 +1,14 @@
 "use strict";
 
+function line(context, x1, y1, x2, y2, color, width) {
+  context.beginPath();
+  context.moveTo(x1, y1);
+  context.lineTo(x2, y2);
+  context.lineWidth = width;
+  context.strokeStyle = color;
+  context.stroke();
+}
+
 module.exports = function(ecs, data) { // eslint-disable-line no-unused-vars
 	ecs.addEach(function(entity, context) { // eslint-disable-line no-unused-vars
 		var x = 0;
@@ -16,6 +25,9 @@ module.exports = function(ecs, data) { // eslint-disable-line no-unused-vars
               	var y = 150 + (i * 60);
           		context.fillText(cart.deliveries[i].name, 550, y + 30);
               	context.drawImage(data.images.get("pill-" + cart.deliveries[i].pill), 450, y);
+              if (cart.deliveries[i].done) {
+                line(context, 430, y + 20, 700, y + 20, "#f00", 10);
+              }
             }
       }
       	if (entity.message) {      
