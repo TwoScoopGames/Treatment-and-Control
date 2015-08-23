@@ -530,5 +530,47 @@
     }
    }
   }
+ ],
+ "clipboard-big": [
+  {
+   "time": 100,
+   "properties": {
+    "image": {
+     "name": "clipboard-big",
+     "sourceX": 0,
+     "sourceY": 0,
+     "sourceWidth": 408,
+     "sourceHeight": 513
+    }
+   }
+  }
+ ],
+ "pill-blue": [
+  {
+   "time": 100,
+   "properties": {
+    "image": {
+     "name": "pill-blue",
+     "sourceX": 0,
+     "sourceY": 0,
+     "sourceWidth": 53,
+     "sourceHeight": 53
+    }
+   }
+  }
+ ],
+ "pill-red": [
+  {
+   "time": 100,
+   "properties": {
+    "image": {
+     "name": "pill-red",
+     "sourceX": 0,
+     "sourceY": 0,
+     "sourceWidth": 45,
+     "sourceHeight": 40
+    }
+   }
+  }
  ]
 }
