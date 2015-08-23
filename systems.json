@@ -19,6 +19,12 @@
    ]
   },
   {
+   "name": "./systems/simulation/do-action",
+   "scenes": [
+    "main"
+   ]
+  },
+  {
    "name": "./systems/simulation/track-last-position",
    "scenes": [
     "main"

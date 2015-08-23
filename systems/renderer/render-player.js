@@ -13,5 +13,5 @@ module.exports = function(ecs, data) { // eslint-disable-line no-unused-vars
 		context.font = "50px mono";
 		var msg = entity.message.text.substr(0, entity.message.len);
 		context.fillText(msg, x + 50, y + 100);
-	}, ["player", "message"]);
+	}, ["actionZone"]);
 };

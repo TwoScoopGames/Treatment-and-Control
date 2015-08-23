@@ -33,15 +33,7 @@
     "destinationWidth": 36,
     "destinationHeight": 69
    },
-   "collisions": [],
-   "timers": {
-    "text": {
-     "running": false,
-     "time": 0,
-     "max": 100,
-     "script": "./scripts/new-script-0"
-    }
-   }
+   "collisions": []
   },
   {
    "id": 1,
@@ -292,12 +284,26 @@
     "y": 0
    },
    "size": {
-    "width": 60,
-    "height": 60
+    "width": 100,
+    "height": 100
    },
    "follow": {
     "id": 0,
     "distance": 0
+   },
+   "actionZone": {},
+   "collisions": [],
+   "timers": {
+    "text": {
+     "running": false,
+     "time": 0,
+     "max": 100,
+     "script": "./scripts/new-script-0"
+    }
+   },
+   "velocity": {
+    "x": 0,
+    "y": 0
    }
   }
  ]
