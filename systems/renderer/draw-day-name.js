@@ -1,8 +1,12 @@
 "use strict";
 
+var day = 0;
+
 module.exports = function(ecs, data) { // eslint-disable-line no-unused-vars
+  day++;
 	ecs.add(function(entities, context) { // eslint-disable-line no-unused-vars
-      context.fillStyle = "#302f2c";
-      context.fillRect(0,0, data.canvas.width, data.canvas.height);
+      context.font = "50px minecraftia";
+      context.fillStyle = "#666";
+	  context.fillText("DAY " + day, 300, 300);
 	}, []);
 };

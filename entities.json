@@ -1656,5 +1656,18 @@
   }
  ],
  "New Scene 0": [],
- "day-intro": []
+ "day-intro": [
+  {
+   "id": 0,
+   "name": "timer-holder",
+   "timers": {
+    "scene-switcher": {
+     "running": true,
+     "time": 0,
+     "max": 2000,
+     "script": "./scripts/new-script-2"
+    }
+   }
+  }
+ ]
 }

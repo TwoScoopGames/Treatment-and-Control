@@ -131,7 +131,8 @@ module.exports = function(ecs, data) { // eslint-disable-line no-unused-vars
                     return !d.done;
                   });
                   if (left.length === 0) {
-	                  showMessage(data, entity, "No pills left");
+	                  //showMessage(data, entity, "No pills left");
+                    data.switchScene("day-intro");
                   } else {
                    	  entity.target = left[0];
 	                    entity.clipboard = true;

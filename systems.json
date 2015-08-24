@@ -3,7 +3,8 @@
   {
    "name": "splatjs:advanceTimers",
    "scenes": [
-    "main"
+    "main",
+    "day-intro"
    ]
   },
   {
@@ -69,7 +70,8 @@
   {
    "name": "./systems/renderer/drawBackground",
    "scenes": [
-    "main"
+    "main",
+    "day-intro"
    ]
   },
   {
@@ -99,6 +101,12 @@
    "name": "./systems/renderer/render-player",
    "scenes": [
     "main"
+   ]
+  },
+  {
+   "name": "./systems/renderer/draw-day-name",
+   "scenes": [
+    "day-intro"
    ]
   }
  ]
