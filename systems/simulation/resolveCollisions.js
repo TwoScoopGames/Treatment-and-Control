@@ -17,7 +17,7 @@ module.exports = function(ecs, data) { // eslint-disable-line no-unused-vars
 	ecs.addEach(function(entity, elapsed) { // eslint-disable-line no-unused-vars
       for (var i = 0; i < entity.collisions.length; i++) {
         var other = data.entities.entities[entity.collisions[i]];
-        if (other.actionZone) {
+        if (other.actionZone || other.image === undefined) {
           continue;
         }
         if (wasLeft(entity, other)) {
