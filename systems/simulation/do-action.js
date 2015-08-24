@@ -93,7 +93,7 @@ function pickMessage(entity, other, cart, data) {
     data.sounds.play(bluePillSounds[Math.floor(Math.random() * bluePillSounds.length)]);
   }
   var i = Math.floor(Math.random() * arr.length);
-  return other.name + ": " + arr[i];
+  return other.name.toUpperCase() + ": " + arr[i];
 }
 
 function showMessage(data, entity, message) {

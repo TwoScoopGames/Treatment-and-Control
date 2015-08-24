@@ -429,7 +429,7 @@
     "destinationHeight": 81
    },
    "message": {
-    "text": "Guard: Get back to work!"
+    "text": "GUARD: Get back to work!"
    },
    "collisions": []
   },
@@ -1590,7 +1590,7 @@
     "destinationHeight": 81
    },
    "message": {
-    "text": "Guard: Don't you have work to do?"
+    "text": "GUARD: Don't you have work to do?"
    },
    "collisions": []
   },
