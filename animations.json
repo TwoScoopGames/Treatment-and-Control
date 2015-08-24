@@ -1260,5 +1260,33 @@
     }
    }
   }
+ ],
+ "poster-1": [
+  {
+   "time": 100,
+   "properties": {
+    "image": {
+     "name": "poster-1",
+     "sourceX": 0,
+     "sourceY": 0,
+     "sourceWidth": 57,
+     "sourceHeight": 75
+    }
+   }
+  }
+ ],
+ "poster-2": [
+  {
+   "time": 100,
+   "properties": {
+    "image": {
+     "name": "poster-2",
+     "sourceX": 0,
+     "sourceY": 0,
+     "sourceWidth": 57,
+     "sourceHeight": 75
+    }
+   }
+  }
  ]
 }

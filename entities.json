@@ -1669,6 +1669,70 @@
    "message": {
     "text": "The door is locked."
    }
+  },
+  {
+   "id": 54,
+   "name": "poster-1",
+   "position": {
+    "x": 274,
+    "y": 304
+   },
+   "size": {
+    "width": 57,
+    "height": 139
+   },
+   "animation": {
+    "time": 0,
+    "frame": 0,
+    "loop": true,
+    "speed": 1,
+    "name": "poster-1"
+   },
+   "image": {
+    "sourceX": 0,
+    "sourceY": 0,
+    "sourceWidth": 0,
+    "sourceHeight": 0,
+    "destinationX": 0,
+    "destinationY": 0,
+    "destinationWidth": 57,
+    "destinationHeight": 75
+   },
+   "message": {
+    "text": "I'm glad were safe..."
+   }
+  },
+  {
+   "id": 55,
+   "name": "poster-2",
+   "position": {
+    "x": 648,
+    "y": 304
+   },
+   "size": {
+    "width": 57,
+    "height": 139
+   },
+   "animation": {
+    "time": 0,
+    "frame": 0,
+    "loop": true,
+    "speed": 1,
+    "name": "poster-2"
+   },
+   "image": {
+    "sourceX": 0,
+    "sourceY": 0,
+    "sourceWidth": 0,
+    "sourceHeight": 0,
+    "destinationX": 0,
+    "destinationY": 0,
+    "destinationWidth": 57,
+    "destinationHeight": 75
+   },
+   "message": {
+    "text": "I hope I'm doing enough..."
+   }
   }
  ],
  "title": [
