@@ -1,15 +1,17 @@
 {
  "main": {
-  "first": true,
+  "first": false,
   "onEnter": "./scripts/main-enter",
   "onExit": "./scripts/main-exit"
  },
  "title": {
   "onEnter": "./scripts/title-enter",
-  "onExit": "./scripts/title-exit"
+  "onExit": "./scripts/title-exit",
+  "first": false
  },
  "day-intro": {
   "onEnter": "./scripts/day-intro-enter",
-  "onExit": "./scripts/day-intro-exit"
+  "onExit": "./scripts/day-intro-exit",
+  "first": true
  }
 }
