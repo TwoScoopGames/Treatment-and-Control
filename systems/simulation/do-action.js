@@ -51,7 +51,7 @@ var responses = {
   ],
   "redPill":
   [
-    "This is different than the usual pills.",
+    "This is different than the usual pill.",
     "Are these a new flavor?",
     "What is this one for?"
   ],
