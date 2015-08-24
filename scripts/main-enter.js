@@ -39,6 +39,12 @@ schedule[0].unaffectedOn = 0;
 schedule[2].unaffectedOn = 2;
 shuffle(schedule);
 
+function showMessage(data, entity, message) {
+  entity.message = { text: message, len: 0 };
+  entity.timers.text.running = true;
+  data.sounds.play("textpopup2");
+}
+
 module.exports = function(data) {
   data.sounds.play("day1", true);
 
@@ -46,6 +52,11 @@ module.exports = function(data) {
   cart.deliveries = [];
 
   var day = data.arguments.day || 0;
+  
+  if (day === 0) {
+    showMessage(data, data.entities.entities[11], "GUARD: The night shift left your cart over there.");
+  }
+  
   var worker = 0;
   Object.keys(data.entities.entities).forEach(function(id) {
     var entity = data.entities.entities[id];
