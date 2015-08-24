@@ -5,7 +5,7 @@ function shuffle(o) {
     return o;
 }
 
-var starterNames = [
+var names = [
   "Alex",
   "Eric",
   "Allen",
@@ -28,32 +28,47 @@ var starterNames = [
   "Mark"
 ];
 
+shuffle(names);
+var schedule = names.map(function(name, i) {
+  return {
+    name: name,
+    day: i % 5
+  };
+});
+schedule[0].unaffectedOn = 0;
+schedule[2].unaffectedOn = 2;
+shuffle(schedule);
+
 module.exports = function(data) {
   data.sounds.play("day1", true);
-  var names = starterNames.slice(0);
-  shuffle(names);
 
-  var nameMap = {};
-  
+  var cart = data.entities.entities[3];
+  cart.deliveries = [];
+
+  var day = data.arguments.day || 0;
+  var worker = 0;
   Object.keys(data.entities.entities).forEach(function(id) {
     var entity = data.entities.entities[id];
     if (entity.fadePercent === undefined) {
       return;
     }
-    entity.name = names.pop();
-    entity.fadePercent.fadePercent = 100;
-    nameMap[entity.name] = entity.id;
+    
+    var s = schedule[worker];
+    entity.name = s.name;
+    if (day === s.day) {
+	    entity.fadePercent.fadePercent = 0;
+      	var effective = s.unaffectedOn !== day
+      	cart.deliveries.push({ name: s.name, pill: "blue", effective: effective });
+    } else if (s.unaffectedOn < day) {
+	    entity.fadePercent.fadePercent = 0;
+      	if (s.unaffectedOn === day - 2) {
+	      	cart.deliveries.push({ name: s.name, pill: "red", effective: true });
+        }
+    } else {
+	    entity.fadePercent.fadePercent = 100;
+    }
+    
+    worker++;
   });
-
-  var cart = data.entities.entities[3];
-
-  cart.deliveries = [];
-
-  var pillNames = starterNames.slice(0);
-  shuffle(pillNames);
-  for (var i = 0; i < 5; i++) {
-    cart.deliveries.push({ name: pillNames[i], pill: "blue" });
-    var worker = data.entities.entities[nameMap[pillNames[i]]];
-    worker.fadePercent.fadePercent = 0;
-  }
+  shuffle(cart.deliveries);
 };

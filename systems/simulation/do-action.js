@@ -63,7 +63,7 @@ var responses = {
 };
 
 function pickMessage(entity, other, cart, data) {
-  var arr = [""];
+  var arr = ["..."];
   var fade = parseInt(other.fadePercent.fadePercent);
   if (fade === 0) {
     arr = responses.peopleColorful;
@@ -75,17 +75,22 @@ function pickMessage(entity, other, cart, data) {
   if (entity.target && entity.target.name === other.name) {
     if (entity.target.pill === "blue") {
       arr = responses.bluePill;
+    } else if (entity.target.pill === "red") {
+      arr = responses.redPill;
+    }
 
-      for (var i = 0; i < cart.deliveries.length; i++) {
-        if (cart.deliveries[i].name === entity.target.name) {
-          cart.deliveries[i].done = true;
+    for (var i = 0; i < cart.deliveries.length; i++) {
+      var d = cart.deliveries[i];
+      if (d.name === entity.target.name) {
+        d.done = true;
+        if (d.effective) {
+		    other.fadePercent.fadePercent = 100;
         }
       }
-      entity.target = undefined;
-      other.fadePercent.fadePercent = 100;
-      
-      data.sounds.play(bluePillSounds[Math.floor(Math.random() * bluePillSounds.length)]);
     }
+    entity.target = undefined;
+      
+    data.sounds.play(bluePillSounds[Math.floor(Math.random() * bluePillSounds.length)]);
   }
   var i = Math.floor(Math.random() * arr.length);
   return other.name + ": " + arr[i];
@@ -132,7 +137,7 @@ module.exports = function(ecs, data) { // eslint-disable-line no-unused-vars
                   });
                   if (left.length === 0) {
 	                  //showMessage(data, entity, "No pills left");
-                    var day = data.arguments.day || 1;
+                    var day = data.arguments.day || 0;
                     data.switchScene("day-intro", {day: day + 1 });
                   } else {
                    	  entity.target = left[0];
