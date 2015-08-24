@@ -265,7 +265,7 @@
    "name": "camera",
    "position": {
     "x": 0,
-    "y": 0
+    "y": 300
    },
    "size": {
     "width": 1136,
