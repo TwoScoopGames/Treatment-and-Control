@@ -24,7 +24,10 @@ var anims = {
 module.exports = function(ecs, data) { // eslint-disable-line no-unused-vars
 	ecs.addEach(function(entity, elapsed) { // eslint-disable-line no-unused-vars
       var fade = entity.fadePercent.fadePercent;
+      if (entity.animation === undefined) {
+        return;
+      }
       var anim = entity.animation.name.substr(0, 8);      
       entity.animation.name = anims[fade][anim];
-	}, ["fadePercent"]);
+	}, ["fadePercent", "animation"]);
 };

@@ -64,6 +64,11 @@ module.exports = function(data) {
       	if (s.unaffectedOn === day - 2) {
 	      	cart.deliveries.push({ name: s.name, pill: "red", effective: true });
         }
+      	if (s.unaffectedOn < day - 2) {
+          entity.animation = undefined;
+          entity.image = undefined;
+          entity.message = { text: "I wonder where " + entity.name + " is..." };
+        }
     } else {
 	    entity.fadePercent.fadePercent = 100;
     }
