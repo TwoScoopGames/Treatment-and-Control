@@ -153,7 +153,7 @@
     "frame": 0,
     "loop": true,
     "speed": 1,
-    "name": "worker-1"
+    "name": "worker-1-f3"
    },
    "image": {
     "sourceX": 0,
@@ -189,7 +189,7 @@
     "frame": 0,
     "loop": true,
     "speed": 1,
-    "name": "worker-2"
+    "name": "worker-2-f3"
    },
    "image": {
     "sourceX": 0,
@@ -449,7 +449,7 @@
     "frame": 0,
     "loop": true,
     "speed": 1,
-    "name": "worker-3"
+    "name": "worker-3-f3"
    },
    "image": {
     "sourceX": 0,
@@ -485,7 +485,7 @@
     "frame": 0,
     "loop": true,
     "speed": 1,
-    "name": "worker-4"
+    "name": "worker-4-f3"
    },
    "image": {
     "sourceX": 0,
@@ -551,7 +551,7 @@
     "frame": 0,
     "loop": true,
     "speed": 1,
-    "name": "worker-2"
+    "name": "worker-2-f3"
    },
    "image": {
     "sourceX": 0,
@@ -617,7 +617,7 @@
     "frame": 0,
     "loop": true,
     "speed": 1,
-    "name": "worker-3"
+    "name": "worker-3-f3"
    },
    "image": {
     "sourceX": 0,
@@ -713,7 +713,7 @@
     "frame": 0,
     "loop": true,
     "speed": 1,
-    "name": "worker-2"
+    "name": "worker-2-f3"
    },
    "image": {
     "sourceX": 0,
@@ -749,7 +749,7 @@
     "frame": 0,
     "loop": true,
     "speed": 1,
-    "name": "worker-4"
+    "name": "worker-4-f3"
    },
    "image": {
     "sourceX": 0,
@@ -785,7 +785,7 @@
     "frame": 0,
     "loop": true,
     "speed": 1,
-    "name": "worker-2"
+    "name": "worker-2-f3"
    },
    "image": {
     "sourceX": 0,
@@ -851,7 +851,7 @@
     "frame": 0,
     "loop": true,
     "speed": 1,
-    "name": "worker-3"
+    "name": "worker-3-f3"
    },
    "image": {
     "sourceX": 0,
@@ -917,7 +917,7 @@
     "frame": 0,
     "loop": true,
     "speed": 1,
-    "name": "worker-2"
+    "name": "worker-2-f3"
    },
    "image": {
     "sourceX": 0,
@@ -1013,7 +1013,7 @@
     "frame": 0,
     "loop": true,
     "speed": 1,
-    "name": "worker-1"
+    "name": "worker-1-f3"
    },
    "image": {
     "sourceX": 0,
@@ -1049,7 +1049,7 @@
     "frame": 0,
     "loop": true,
     "speed": 1,
-    "name": "worker-4"
+    "name": "worker-4-f3"
    },
    "image": {
     "sourceX": 0,
@@ -1115,7 +1115,7 @@
     "frame": 0,
     "loop": true,
     "speed": 1,
-    "name": "worker-1"
+    "name": "worker-1-f3"
    },
    "image": {
     "sourceX": 0,
@@ -1241,7 +1241,7 @@
     "frame": 0,
     "loop": true,
     "speed": 1,
-    "name": "worker-3"
+    "name": "worker-3-f3"
    },
    "image": {
     "sourceX": 0,
@@ -1277,7 +1277,7 @@
     "frame": 0,
     "loop": true,
     "speed": 1,
-    "name": "worker-4"
+    "name": "worker-4-f3"
    },
    "image": {
     "sourceX": 0,
@@ -1313,7 +1313,7 @@
     "frame": 0,
     "loop": true,
     "speed": 1,
-    "name": "worker-4"
+    "name": "worker-4-f3"
    },
    "image": {
     "sourceX": 0,
@@ -1409,7 +1409,7 @@
     "frame": 0,
     "loop": true,
     "speed": 1,
-    "name": "worker-3"
+    "name": "worker-3-f3"
    },
    "image": {
     "sourceX": 0,
@@ -1475,7 +1475,7 @@
     "frame": 0,
     "loop": true,
     "speed": 1,
-    "name": "worker-2"
+    "name": "worker-2-f3"
    },
    "image": {
     "sourceX": 0,
@@ -1541,7 +1541,7 @@
     "frame": 0,
     "loop": true,
     "speed": 1,
-    "name": "worker-1"
+    "name": "worker-1-f3"
    },
    "image": {
     "sourceX": 0,

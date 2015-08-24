@@ -2,10 +2,10 @@
 
 var anims = {
   100: {
-    "worker-1": "worker-1",
-    "worker-2": "worker-2",
-    "worker-3": "worker-3",
-    "worker-4": "worker-4",
+    "worker-1": "worker-1-f3",
+    "worker-2": "worker-2-f3",
+    "worker-3": "worker-3-f3",
+    "worker-4": "worker-4-f3",
   },
   50: {
     "worker-1": "worker-1-fade50",
