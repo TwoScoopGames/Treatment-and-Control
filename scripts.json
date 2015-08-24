@@ -1,6 +1,10 @@
 [
+	"./scripts/day-intro-enter",
+	"./scripts/day-intro-exit",
 	"./scripts/main-enter",
 	"./scripts/main-exit",
 	"./scripts/new-script-0",
-	"./scripts/new-script-1"
+	"./scripts/new-script-1",
+	"./scripts/title-enter",
+	"./scripts/title-exit"
 ]

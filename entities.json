@@ -1624,7 +1624,6 @@
    }
   }
  ],
- "New Scene 0": [],
  "title": [
   {
    "id": 0,
@@ -1655,5 +1654,7 @@
     "destinationHeight": 640
    }
   }
- ]
+ ],
+ "New Scene 0": [],
+ "day-intro": []
 }
