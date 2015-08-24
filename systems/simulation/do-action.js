@@ -84,7 +84,7 @@ function pickMessage(entity, other, cart, data) {
       entity.target = undefined;
       other.fadePercent.fadePercent = 100;
       
-      data.sounds.play(bluePillSounds[Math.floor(Math.random()*bluePillSounds.length)]);
+      data.sounds.play(bluePillSounds[Math.floor(Math.random() * bluePillSounds.length)]);
     }
   }
   var i = Math.floor(Math.random() * arr.length);
@@ -132,7 +132,8 @@ module.exports = function(ecs, data) { // eslint-disable-line no-unused-vars
                   });
                   if (left.length === 0) {
 	                  //showMessage(data, entity, "No pills left");
-                    data.switchScene("day-intro");
+                    var day = data.arguments.day || 1;
+                    data.switchScene("day-intro", {day: day + 1 });
                   } else {
                    	  entity.target = left[0];
 	                    entity.clipboard = true;
