@@ -1653,7 +1653,8 @@
    },
    "message": {
     "text": "....ouch!"
-   }
+   },
+   "collisions": []
   },
   {
    "id": 53,
@@ -1668,7 +1669,8 @@
    },
    "message": {
     "text": "The door is locked."
-   }
+   },
+   "collisions": []
   },
   {
    "id": 54,
@@ -1699,8 +1701,9 @@
     "destinationHeight": 75
    },
    "message": {
-    "text": "I'm glad were safe..."
-   }
+    "text": "I'm glad we're safe..."
+   },
+   "collisions": []
   },
   {
    "id": 55,
@@ -1732,7 +1735,8 @@
    },
    "message": {
     "text": "I hope I'm doing enough..."
-   }
+   },
+   "collisions": []
   }
  ],
  "title": [
