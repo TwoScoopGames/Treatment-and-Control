@@ -22,11 +22,11 @@ module.exports = function(ecs, data) { // eslint-disable-line no-unused-vars
           context.fillStyle = "#666";
         
         	for (var i = 0; i < cart.deliveries.length; i++) {
-              	var y = 150 + (i * 60);
-          		context.fillText(cart.deliveries[i].name, 550, y + 30);
-              	context.drawImage(data.images.get("pill-" + cart.deliveries[i].pill), 450, y);
+              	var y = 200 + (i * 60);
+          		context.fillText(cart.deliveries[i].name, 560, y + 45);
+              	context.drawImage(data.images.get("pill-" + cart.deliveries[i].pill), 510, y);
               if (cart.deliveries[i].done) {
-                line(context, 430, y + 20, 700, y + 20, "#f00", 10);
+                line(context, 460, y + 20, 700, y + 20, "#f00", 10);
               }
             }
       }

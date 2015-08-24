@@ -920,5 +920,19 @@
     }
    }
   }
+ ],
+ "strikeout": [
+  {
+   "time": 100,
+   "properties": {
+    "image": {
+     "name": "strikeout",
+     "sourceX": 0,
+     "sourceY": 0,
+     "sourceWidth": 246,
+     "sourceHeight": 15
+    }
+   }
+  }
  ]
 }
