@@ -26,7 +26,7 @@ module.exports = function(ecs, data) { // eslint-disable-line no-unused-vars
           		context.fillText(cart.deliveries[i].name, 560, y + 45);
               	context.drawImage(data.images.get("pill-" + cart.deliveries[i].pill), 510, y);
               if (cart.deliveries[i].done) {
-                line(context, 460, y + 20, 700, y + 20, "#f00", 10);
+                context.drawImage(data.images.get("strikeout"), 480, y + 18);
               }
             }
       }
