@@ -805,20 +805,6 @@
    }
   }
  ],
- "worker-1-fade0-F3": [
-  {
-   "time": 3300,
-   "properties": {
-    "image": {
-     "name": "worker-1-fade0-F3",
-     "sourceX": 0,
-     "sourceY": 0,
-     "sourceWidth": 108,
-     "sourceHeight": 63
-    }
-   }
-  }
- ],
  "worker-1-fade50-f3": [
   {
    "time": 3300,
@@ -1199,9 +1185,47 @@
    }
   }
  ],
+ "worker-1-fade0-f3": [
+  {
+   "time": 3300,
+   "properties": {
+    "image": {
+     "name": "worker-1-fade0-f3",
+     "sourceX": 0,
+     "sourceY": 0,
+     "sourceWidth": 36,
+     "sourceHeight": 63
+    }
+   }
+  },
+  {
+   "time": 100,
+   "properties": {
+    "image": {
+     "name": "worker-1-fade0-f3",
+     "sourceX": 36,
+     "sourceY": 0,
+     "sourceWidth": 36,
+     "sourceHeight": 63
+    }
+   }
+  },
+  {
+   "time": 100,
+   "properties": {
+    "image": {
+     "name": "worker-1-fade0-f3",
+     "sourceX": 72,
+     "sourceY": 0,
+     "sourceWidth": 36,
+     "sourceHeight": 63
+    }
+   }
+  }
+ ],
  "fire": [
   {
-   "time": 400,
+   "time": 100,
    "properties": {
     "image": {
      "name": "fire",
@@ -1213,7 +1237,7 @@
    }
   },
   {
-   "time": 400,
+   "time": 100,
    "properties": {
     "image": {
      "name": "fire",
@@ -1225,7 +1249,7 @@
    }
   },
   {
-   "time": 400,
+   "time": 100,
    "properties": {
     "image": {
      "name": "fire",

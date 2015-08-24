@@ -8,16 +8,16 @@ var anims = {
     "worker-4": "worker-4-f3",
   },
   50: {
-    "worker-1": "worker-1-fade50",
-    "worker-2": "worker-2-fade50",
-    "worker-3": "worker-3-fade50",
-    "worker-4": "worker-4-fade50",
+    "worker-1": "worker-1-fade50-f3",
+    "worker-2": "worker-2-fade50-f3",
+    "worker-3": "worker-3-fade50-f3",
+    "worker-4": "worker-4-fade50-f3",
   },
   0: {
-    "worker-1": "worker-1-fade0",
-    "worker-2": "worker-2-fade0",
-    "worker-3": "worker-3-fade0",
-    "worker-4": "worker-4-fade0",
+    "worker-1": "worker-1-fade0-f3",
+    "worker-2": "worker-2-fade0-f3",
+    "worker-3": "worker-3-fade0-f3",
+    "worker-4": "worker-4-fade0-f3",
   }
 };
 
