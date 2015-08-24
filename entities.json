@@ -5,8 +5,8 @@
    "name": "player",
    "player": true,
    "position": {
-    "x": 300,
-    "y": 500
+    "x": 479,
+    "y": 399
    },
    "size": {
     "width": 36,
