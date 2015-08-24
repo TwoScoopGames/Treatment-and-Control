@@ -264,7 +264,7 @@
    "id": 10,
    "name": "camera",
    "position": {
-    "x": 0,
+    "x": -64,
     "y": 300
    },
    "size": {
@@ -1621,6 +1621,53 @@
     "destinationY": 0,
     "destinationWidth": 39,
     "destinationHeight": 57
+   }
+  },
+  {
+   "id": 52,
+   "name": "fire",
+   "position": {
+    "x": 894,
+    "y": 301
+   },
+   "animation": {
+    "time": 0,
+    "frame": 0,
+    "loop": true,
+    "speed": 1,
+    "name": "fire"
+   },
+   "image": {
+    "sourceX": 0,
+    "sourceY": 0,
+    "sourceWidth": 0,
+    "sourceHeight": 0,
+    "destinationX": 0,
+    "destinationY": 0,
+    "destinationWidth": 120,
+    "destinationHeight": 129
+   },
+   "size": {
+    "width": 120,
+    "height": 154
+   },
+   "message": {
+    "text": "....ouch!"
+   }
+  },
+  {
+   "id": 53,
+   "name": "door",
+   "position": {
+    "x": 452,
+    "y": 333
+   },
+   "size": {
+    "width": 88,
+    "height": 107
+   },
+   "message": {
+    "text": "The door is locked."
    }
   }
  ],

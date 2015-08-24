@@ -1198,5 +1198,43 @@
     }
    }
   }
+ ],
+ "fire": [
+  {
+   "time": 400,
+   "properties": {
+    "image": {
+     "name": "fire",
+     "sourceX": 0,
+     "sourceY": 0,
+     "sourceWidth": 120,
+     "sourceHeight": 129
+    }
+   }
+  },
+  {
+   "time": 400,
+   "properties": {
+    "image": {
+     "name": "fire",
+     "sourceX": 120,
+     "sourceY": 0,
+     "sourceWidth": 120,
+     "sourceHeight": 129
+    }
+   }
+  },
+  {
+   "time": 400,
+   "properties": {
+    "image": {
+     "name": "fire",
+     "sourceX": 240,
+     "sourceY": 0,
+     "sourceWidth": 120,
+     "sourceHeight": 129
+    }
+   }
+  }
  ]
 }

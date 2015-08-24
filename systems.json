@@ -89,7 +89,9 @@
   },
   {
    "name": "./systems/renderer/draw-bounds",
-   "scenes": []
+   "scenes": [
+    "main"
+   ]
   },
   {
    "name": "splatjs:viewport.reset",
