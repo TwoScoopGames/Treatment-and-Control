@@ -1,5 +1,6 @@
 [
 	"./scripts/main-enter",
 	"./scripts/main-exit",
-	"./scripts/new-script-0"
+	"./scripts/new-script-0",
+	"./scripts/new-script-1"
 ]
