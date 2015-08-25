@@ -56,7 +56,7 @@ module.exports = function(ecs, data) { // eslint-disable-line no-unused-vars
           context.fillStyle = "white";
           context.font = "24px minecraftia";
           var msg = entity.message.text.substr(0, entity.message.len);
-          wrapText(context, msg, x + 64, y + 64, 800, 25);
+          wrapText(context, msg, x + 64, y + 64, 950, 30);
         }
 
 	}, ["actionZone"]);
