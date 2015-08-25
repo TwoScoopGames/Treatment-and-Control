@@ -139,7 +139,11 @@ module.exports = function(ecs, data) { // eslint-disable-line no-unused-vars
                   if (left.length === 0) {
 	                  //showMessage(data, entity, "No pills left");
                     var day = data.arguments.day || 0;
-                    data.switchScene("day-intro", {day: day + 1 });
+                    if (day === 5) {
+                    	data.switchScene("ending");                      
+                    } else {
+                    	data.switchScene("day-intro", {day: day + 1 });
+                    }
                   } else {
                    	  entity.target = left[0];
 	                    entity.clipboard = true;

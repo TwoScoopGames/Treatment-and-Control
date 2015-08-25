@@ -13,5 +13,10 @@
   "onEnter": "./scripts/day-intro-enter",
   "onExit": "./scripts/day-intro-exit",
   "first": false
+ },
+ "ending": {
+  "onEnter": "./scripts/ending-enter",
+  "onExit": "./scripts/ending-exit",
+  "first": false
  }
 }
