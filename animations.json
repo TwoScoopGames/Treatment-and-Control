@@ -1288,5 +1288,19 @@
     }
    }
   }
+ ],
+ "end-screen": [
+  {
+   "time": 100,
+   "properties": {
+    "image": {
+     "name": "end-screen",
+     "sourceX": 0,
+     "sourceY": 0,
+     "sourceWidth": 1137,
+     "sourceHeight": 640
+    }
+   }
+  }
  ]
 }
