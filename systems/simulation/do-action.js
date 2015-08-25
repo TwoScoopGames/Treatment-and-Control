@@ -78,7 +78,7 @@ function pickMessage(entity, other, cart, data) {
       data.sounds.play(bluePillSounds[Math.floor(Math.random() * bluePillSounds.length)]);
     } else if (entity.target.pill === "red") {
       arr = responses.redPill;
-      data.sounds.play(redPill2);
+      data.sounds.play("redpill2");
     }
 
     for (var i = 0; i < cart.deliveries.length; i++) {
@@ -139,7 +139,7 @@ module.exports = function(ecs, data) { // eslint-disable-line no-unused-vars
                   if (left.length === 0) {
 	                  //showMessage(data, entity, "No pills left");
                     var day = data.arguments.day || 0;
-                    if (day === 5) {
+                    if (day === 4) {
                     	data.switchScene("ending");                      
                     } else {
                     	data.switchScene("day-intro", {day: day + 1 });
