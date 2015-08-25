@@ -9,6 +9,27 @@ function line(context, x1, y1, x2, y2, color, width) {
   context.stroke();
 }
 
+function wrapText(context, text, x, y, maxWidth, lineHeight) {
+  var words = text.split(" ");
+  var line = "";
+
+  for(var i = 0; i < words.length; i++) {
+    var testLine = line + words[i] + ' ';
+    var metrics = context.measureText(testLine);
+    var testWidth = metrics.width;
+    if (testWidth > maxWidth && i > 0) {
+      context.fillText(line, x, y);
+      line = words[i] + " ";
+      y += lineHeight;
+    }
+    else {
+    	line = testLine;
+    }
+  }
+  context.fillText(line, x, y);
+}
+      
+
 module.exports = function(ecs, data) { // eslint-disable-line no-unused-vars
 	ecs.addEach(function(entity, context) { // eslint-disable-line no-unused-vars
 		var x = 0;
@@ -35,7 +56,7 @@ module.exports = function(ecs, data) { // eslint-disable-line no-unused-vars
           context.fillStyle = "white";
           context.font = "24px minecraftia";
           var msg = entity.message.text.substr(0, entity.message.len);
-          context.fillText(msg, x + 64, y + 64);
+          wrapText(context, msg, x + 64, y + 64, 800, 25);
         }
 
 	}, ["actionZone"]);
