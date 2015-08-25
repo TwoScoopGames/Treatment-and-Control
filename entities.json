@@ -1650,11 +1650,7 @@
    "size": {
     "width": 120,
     "height": 154
-   },
-   "message": {
-    "text": "....ouch!"
-   },
-   "collisions": []
+   }
   },
   {
    "id": 53,
@@ -1699,11 +1695,7 @@
     "destinationY": 0,
     "destinationWidth": 57,
     "destinationHeight": 75
-   },
-   "message": {
-    "text": "I'm glad we're safe..."
-   },
-   "collisions": []
+   }
   },
   {
    "id": 55,
@@ -1732,6 +1724,50 @@
     "destinationY": 0,
     "destinationWidth": 57,
     "destinationHeight": 75
+   }
+  },
+  {
+   "id": 56,
+   "name": "fire message",
+   "position": {
+    "x": 894,
+    "y": 301
+   },
+   "size": {
+    "width": 120,
+    "height": 154
+   },
+   "message": {
+    "text": "The furnace gives off a warm glow."
+   },
+   "collisions": []
+  },
+  {
+   "id": 57,
+   "name": "poster-1 message",
+   "position": {
+    "x": 274,
+    "y": 304
+   },
+   "size": {
+    "width": 57,
+    "height": 139
+   },
+   "message": {
+    "text": "I'm glad we're safe..."
+   },
+   "collisions": []
+  },
+  {
+   "id": 58,
+   "name": "poster-2 message",
+   "position": {
+    "x": 648,
+    "y": 304
+   },
+   "size": {
+    "width": 57,
+    "height": 139
    },
    "message": {
     "text": "I hope I'm doing enough..."
