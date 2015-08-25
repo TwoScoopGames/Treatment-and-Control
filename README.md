@@ -6,7 +6,7 @@ Congratulations on your new job, citizen! You must report for duty on Monday to 
 #####  Controls:
  
 * Arrow keys or WASD to move
- * Space to interact
+* Space to interact
 
 ##### Creators:
 
