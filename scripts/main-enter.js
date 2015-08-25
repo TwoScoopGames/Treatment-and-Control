@@ -28,6 +28,8 @@ var names = [
   "Mark"
 ];
 
+var songs = ["day1", "day2", "day3", "day4", "day4"];
+
 shuffle(names);
 var schedule = names.map(function(name, i) {
   return {
@@ -46,12 +48,12 @@ function showMessage(data, entity, message) {
 }
 
 module.exports = function(data) {
-  data.sounds.play("day1", true);
+  var day = data.arguments.day || 0;
+  data.sounds.play(songs[day], true);
 
   var cart = data.entities.entities[3];
   cart.deliveries = [];
 
-  var day = data.arguments.day || 0;
   
   if (day === 0) {
     showMessage(data, data.entities.entities[11], "GUARD: The night shift left your cart over there.");
