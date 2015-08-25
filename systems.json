@@ -10,7 +10,8 @@
   {
    "name": "splatjs:advanceAnimations",
    "scenes": [
-    "main"
+    "main",
+    "title"
    ]
   },
   {
