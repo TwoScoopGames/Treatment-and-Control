@@ -1,3 +1,5 @@
+![Treatment and Control](./images/title-screen.png)
+
 # Treatment and Control
 ##### Game created in 72 hours for the [Ludum Dare](http://ludumdare.com/compo/about-ludum-dare/) 33 worldwide game competition!
 
