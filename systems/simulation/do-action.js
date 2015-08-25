@@ -75,8 +75,10 @@ function pickMessage(entity, other, cart, data) {
   if (entity.target && entity.target.name === other.name) {
     if (entity.target.pill === "blue") {
       arr = responses.bluePill;
+      data.sounds.play(bluePillSounds[Math.floor(Math.random() * bluePillSounds.length)]);
     } else if (entity.target.pill === "red") {
       arr = responses.redPill;
+      data.sounds.play(redPill2);
     }
 
     for (var i = 0; i < cart.deliveries.length; i++) {
@@ -89,8 +91,7 @@ function pickMessage(entity, other, cart, data) {
       }
     }
     entity.target = undefined;
-      
-    data.sounds.play(bluePillSounds[Math.floor(Math.random() * bluePillSounds.length)]);
+
   }
   var i = Math.floor(Math.random() * arr.length);
   return other.name.toUpperCase() + ": " + arr[i];
