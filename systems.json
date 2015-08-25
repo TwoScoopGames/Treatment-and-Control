@@ -61,6 +61,12 @@
    "scenes": [
     "main"
    ]
+  },
+  {
+   "name": "./systems/simulation/start-game",
+   "scenes": [
+    "title"
+   ]
   }
  ],
  "renderer": [

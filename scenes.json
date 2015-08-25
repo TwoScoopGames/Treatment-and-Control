@@ -7,11 +7,11 @@
  "title": {
   "onEnter": "./scripts/title-enter",
   "onExit": "./scripts/title-exit",
-  "first": false
+  "first": true
  },
  "day-intro": {
   "onEnter": "./scripts/day-intro-enter",
   "onExit": "./scripts/day-intro-exit",
-  "first": true
+  "first": false
  }
 }
