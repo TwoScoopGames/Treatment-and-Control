@@ -15,7 +15,9 @@ var responses = {
   [
     "...",
     "I need to get back to work.",
-    "I'm not on your list."
+    "I'm not on your list.",
+    "I must focus on my work.",
+    "As a citizen it is my duty to be productive."
   ],
   "peopleMedium":
   [
@@ -24,7 +26,7 @@ var responses = {
     "How is your family?",
     "This job is boring.",
     "This job is boring, I wish I could work at the refinery.",
-    "<name> hasn't showed up in a few days...",
+    "Samuel hasn't showed up in a few days...",
     "I wish I was chosen to be a cook."
   ],
   "peopleColorful":
@@ -33,7 +35,18 @@ var responses = {
     "I'm tired of this place.",
     "We aren't criminals, why are we treated like this?",
     "My brother was assigned to the refinery and we haven't seen him since.",
+<<<<<<< HEAD
     "People are disappearing and nobody seems to care."
+=======
+    "People are disappearing and nobody seems to care.",
+    "How are you today?",
+    "I haven't seen Tim in months, nobody seems to remember him... maybe I'm just imagining things...",
+    "How is your family?",
+    "This job is boring.",
+    "This job is boring, but I am too old for the defence force.",
+    "Anthony hasn't showed up in a few days...",
+    "I wish I was chosen to be a cook."
+>>>>>>> fix typo in messages, add a few more.
   ],
   "bluePill":
   [
@@ -41,7 +54,10 @@ var responses = {
     "Time for my medicine?",
     "It's that time again.",
     "Can't they make these taste better?",
-    "..."
+    "...",
+    "If I have to...",
+    "Do we really still need these?",
+    "There hasen't been an incident in years, do we still need these pills?"
   ],
   "bluePillSkeptical":
   [
@@ -53,7 +69,9 @@ var responses = {
   [
     "This is different than the usual pill.",
     "Are these a new flavor?",
-    "What is this one for?"
+    "What is this one for?",
+    "They gave Tim one of these and he hasen't been back to work.",
+    "Isn't this what Anthony takes? Where has he been...?"
   ],
   "redPillSkeptical":
   [
@@ -140,7 +158,7 @@ module.exports = function(ecs, data) { // eslint-disable-line no-unused-vars
 	                  //showMessage(data, entity, "No pills left");
                     var day = data.arguments.day || 0;
                     if (day === 4) {
-                    	data.switchScene("ending");                      
+                    	data.switchScene("ending");
                     } else {
                     	data.switchScene("day-intro", {day: day + 1 });
                     }
