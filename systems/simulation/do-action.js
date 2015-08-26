@@ -35,9 +35,6 @@ var responses = {
     "I'm tired of this place.",
     "We aren't criminals, why are we treated like this?",
     "My brother was assigned to the refinery and we haven't seen him since.",
-<<<<<<< HEAD
-    "People are disappearing and nobody seems to care."
-=======
     "People are disappearing and nobody seems to care.",
     "How are you today?",
     "I haven't seen Tim in months, nobody seems to remember him... maybe I'm just imagining things...",
@@ -46,7 +43,6 @@ var responses = {
     "This job is boring, but I am too old for the defence force.",
     "Anthony hasn't showed up in a few days...",
     "I wish I was chosen to be a cook."
->>>>>>> fix typo in messages, add a few more.
   ],
   "bluePill":
   [
@@ -77,7 +73,7 @@ var responses = {
   [
     "They gave <name> one of these snd they havent been back to work.",
     "Isn't this what <name> takes? Where are they...?"
-  ],
+  ]
 };
 
 function pickMessage(entity, other, cart, data) {
