@@ -33,7 +33,7 @@ var responses = {
     "I'm tired of this place.",
     "We aren't criminals, why are we treated like this?",
     "My brother was assigned to the refinery and we haven't seen him since.",
-    "People are dissapearing and nobody seems to care."
+    "People are disappearing and nobody seems to care."
   ],
   "bluePill":
   [
