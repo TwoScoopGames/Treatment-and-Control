@@ -9,22 +9,21 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/SplatJS/splatjs-ecs-blank-project.git"
+    "url": "https://github.com/TwoScoopGames/Treatment-and-Control"
   },
   "keywords": [],
   "author": "Eric Lathrop <eric@ericlathrop.com> (http://ericlathrop.com/)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/SplatJS/splatjs-ecs-blank-project/issues"
+    "url": "https://github.com/TwoScoopGames/Treatment-and-Control/issues"
   },
-  "homepage": "https://github.com/SplatJS/splatjs-ecs-blank-project",
+  "homepage": "https://github.com/TwoScoopGames/Treatment-and-Control",
   "devDependencies": {
     "browserify": "^7.0.0",
     "jshint": "^2.5.11"
   },
   "dependencies": {
-    "gl-matrix": "^2.3.1",
-    "splatjs": "SplatJS/SplatJS#ecs"
+    "splat-ecs": "0.0.0"
   },
   "jshintConfig": {
     "camelcase": true,
