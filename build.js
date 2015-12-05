@@ -37,4 +37,5 @@ b.bundle().pipe(out);
 
 ncp("src/index.html", "build/index.html");
 ncp("src/images", "build/images");
+ncp("src/fonts", "build/fonts");
 ncp("src/sounds", "build/sounds");
