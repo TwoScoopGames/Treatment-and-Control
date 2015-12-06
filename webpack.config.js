@@ -5,6 +5,9 @@ var environment = process.env["NODE_ENV"] || "development";
 
 module.exports = {
 	entry: "./src/game",
+	glsl: {
+		chunkPath: __dirname + "/src/shaders/chunks"
+	},
 	output: {
 		path: __dirname + "/build",
 		filename: "index.js"
@@ -29,7 +32,8 @@ module.exports = {
 			{
 				test: /src\/index.html$/i,
 				loader: "file?hash=sha512&digest=hex&name=[name].[ext]"
-			}
+			},
+			{ test: /\.(glsl|vs|fs)$/, loader: "shader" }
 		]
 	},
 	plugins: [
