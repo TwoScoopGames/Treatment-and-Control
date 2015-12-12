@@ -1,41 +1,53 @@
 "use strict";
 
-function wasLeft(entity, other) {
-	return entity.lastPosition.x + entity.size.width <= other.position.x;
+function wasLeft(entityLastPosition, entitySize, otherPosition) {
+	return entityLastPosition.x + entitySize.width <= otherPosition.x;
 }
-function wasRight(entity, other) {
-	return entity.lastPosition.x >= other.position.x + other.size.width;
+function wasRight(entityLastPosition, otherPosition, otherSize) {
+	return entityLastPosition.x >= otherPosition.x + otherSize.width;
 }
-function wasAbove(entity, other) {
-	return entity.lastPosition.y + entity.size.height <= other.position.y;
+function wasAbove(entityLastPosition, entitySize, otherPosition) {
+	return entityLastPosition.y + entitySize.height <= otherPosition.y;
 }
-function wasBelow(entity, other) {
-	return entity.lastPosition.y >= other.position.y + other.size.height;
+function wasBelow(entityLastPosition, otherPosition, otherSize) {
+	return entityLastPosition.y >= otherPosition.y + otherSize.height;
 }
 
 module.exports = function(ecs, data) { // eslint-disable-line no-unused-vars
+	data.entities.registerSearch("resolveCollisions", ["collisions","velocity","player","lastPosition","position"]);
 	ecs.addEach(function(entity, elapsed) { // eslint-disable-line no-unused-vars
-		for (var i = 0; i < entity.collisions.length; i++) {
-			var other = data.entities.entities[entity.collisions[i]];
-			if (other.actionZone || other.image === undefined) {
+		var entityCollisions = data.entities.get(entity, "collisions");
+		var entityPosition = data.entities.get(entity, "position");
+		var entitySize = data.entities.get(entity, "size");
+		var entityVelocity = data.entities.get(entity, "velocity");
+		var entityLastPosition = data.entities.get(entity, "lastPosition");
+
+		for (var i = 0; i < entityCollisions.length; i++) {
+			var other = entityCollisions[i];
+			var otherActionZone = data.entities.get(other, "actionZone");
+			var otherImage = data.entities.get(other, "image");
+			var otherPosition = data.entities.get(other, "position");
+			var otherSize = data.entities.get(other, "size");
+
+			if (otherActionZone || otherImage === undefined) {
 				continue;
 			}
-			if (wasLeft(entity, other)) {
-				entity.position.x = other.position.x - entity.size.width;
-				entity.velocity.x = 0;
+			if (wasLeft(entityLastPosition, entitySize, otherPosition)) {
+				entityPosition.x = otherPosition.x - entitySize.width;
+				entityVelocity.x = 0;
 			}
-			if (wasRight(entity, other)) {
-				entity.position.x = other.position.x + other.size.width;
-				entity.velocity.x = 0;
+			if (wasRight(entityLastPosition, otherPosition, otherSize)) {
+				entityPosition.x = otherPosition.x + otherSize.width;
+				entityVelocity.x = 0;
 			}
-			if (wasAbove(entity, other)) {
-				entity.position.y = other.position.y - entity.size.height;
-				entity.velocity.y = 0;
+			if (wasAbove(entityLastPosition, entitySize, otherPosition)) {
+				entityPosition.y = otherPosition.y - entitySize.height;
+				entityVelocity.y = 0;
 			}
-			if (wasBelow(entity, other)) {
-				entity.position.y = other.position.y + other.size.height;
-				entity.velocity.y = 0;
+			if (wasBelow(entityLastPosition, otherPosition, otherSize)) {
+				entityPosition.y = otherPosition.y + otherSize.height;
+				entityVelocity.y = 0;
 			}
 		}
-	}, ["collisions","velocity","player","lastPosition","position"]);
+	}, "resolveCollisions");
 };

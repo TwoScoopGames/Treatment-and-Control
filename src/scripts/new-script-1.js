@@ -13,5 +13,5 @@ var footsteps = [
 
 module.exports = function(entity, data) { // eslint-disable-line no-unused-vars
 	data.sounds.play(footsteps[Math.floor(Math.random()*footsteps.length)]);
-	entity.timers.footsteps.running = true;
+	data.entities.get(entity, "timers").footsteps.running = true;
 };

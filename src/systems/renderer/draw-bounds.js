@@ -1,8 +1,11 @@
 "use strict";
 
 module.exports = function(ecs, data) { // eslint-disable-line no-unused-vars
+	data.entities.registerSearch("drawBounds", ["position", "size"]);
 	ecs.addEach(function(entity, context) { // eslint-disable-line no-unused-vars
+		var position = data.entities.get(entity, "position");
+		var size = data.entities.get(entity, "position");
 		context.strokeStyle = "red";
-		context.strokeRect(entity.position.x, entity.position.y, entity.size.width, entity.size.height);
-	}, ["position", "size"]);
+		context.strokeRect(position.x, position.y, size.width, size.height);
+	}, "drawBounds");
 };

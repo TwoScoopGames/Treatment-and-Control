@@ -42,8 +42,8 @@ schedule[2].unaffectedOn = 2;
 shuffle(schedule);
 
 function showMessage(data, entity, message) {
-	entity.message = { text: message, len: 0 };
-	entity.timers.text.running = true;
+	data.entities.set(entity, "message", { text: message, len: 0 });
+	data.entities.get(entity, "timers").text.running = true;
 	data.sounds.play("textpopup2");
 }
 
@@ -51,42 +51,37 @@ module.exports = function(data) {
 	var day = data.arguments.day || 0;
 	data.sounds.play(songs[day], true);
 
-	var cart = data.entities.entities[3];
-	cart.deliveries = [];
-
+	var cart = 3;
+	var deliveries = [];
+	data.entities.set(cart, "deliveries", deliveries);
 
 	if (day === 0) {
-		showMessage(data, data.entities.entities[11], "GUARD: The night shift left your cart over there.");
+		showMessage(data, 11, "GUARD: The night shift left your cart over there.");
 	}
 
 	var worker = 0;
-	Object.keys(data.entities.entities).forEach(function(id) {
-		var entity = data.entities.entities[id];
-		if (entity.fadePercent === undefined) {
-			return;
-		}
-
+	data.entities.find("fadePercent").forEach(function(entity) {
 		var s = schedule[worker];
-		entity.name = s.name;
+		data.entities.set(entity, "name", s.name);
 		if (day === s.day) {
-			entity.fadePercent.fadePercent = 0;
+			data.entities.set(entity, "fadePercent", { fadePercent: 0 });
 			var effective = s.unaffectedOn !== day;
-			cart.deliveries.push({ name: s.name, pill: "blue", effective: effective });
+			deliveries.push({ name: s.name, pill: "blue", effective: effective });
 		} else if (s.unaffectedOn < day) {
-			entity.fadePercent.fadePercent = 0;
+			data.entities.set(entity, "fadePercent", { fadePercent: 0 });
 			if (s.unaffectedOn === day - 2) {
-				cart.deliveries.push({ name: s.name, pill: "red", effective: true });
+				deliveries.push({ name: s.name, pill: "red", effective: true });
 			}
 			if (s.unaffectedOn < day - 2) {
-				entity.animation = undefined;
-				entity.image = undefined;
-				entity.message = { text: "I wonder where " + entity.name + " is..." };
+				data.entities.remove(entity, "animation");
+				data.entities.remove(entity, "image");
+				data.entities.set(entity, "message", { text: "I wonder where " + entity.name + " is..." });
 			}
 		} else {
-			entity.fadePercent.fadePercent = 100;
+			data.entities.set(entity, "fadePercent", { fadePercent: 100 });
 		}
 
 		worker++;
 	});
-	shuffle(cart.deliveries);
+	shuffle(deliveries);
 };

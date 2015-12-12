@@ -5,12 +5,14 @@ var sounds = [
 	"texttyping21"
 ];
 module.exports = function(entity, data) { // eslint-disable-line no-unused-vars
-	entity.message.len++;
-	if (entity.message.len === 1 || entity.message.text[entity.message.len - 1] === " ") {
+	var message = data.entities.get(entity, "message");
+	var timers = data.entities.get(entity, "timers");
+	message.len++;
+	if (message.len === 1 || message.text[message.len - 1] === " ") {
 		var i = Math.floor(Math.random() * sounds.length);
 		data.sounds.play(sounds[i]);
 	}
-	if (entity.message.len < entity.message.text.length) {
-		entity.timers.text.running = true;
+	if (message.len < message.text.length) {
+		timers.text.running = true;
 	}
 };

@@ -22,12 +22,15 @@ var anims = {
 };
 
 module.exports = function(ecs, data) { // eslint-disable-line no-unused-vars
+	data.entities.registerSearch("setWorkerAnimation", ["fadePercent", "animation"]);
 	ecs.addEach(function(entity, elapsed) { // eslint-disable-line no-unused-vars
-		var fade = entity.fadePercent.fadePercent;
-		if (entity.animation === undefined) {
+		var fadePercent = data.entities.get(entity, "fadePercent");
+		var animation = data.entities.get(entity, "animation");
+		var fade = fadePercent.fadePercent;
+		if (animation === undefined) {
 			return;
 		}
-		var anim = entity.animation.name.substr(0, 8);
-		entity.animation.name = anims[fade][anim];
-	}, ["fadePercent", "animation"]);
+		var anim = animation.name.substr(0, 8);
+		animation.name = anims[fade][anim];
+	}, "setWorkerAnimation");
 };

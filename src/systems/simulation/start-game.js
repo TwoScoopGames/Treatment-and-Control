@@ -1,15 +1,15 @@
 "use strict";
 
 module.exports = function(ecs, data) { // eslint-disable-line no-unused-vars
-	ecs.addEach(function(entity, elapsed) { // eslint-disable-line no-unused-vars
-		var title = data.entities.entities[0];
+	ecs.add(function(entities, elapsed) { // eslint-disable-line no-unused-vars
+		var title = 0;
 		if (data.input.button("action")) {
-			title.action = true;
+			data.entities.set(title, "action", true);
 		} else {
-			if (title.action) {
+			if (data.entities.get(title, "action")) {
 				data.switchScene("day-intro");
 			}
-			title.action = false;
+			data.entities.set(title, "action", false);
 		}
-	}, []);
+	});
 };

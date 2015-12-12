@@ -7,5 +7,5 @@ module.exports = function(ecs, data) { // eslint-disable-line no-unused-vars
 		context.fillStyle = "#666";
 		var day = data.arguments.day || 0;
 		context.fillText(days[day % 5], 300, 300);
-	}, []);
+	});
 };

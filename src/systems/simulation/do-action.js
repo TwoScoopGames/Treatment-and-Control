@@ -71,7 +71,7 @@ var responses = {
 
 function pickMessage(entity, other, cart, data) {
 	var arr = ["..."];
-	var fade = parseInt(other.fadePercent.fadePercent);
+	var fade = parseInt(data.entities.get(other, "fadePercent").fadePercent);
 	if (fade === 0) {
 		arr = responses.peopleColorful;
 	} else if (fade === 50) {
@@ -79,68 +79,77 @@ function pickMessage(entity, other, cart, data) {
 	} else if (fade === 100) {
 		arr = responses.peopleGrey;
 	}
-	if (entity.target && entity.target.name === other.name) {
-		if (entity.target.pill === "blue") {
+	var target = data.entities.get(entity, "target");
+	var otherName = data.entities.get(other, "name");
+	var otherFadePercent = data.entities.get(other, "fadePercent");
+	if (target && target.name === otherName) {
+		if (target.pill === "blue") {
 			arr = responses.bluePill;
 			data.sounds.play(bluePillSounds[Math.floor(Math.random() * bluePillSounds.length)]);
-		} else if (entity.target.pill === "red") {
+		} else if (target.pill === "red") {
 			arr = responses.redPill;
 			data.sounds.play("redpill2");
 		}
 
-		for (var i = 0; i < cart.deliveries.length; i++) {
-			var d = cart.deliveries[i];
-			if (d.name === entity.target.name) {
+		var deliveries = data.entities.get(cart, "deliveries");
+		for (var i = 0; i < deliveries.length; i++) {
+			var d = deliveries[i];
+			if (d.name === target.name) {
 				d.done = true;
 				if (d.effective) {
-					other.fadePercent.fadePercent = 100;
+					otherFadePercent.fadePercent = 100;
 				}
 			}
 		}
-		entity.target = undefined;
-
+		data.entities.remove(entity, "target");
 	}
 	var msg = Math.floor(Math.random() * arr.length);
-	return other.name.toUpperCase() + ": " + arr[msg];
+	return otherName.toUpperCase() + ": " + arr[msg];
 }
 
 function showMessage(data, entity, message) {
-	entity.message = { text: message, len: 0 };
-	entity.timers.text.running = true;
+	data.entities.set(entity, "message", { text: message, len: 0 });
+	data.entities.get(entity, "timers").text.running = true;
 	data.sounds.play("textpopup2");
 }
 
 module.exports = function(ecs, data) { // eslint-disable-line no-unused-vars
 	ecs.addEach(function(entity, elapsed) { // eslint-disable-line no-unused-vars
-		var cart = data.entities.entities[3];
+		var cart = 3;
+		var action = data.entities.get(entity, "action");
+		var message = data.entities.get(entity, "message");
+		var collisions = data.entities.get(entity, "collisions");
 
 		if (data.input.button("action")) {
-			var risingEdge = !entity.action;
-			entity.action = true;
+			var risingEdge = !action;
+			data.entities.set(entity, "action", true);
 			if (risingEdge) {
-				if (entity.message) {
-					if (entity.message.len < entity.message.text.length) {
-						entity.message.len = entity.message.text.length;
+				if (message) {
+					if (message.len < message.text.length) {
+						message.len = message.text.length;
 					} else {
-						entity.message = undefined;
+						data.entities.remove(entity, "message");
 						data.sounds.play("textpopup10");
 					}
-				} else if (entity.clipboard) {
-					entity.clipboard = undefined;
+				} else if (data.entities.get(entity, "clipboard")) {
+					data.entities.remove(entity, "clipboard");
 					data.sounds.play("textpopup10");
 				} else {
-					for (var i = 0; i < entity.collisions.length; i++) {
-						var other = data.entities.entities[entity.collisions[i]];
-						if (other.message) {
-							showMessage(data, entity, other.message.text);
+					for (var i = 0; i < collisions.length; i++) {
+						var other = collisions[i];
+						var otherMessage = data.entities.get(other, "message");
+						var otherFadePercent = data.entities.get(other, "fadePercent");
+						var otherDeliveries = data.entities.get(other, "deliveries");
+						if (otherMessage) {
+							showMessage(data, entity, otherMessage.text);
 							break;
 						}
-						if (other.fadePercent) {
+						if (otherFadePercent) {
 							showMessage(data, entity, pickMessage(entity, other, cart, data));
 							break;
 						}
-						if (other.deliveries) {
-							var left = other.deliveries.filter(function(d) {
+						if (otherDeliveries) {
+							var left = otherDeliveries.filter(function(d) {
 								return !d.done;
 							});
 							if (left.length === 0) {
@@ -152,8 +161,8 @@ module.exports = function(ecs, data) { // eslint-disable-line no-unused-vars
 									data.switchScene("day-intro", {day: day + 1 });
 								}
 							} else {
-								entity.target = left[0];
-								entity.clipboard = true;
+								data.entities.set(entity, "target", left[0]);
+								data.entities.set(entity, "clipboard", true);
 								data.sounds.play("textpopup2");
 							}
 						}
@@ -161,7 +170,7 @@ module.exports = function(ecs, data) { // eslint-disable-line no-unused-vars
 				}
 			}
 		} else {
-			entity.action = false;
+			data.entities.set(entity, "action", false);
 		}
-	}, ["actionZone"]);
+	}, "actionZone");
 };
