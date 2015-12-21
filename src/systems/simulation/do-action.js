@@ -114,7 +114,7 @@ function showMessage(data, entity, message) {
 }
 
 module.exports = function(ecs, data) { // eslint-disable-line no-unused-vars
-	ecs.addEach(function(entity, elapsed) { // eslint-disable-line no-unused-vars
+	ecs.addEach(function doAction(entity, elapsed) { // eslint-disable-line no-unused-vars
 		var cart = 3;
 		var action = data.entities.get(entity, "action");
 		var message = data.entities.get(entity, "message");

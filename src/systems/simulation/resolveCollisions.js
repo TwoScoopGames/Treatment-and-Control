@@ -15,7 +15,7 @@ function wasBelow(entityLastPosition, otherPosition, otherSize) {
 
 module.exports = function(ecs, data) { // eslint-disable-line no-unused-vars
 	data.entities.registerSearch("resolveCollisions", ["collisions","velocity","player","lastPosition","position"]);
-	ecs.addEach(function(entity, elapsed) { // eslint-disable-line no-unused-vars
+	ecs.addEach(function resolveCollisions(entity, elapsed) { // eslint-disable-line no-unused-vars
 		var entityCollisions = data.entities.get(entity, "collisions");
 		var entityPosition = data.entities.get(entity, "position");
 		var entitySize = data.entities.get(entity, "size");

@@ -23,7 +23,7 @@ var anims = {
 
 module.exports = function(ecs, data) { // eslint-disable-line no-unused-vars
 	data.entities.registerSearch("setWorkerAnimation", ["fadePercent", "animation"]);
-	ecs.addEach(function(entity, elapsed) { // eslint-disable-line no-unused-vars
+	ecs.addEach(function setWorkerAnimation(entity, elapsed) { // eslint-disable-line no-unused-vars
 		var fadePercent = data.entities.get(entity, "fadePercent");
 		var animation = data.entities.get(entity, "animation");
 		var fade = fadePercent.fadePercent;
