@@ -1,14 +1,14 @@
 {
  "simulation": [
   {
-   "name": "splatjs:advanceTimers",
+   "name": "splat-ecs/lib/systems/advance-timers",
    "scenes": [
     "main",
     "day-intro"
    ]
   },
   {
-   "name": "splatjs:advanceAnimations",
+   "name": "splat-ecs/lib/systems/advance-animations",
    "scenes": [
     "main",
     "title",
@@ -34,25 +34,25 @@
    ]
   },
   {
-   "name": "splatjs:applyVelocity",
+   "name": "splat-ecs/lib/systems/apply-velocity",
    "scenes": [
     "main"
    ]
   },
   {
-   "name": "splatjs:followParent",
+   "name": "splat-ecs/lib/systems/follow-parent",
    "scenes": [
     "main"
    ]
   },
   {
-   "name": "splatjs:boxCollider",
+   "name": "splat-ecs/lib/systems/box-collider",
    "scenes": [
     "main"
    ]
   },
   {
-   "name": "./systems/simulation/resolveCollisions",
+   "name": "./systems/simulation/resolve-collisions",
    "scenes": [
     "main"
    ]
@@ -72,24 +72,24 @@
  ],
  "renderer": [
   {
-   "name": "splatjs:clearScreen",
+   "name": "splat-ecs/lib/systems/clear-screen",
    "scenes": []
   },
   {
-   "name": "./systems/renderer/drawBackground",
+   "name": "./systems/renderer/draw-background",
    "scenes": [
     "main",
     "day-intro"
    ]
   },
   {
-   "name": "splatjs:viewport.moveToCamera",
+   "name": "splat-ecs/lib/systems/viewport-move-to-camera",
    "scenes": [
     "main"
    ]
   },
   {
-   "name": "splatjs:drawImage",
+   "name": "splat-ecs/lib/systems/draw-image",
    "scenes": [
     "main",
     "title",
@@ -101,7 +101,7 @@
    "scenes": []
   },
   {
-   "name": "splatjs:viewport.reset",
+   "name": "splat-ecs/lib/systems/viewport-reset",
    "scenes": [
     "main"
    ]

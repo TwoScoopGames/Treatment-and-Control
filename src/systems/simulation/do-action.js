@@ -158,7 +158,7 @@ module.exports = function(ecs, data) { // eslint-disable-line no-unused-vars
 								if (day === 4) {
 									data.switchScene("ending");
 								} else {
-									data.switchScene("day-intro", {day: day + 1 });
+									data.switchScene("day-intro", { day: day + 1 });
 								}
 							} else {
 								data.entities.set(entity, "target", left[0]);
