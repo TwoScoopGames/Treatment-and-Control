@@ -1,8 +1,6 @@
 "use strict";
 
 var canvas = document.getElementById("canvas");
-var context = canvas.getContext("2d");
-
 var Splat = require("splat-ecs");
 
 // This is some webpack magic to ensure the dynamically required scripts are loaded
@@ -54,4 +52,4 @@ function percentLoaded() {
 	return (game.images.loadedImages + game.sounds.loadedSounds) / (game.images.totalImages + game.sounds.totalSounds);
 }
 var loading = Splat.loadingScene(canvas, percentLoaded, game.scene);
-loading.start(context);
+loading.start(game.context);
