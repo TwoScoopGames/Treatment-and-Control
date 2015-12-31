@@ -26,6 +26,13 @@ module.exports = {
 				]
 			},
 			{
+				test: /src\/textures\/.*\.(jpe?g|png|gif|svg)$/i,
+				loaders: [
+					"file?hash=sha512&digest=hex&name=textures/[name].[ext]",
+					"image-webpack?bypassOnDebug&optimizationLevel=7&interlaced=false"
+				]
+			},
+			{
 				test: /src\/sounds\/.*\.(mp3|ogg|wav)$/i,
 				loader: "file?hash=sha512&digest=hex&name=sounds/[name].[ext]"
 			},
