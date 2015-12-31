@@ -1,7 +1,7 @@
 {
 	"shaders": [
 		{
-			"path": "./data/fragment.glsl",
+			"path": "./shaders/fragment.glsl",
 			"type": "FRAGMENT_SHADER",
 			"scenes": [
 				"main",
@@ -11,7 +11,7 @@
 			]
 		},
 		{
-			"path": "./data/vertex.glsl",
+			"path": "./shaders/vertex.glsl",
 			"type": "VERTEX_SHADER",
 			"scenes": [
 				"main",
