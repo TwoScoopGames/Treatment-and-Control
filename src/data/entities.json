@@ -65,7 +65,7 @@
     "frame": 0,
     "loop": true,
     "speed": 1,
-    "name": "desk-3x"
+    "name": "desk"
    },
    "image": {
     "sourceX": 0,
@@ -91,7 +91,7 @@
     "frame": 0,
     "loop": true,
     "speed": 1,
-    "name": "bg-3x"
+    "name": "bg"
    },
    "image": {
     "sourceX": 0,
@@ -326,7 +326,7 @@
     "frame": 0,
     "loop": true,
     "speed": 1,
-    "name": "desk-3x"
+    "name": "desk"
    },
    "image": {
     "sourceX": 0,
@@ -356,7 +356,7 @@
     "frame": 0,
     "loop": true,
     "speed": 1,
-    "name": "desk-3x"
+    "name": "desk"
    },
    "image": {
     "sourceX": 0,
@@ -386,7 +386,7 @@
     "frame": 0,
     "loop": true,
     "speed": 1,
-    "name": "desk-3x"
+    "name": "desk"
    },
    "image": {
     "sourceX": 0,
@@ -521,7 +521,7 @@
     "frame": 0,
     "loop": true,
     "speed": 1,
-    "name": "desk-3x"
+    "name": "desk"
    },
    "image": {
     "sourceX": 0,
@@ -587,7 +587,7 @@
     "frame": 0,
     "loop": true,
     "speed": 1,
-    "name": "desk-3x"
+    "name": "desk"
    },
    "image": {
     "sourceX": 0,
@@ -653,7 +653,7 @@
     "frame": 0,
     "loop": true,
     "speed": 1,
-    "name": "desk-3x"
+    "name": "desk"
    },
    "image": {
     "sourceX": 0,
@@ -683,7 +683,7 @@
     "frame": 0,
     "loop": true,
     "speed": 1,
-    "name": "desk-3x"
+    "name": "desk"
    },
    "image": {
     "sourceX": 0,
@@ -821,7 +821,7 @@
     "frame": 0,
     "loop": true,
     "speed": 1,
-    "name": "desk-3x"
+    "name": "desk"
    },
    "image": {
     "sourceX": 0,
@@ -887,7 +887,7 @@
     "frame": 0,
     "loop": true,
     "speed": 1,
-    "name": "desk-3x"
+    "name": "desk"
    },
    "image": {
     "sourceX": 0,
@@ -953,7 +953,7 @@
     "frame": 0,
     "loop": true,
     "speed": 1,
-    "name": "desk-3x"
+    "name": "desk"
    },
    "image": {
     "sourceX": 0,
@@ -983,7 +983,7 @@
     "frame": 0,
     "loop": true,
     "speed": 1,
-    "name": "desk-3x"
+    "name": "desk"
    },
    "image": {
     "sourceX": 0,
@@ -1085,7 +1085,7 @@
     "frame": 0,
     "loop": true,
     "speed": 1,
-    "name": "desk-3x"
+    "name": "desk"
    },
    "image": {
     "sourceX": 0,
@@ -1151,7 +1151,7 @@
     "frame": 0,
     "loop": true,
     "speed": 1,
-    "name": "desk-3x"
+    "name": "desk"
    },
    "image": {
     "sourceX": 0,
@@ -1181,7 +1181,7 @@
     "frame": 0,
     "loop": true,
     "speed": 1,
-    "name": "desk-3x"
+    "name": "desk"
    },
    "image": {
     "sourceX": 0,
@@ -1211,7 +1211,7 @@
     "frame": 0,
     "loop": true,
     "speed": 1,
-    "name": "desk-3x"
+    "name": "desk"
    },
    "image": {
     "sourceX": 0,
@@ -1349,7 +1349,7 @@
     "frame": 0,
     "loop": true,
     "speed": 1,
-    "name": "desk-3x"
+    "name": "desk"
    },
    "image": {
     "sourceX": 0,
@@ -1379,7 +1379,7 @@
     "frame": 0,
     "loop": true,
     "speed": 1,
-    "name": "desk-3x"
+    "name": "desk"
    },
    "image": {
     "sourceX": 0,
@@ -1445,7 +1445,7 @@
     "frame": 0,
     "loop": true,
     "speed": 1,
-    "name": "desk-3x"
+    "name": "desk"
    },
    "image": {
     "sourceX": 0,
@@ -1511,7 +1511,7 @@
     "frame": 0,
     "loop": true,
     "speed": 1,
-    "name": "desk-3x"
+    "name": "desk"
    },
    "image": {
     "sourceX": 0,

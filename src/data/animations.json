@@ -18,7 +18,7 @@
    "time": 100,
    "properties": {
     "image": {
-     "name": "cartboy-walk-down.png",
+     "name": "cartboy-walk-down-f3-1.png",
      "sourceX": 0,
      "sourceY": 0,
      "sourceWidth": 36,
@@ -30,7 +30,7 @@
    "time": 100,
    "properties": {
     "image": {
-     "name": "cartboy-walk-down.png",
+     "name": "cartboy-walk-down-f3-2.png",
      "sourceX": 36,
      "sourceY": 0,
      "sourceWidth": 36,
@@ -42,7 +42,7 @@
    "time": 100,
    "properties": {
     "image": {
-     "name": "cartboy-walk-down.png",
+     "name": "cartboy-walk-down-f3-1.png",
      "sourceX": 0,
      "sourceY": 0,
      "sourceWidth": 36,
@@ -54,7 +54,7 @@
    "time": 100,
    "properties": {
     "image": {
-     "name": "cartboy-walk-down.png",
+     "name": "cartboy-walk-down-f3-3.png",
      "sourceX": 72,
      "sourceY": 0,
      "sourceWidth": 36,
@@ -68,7 +68,7 @@
    "time": 100,
    "properties": {
     "image": {
-     "name": "cartboy-walk-right.png",
+     "name": "cartboy-walk-right-f3-1.png",
      "sourceX": 0,
      "sourceY": 0,
      "sourceWidth": 33,
@@ -80,7 +80,7 @@
    "time": 100,
    "properties": {
     "image": {
-     "name": "cartboy-walk-right.png",
+     "name": "cartboy-walk-right-f3-2.png",
      "sourceX": 33,
      "sourceY": 0,
      "sourceWidth": 33,
@@ -92,7 +92,7 @@
    "time": 100,
    "properties": {
     "image": {
-     "name": "cartboy-walk-right.png",
+     "name": "cartboy-walk-right-f3-1.png",
      "sourceX": 0,
      "sourceY": 0,
      "sourceWidth": 33,
@@ -104,7 +104,7 @@
    "time": 100,
    "properties": {
     "image": {
-     "name": "cartboy-walk-right.png",
+     "name": "cartboy-walk-right-f3-3.png",
      "sourceX": 66,
      "sourceY": 0,
      "sourceWidth": 33,
@@ -118,7 +118,7 @@
    "time": 100,
    "properties": {
     "image": {
-     "name": "cartboy-walk-up.png",
+     "name": "cartboy-walk-up-f3-1.png",
      "sourceX": 0,
      "sourceY": 0,
      "sourceWidth": 36,
@@ -130,7 +130,7 @@
    "time": 100,
    "properties": {
     "image": {
-     "name": "cartboy-walk-up.png",
+     "name": "cartboy-walk-up-f3-1.png",
      "sourceX": 0,
      "sourceY": 0,
      "sourceWidth": 36,
@@ -142,7 +142,7 @@
    "time": 100,
    "properties": {
     "image": {
-     "name": "cartboy-walk-up.png",
+     "name": "cartboy-walk-up-f3-2.png",
      "sourceX": 36,
      "sourceY": 0,
      "sourceWidth": 36,
@@ -154,7 +154,7 @@
    "time": 100,
    "properties": {
     "image": {
-     "name": "cartboy-walk-up.png",
+     "name": "cartboy-walk-up-f3-1.png",
      "sourceX": 0,
      "sourceY": 0,
      "sourceWidth": 36,
@@ -166,7 +166,7 @@
    "time": 100,
    "properties": {
     "image": {
-     "name": "cartboy-walk-up.png",
+     "name": "cartboy-walk-up-f3-3.png",
      "sourceX": 72,
      "sourceY": 0,
      "sourceWidth": 36,
@@ -194,7 +194,7 @@
    "time": 100,
    "properties": {
     "image": {
-     "name": "cartboy-walk-left.png",
+     "name": "cartboy-walk-left-f3-1.png",
      "sourceX": 0,
      "sourceY": 0,
      "sourceWidth": 33,
@@ -206,7 +206,7 @@
    "time": 100,
    "properties": {
     "image": {
-     "name": "cartboy-walk-left.png",
+     "name": "cartboy-walk-left-f3-2.png",
      "sourceX": 33,
      "sourceY": 0,
      "sourceWidth": 33,
@@ -218,7 +218,7 @@
    "time": 100,
    "properties": {
     "image": {
-     "name": "cartboy-walk-left.png",
+     "name": "cartboy-walk-left-f3-1.png",
      "sourceX": 0,
      "sourceY": 0,
      "sourceWidth": 33,
@@ -230,67 +230,11 @@
    "time": 100,
    "properties": {
     "image": {
-     "name": "cartboy-walk-left.png",
+     "name": "cartboy-walk-left-f3-3.png",
      "sourceX": 66,
      "sourceY": 0,
      "sourceWidth": 33,
      "sourceHeight": 69
-    }
-   }
-  }
- ],
- "bg-3x": [
-  {
-   "time": 100,
-   "properties": {
-    "image": {
-     "name": "bg.png",
-     "sourceX": 0,
-     "sourceY": 0,
-     "sourceWidth": 1005,
-     "sourceHeight": 1194
-    }
-   }
-  }
- ],
- "desk-3x": [
-  {
-   "time": 100,
-   "properties": {
-    "image": {
-     "name": "desk.png",
-     "sourceX": 0,
-     "sourceY": 0,
-     "sourceWidth": 87,
-     "sourceHeight": 72
-    }
-   }
-  }
- ],
- "gaurd-1": [
-  {
-   "time": 100,
-   "properties": {
-    "image": {
-     "name": "gaurd-1-f6.png",
-     "sourceX": 0,
-     "sourceY": 0,
-     "sourceWidth": 48,
-     "sourceHeight": 81
-    }
-   }
-  }
- ],
- "gaurd-2": [
-  {
-   "time": 100,
-   "properties": {
-    "image": {
-     "name": "gaurd-2-f6.png",
-     "sourceX": 0,
-     "sourceY": 0,
-     "sourceWidth": 48,
-     "sourceHeight": 78
     }
    }
   }
@@ -300,7 +244,7 @@
    "time": 800,
    "properties": {
     "image": {
-     "name": "cart-f2.png",
+     "name": "cart-f2-1.png",
      "sourceX": 0,
      "sourceY": 0,
      "sourceWidth": 42,
@@ -312,7 +256,7 @@
    "time": 100,
    "properties": {
     "image": {
-     "name": "cart-f2.png",
+     "name": "cart-f2-2.png",
      "sourceX": 42,
      "sourceY": 0,
      "sourceWidth": 42,
@@ -377,20 +321,6 @@
    }
   }
  ],
- "textbox-big": [
-  {
-   "time": 100,
-   "properties": {
-    "image": {
-     "name": "textbox-big.png",
-     "sourceX": 0,
-     "sourceY": 0,
-     "sourceWidth": 1137,
-     "sourceHeight": 213
-    }
-   }
-  }
- ],
  "title-screen": [
   {
    "time": 100,
@@ -410,19 +340,7 @@
    "time": 1000,
    "properties": {
     "image": {
-     "name": "gaurd-1-f6.png",
-     "sourceX": 0,
-     "sourceY": 0,
-     "sourceWidth": 48,
-     "sourceHeight": 81
-    }
-   }
-  },
-  {
-   "time": 1000,
-   "properties": {
-    "image": {
-     "name": "gaurd-1-f6.png",
+     "name": "gaurd-1-f6-1.png",
      "sourceX": 0,
      "sourceY": 0,
      "sourceWidth": 48,
@@ -434,7 +352,7 @@
    "time": 200,
    "properties": {
     "image": {
-     "name": "gaurd-1-f6.png",
+     "name": "gaurd-1-f6-2.png",
      "sourceX": 48,
      "sourceY": 0,
      "sourceWidth": 48,
@@ -446,7 +364,7 @@
    "time": 200,
    "properties": {
     "image": {
-     "name": "gaurd-1-f6.png",
+     "name": "gaurd-1-f6-3.png",
      "sourceX": 96,
      "sourceY": 0,
      "sourceWidth": 48,
@@ -458,7 +376,7 @@
    "time": 100,
    "properties": {
     "image": {
-     "name": "gaurd-1-f6.png",
+     "name": "gaurd-1-f6-4.png",
      "sourceX": 144,
      "sourceY": 0,
      "sourceWidth": 48,
@@ -470,7 +388,7 @@
    "time": 100,
    "properties": {
     "image": {
-     "name": "gaurd-1-f6.png",
+     "name": "gaurd-1-f6-5.png",
      "sourceX": 192,
      "sourceY": 0,
      "sourceWidth": 48,
@@ -482,7 +400,7 @@
    "time": 100,
    "properties": {
     "image": {
-     "name": "gaurd-1-f6.png",
+     "name": "gaurd-1-f6-6.png",
      "sourceX": 240,
      "sourceY": 0,
      "sourceWidth": 48,
@@ -496,7 +414,7 @@
    "time": 1000,
    "properties": {
     "image": {
-     "name": "gaurd2-f6.png",
+     "name": "gaurd2-f6-1.png",
      "sourceX": 0,
      "sourceY": 0,
      "sourceWidth": 48,
@@ -508,7 +426,31 @@
    "time": 100,
    "properties": {
     "image": {
-     "name": "gaurd2-f6.png",
+     "name": "gaurd2-f6-2.png",
+     "sourceX": 48,
+     "sourceY": 0,
+     "sourceWidth": 48,
+     "sourceHeight": 81
+    }
+   }
+  },
+  {
+   "time": 100,
+   "properties": {
+    "image": {
+     "name": "gaurd2-f6-3.png",
+     "sourceX": 96,
+     "sourceY": 0,
+     "sourceWidth": 48,
+     "sourceHeight": 81
+    }
+   }
+  },
+  {
+   "time": 100,
+   "properties": {
+    "image": {
+     "name": "gaurd2-f6-4.png",
      "sourceX": 144,
      "sourceY": 0,
      "sourceWidth": 48,
@@ -520,7 +462,7 @@
    "time": 100,
    "properties": {
     "image": {
-     "name": "gaurd2-f6.png",
+     "name": "gaurd2-f6-7.png",
      "sourceX": 192,
      "sourceY": 0,
      "sourceWidth": 48,
@@ -529,10 +471,10 @@
    }
   },
   {
-   "time": 1000,
+   "time": 100,
    "properties": {
     "image": {
-     "name": "gaurd2-f6.png",
+     "name": "gaurd2-f6-8.png",
      "sourceX": 240,
      "sourceY": 0,
      "sourceWidth": 48,
@@ -546,7 +488,7 @@
    "time": 3000,
    "properties": {
     "image": {
-     "name": "smoke-puff-f8.png",
+     "name": "smoke-puff-f8-1.png",
      "sourceX": 0,
      "sourceY": 0,
      "sourceWidth": 39,
@@ -558,7 +500,7 @@
    "time": 100,
    "properties": {
     "image": {
-     "name": "smoke-puff-f8.png",
+     "name": "smoke-puff-f8-2.png",
      "sourceX": 39,
      "sourceY": 0,
      "sourceWidth": 39,
@@ -570,7 +512,7 @@
    "time": 100,
    "properties": {
     "image": {
-     "name": "smoke-puff-f8.png",
+     "name": "smoke-puff-f8-3.png",
      "sourceX": 78,
      "sourceY": 0,
      "sourceWidth": 39,
@@ -582,7 +524,7 @@
    "time": 100,
    "properties": {
     "image": {
-     "name": "smoke-puff-f8.png",
+     "name": "smoke-puff-f8-4.png",
      "sourceX": 117,
      "sourceY": 0,
      "sourceWidth": 39,
@@ -594,7 +536,7 @@
    "time": 100,
    "properties": {
     "image": {
-     "name": "smoke-puff-f8.png",
+     "name": "smoke-puff-f8-5.png",
      "sourceX": 156,
      "sourceY": 0,
      "sourceWidth": 39,
@@ -606,7 +548,7 @@
    "time": 100,
    "properties": {
     "image": {
-     "name": "smoke-puff-f8.png",
+     "name": "smoke-puff-f8-6.png",
      "sourceX": 195,
      "sourceY": 0,
      "sourceWidth": 39,
@@ -618,7 +560,7 @@
    "time": 100,
    "properties": {
     "image": {
-     "name": "smoke-puff-f8.png",
+     "name": "smoke-puff-f8-7.png",
      "sourceX": 234,
      "sourceY": 0,
      "sourceWidth": 39,
@@ -630,7 +572,7 @@
    "time": 100,
    "properties": {
     "image": {
-     "name": "smoke-puff-f8.png",
+     "name": "smoke-puff-f8-8.png",
      "sourceX": 273,
      "sourceY": 0,
      "sourceWidth": 39,
@@ -658,7 +600,7 @@
    "time": 3300,
    "properties": {
     "image": {
-     "name": "worker-1-f3.png",
+     "name": "worker-1-f3-1.png",
      "sourceX": 0,
      "sourceY": 0,
      "sourceWidth": 36,
@@ -670,7 +612,7 @@
    "time": 100,
    "properties": {
     "image": {
-     "name": "worker-1-f3.png",
+     "name": "worker-1-f3-2.png",
      "sourceX": 36,
      "sourceY": 0,
      "sourceWidth": 36,
@@ -682,7 +624,7 @@
    "time": 100,
    "properties": {
     "image": {
-     "name": "worker-1-f3.png",
+     "name": "worker-1-f3-3.png",
      "sourceX": 72,
      "sourceY": 0,
      "sourceWidth": 36,
@@ -696,7 +638,7 @@
    "time": 3300,
    "properties": {
     "image": {
-     "name": "worker-1-fade50-f3.png",
+     "name": "worker-1-fade50-f3-1.png",
      "sourceX": 0,
      "sourceY": 0,
      "sourceWidth": 36,
@@ -708,7 +650,7 @@
    "time": 100,
    "properties": {
     "image": {
-     "name": "worker-1-fade50-f3.png",
+     "name": "worker-1-fade50-f3-2.png",
      "sourceX": 36,
      "sourceY": 0,
      "sourceWidth": 36,
@@ -720,7 +662,7 @@
    "time": 100,
    "properties": {
     "image": {
-     "name": "worker-1-fade50-f3.png",
+     "name": "worker-1-fade50-f3-3.png",
      "sourceX": 72,
      "sourceY": 0,
      "sourceWidth": 36,
@@ -734,7 +676,7 @@
    "time": 2000,
    "properties": {
     "image": {
-     "name": "worker-2-f3.png",
+     "name": "worker-2-f3-1.png",
      "sourceX": 0,
      "sourceY": 0,
      "sourceWidth": 35,
@@ -746,7 +688,7 @@
    "time": 100,
    "properties": {
     "image": {
-     "name": "worker-2-f3.png",
+     "name": "worker-2-f3-2.png",
      "sourceX": 35,
      "sourceY": 0,
      "sourceWidth": 35,
@@ -758,7 +700,7 @@
    "time": 100,
    "properties": {
     "image": {
-     "name": "worker-2-f3.png",
+     "name": "worker-2-f3-3.png",
      "sourceX": 70,
      "sourceY": 0,
      "sourceWidth": 35,
@@ -772,7 +714,7 @@
    "time": 2000,
    "properties": {
     "image": {
-     "name": "worker-2-fade0-f3.png",
+     "name": "worker-2-fade0-f3-1.png",
      "sourceX": 0,
      "sourceY": 0,
      "sourceWidth": 35,
@@ -784,7 +726,7 @@
    "time": 100,
    "properties": {
     "image": {
-     "name": "worker-2-fade0-f3.png",
+     "name": "worker-2-fade0-f3-2.png",
      "sourceX": 35,
      "sourceY": 0,
      "sourceWidth": 35,
@@ -796,7 +738,7 @@
    "time": 100,
    "properties": {
     "image": {
-     "name": "worker-2-fade0-f3.png",
+     "name": "worker-2-fade0-f3-3.png",
      "sourceX": 70,
      "sourceY": 0,
      "sourceWidth": 35,
@@ -810,7 +752,7 @@
    "time": 2000,
    "properties": {
     "image": {
-     "name": "worker-2-fade50-f3.png",
+     "name": "worker-2-fade50-f3-1.png",
      "sourceX": 0,
      "sourceY": 0,
      "sourceWidth": 35,
@@ -822,7 +764,7 @@
    "time": 100,
    "properties": {
     "image": {
-     "name": "worker-2-fade50-f3.png",
+     "name": "worker-2-fade50-f3-2.png",
      "sourceX": 35,
      "sourceY": 0,
      "sourceWidth": 35,
@@ -834,7 +776,7 @@
    "time": 100,
    "properties": {
     "image": {
-     "name": "worker-2-fade50-f3.png",
+     "name": "worker-2-fade50-f3-3.png",
      "sourceX": 70,
      "sourceY": 0,
      "sourceWidth": 35,
@@ -848,7 +790,7 @@
    "time": 4000,
    "properties": {
     "image": {
-     "name": "worker-3-f3.png",
+     "name": "worker-3-f3-1.png",
      "sourceX": 0,
      "sourceY": 0,
      "sourceWidth": 36,
@@ -860,7 +802,7 @@
    "time": 100,
    "properties": {
     "image": {
-     "name": "worker-3-f3.png",
+     "name": "worker-3-f3-2.png",
      "sourceX": 36,
      "sourceY": 0,
      "sourceWidth": 36,
@@ -872,7 +814,7 @@
    "time": 100,
    "properties": {
     "image": {
-     "name": "worker-3-f3.png",
+     "name": "worker-3-f3-3.png",
      "sourceX": 72,
      "sourceY": 0,
      "sourceWidth": 36,
@@ -886,7 +828,7 @@
    "time": 4000,
    "properties": {
     "image": {
-     "name": "worker-3-fade0-f3.png",
+     "name": "worker-3-fade0-f3-1.png",
      "sourceX": 0,
      "sourceY": 0,
      "sourceWidth": 36,
@@ -898,7 +840,7 @@
    "time": 100,
    "properties": {
     "image": {
-     "name": "worker-3-fade0-f3.png",
+     "name": "worker-3-fade0-f3-2.png",
      "sourceX": 36,
      "sourceY": 0,
      "sourceWidth": 36,
@@ -910,7 +852,7 @@
    "time": 100,
    "properties": {
     "image": {
-     "name": "worker-3-fade0-f3.png",
+     "name": "worker-3-fade0-f3-3.png",
      "sourceX": 72,
      "sourceY": 0,
      "sourceWidth": 36,
@@ -924,7 +866,7 @@
    "time": 4000,
    "properties": {
     "image": {
-     "name": "worker-3-fade50-f3.png",
+     "name": "worker-3-fade50-f3-1.png",
      "sourceX": 0,
      "sourceY": 0,
      "sourceWidth": 36,
@@ -936,7 +878,7 @@
    "time": 100,
    "properties": {
     "image": {
-     "name": "worker-3-fade50-f3.png",
+     "name": "worker-3-fade50-f3-2.png",
      "sourceX": 36,
      "sourceY": 0,
      "sourceWidth": 36,
@@ -948,7 +890,7 @@
    "time": 100,
    "properties": {
     "image": {
-     "name": "worker-3-fade50-f3.png",
+     "name": "worker-3-fade50-f3-3.png",
      "sourceX": 72,
      "sourceY": 0,
      "sourceWidth": 36,
@@ -962,7 +904,7 @@
    "time": 800,
    "properties": {
     "image": {
-     "name": "worker-4-f3.png",
+     "name": "worker-4-f3-1.png",
      "sourceX": 0,
      "sourceY": 0,
      "sourceWidth": 36,
@@ -974,7 +916,7 @@
    "time": 100,
    "properties": {
     "image": {
-     "name": "worker-4-f3.png",
+     "name": "worker-4-f3-2.png",
      "sourceX": 36,
      "sourceY": 0,
      "sourceWidth": 36,
@@ -986,7 +928,7 @@
    "time": 100,
    "properties": {
     "image": {
-     "name": "worker-4-f3.png",
+     "name": "worker-4-f3-3.png",
      "sourceX": 72,
      "sourceY": 0,
      "sourceWidth": 36,
@@ -1000,7 +942,7 @@
    "time": 800,
    "properties": {
     "image": {
-     "name": "worker-4-fade0-f3.png",
+     "name": "worker-4-fade0-f3-1.png",
      "sourceX": 0,
      "sourceY": 0,
      "sourceWidth": 36,
@@ -1012,7 +954,7 @@
    "time": 100,
    "properties": {
     "image": {
-     "name": "worker-4-fade0-f3.png",
+     "name": "worker-4-fade0-f3-2.png",
      "sourceX": 36,
      "sourceY": 0,
      "sourceWidth": 36,
@@ -1024,7 +966,7 @@
    "time": 100,
    "properties": {
     "image": {
-     "name": "worker-4-fade0-f3.png",
+     "name": "worker-4-fade0-f3-3.png",
      "sourceX": 72,
      "sourceY": 0,
      "sourceWidth": 36,
@@ -1038,7 +980,7 @@
    "time": 800,
    "properties": {
     "image": {
-     "name": "worker-4-fade50-f3.png",
+     "name": "worker-4-fade50-f3-1.png",
      "sourceX": 0,
      "sourceY": 0,
      "sourceWidth": 36,
@@ -1050,7 +992,7 @@
    "time": 100,
    "properties": {
     "image": {
-     "name": "worker-4-fade50-f3.png",
+     "name": "worker-4-fade50-f3-2.png",
      "sourceX": 36,
      "sourceY": 0,
      "sourceWidth": 36,
@@ -1062,7 +1004,7 @@
    "time": 100,
    "properties": {
     "image": {
-     "name": "worker-4-fade50-f3.png",
+     "name": "worker-4-fade50-f3-3.png",
      "sourceX": 72,
      "sourceY": 0,
      "sourceWidth": 36,
@@ -1076,7 +1018,7 @@
    "time": 3300,
    "properties": {
     "image": {
-     "name": "worker-1-fade0-f3.png",
+     "name": "worker-1-fade0-f3-1.png",
      "sourceX": 0,
      "sourceY": 0,
      "sourceWidth": 36,
@@ -1088,7 +1030,7 @@
    "time": 100,
    "properties": {
     "image": {
-     "name": "worker-1-fade0-f3.png",
+     "name": "worker-1-fade0-f3-2.png",
      "sourceX": 36,
      "sourceY": 0,
      "sourceWidth": 36,
@@ -1100,7 +1042,7 @@
    "time": 100,
    "properties": {
     "image": {
-     "name": "worker-1-fade0-f3.png",
+     "name": "worker-1-fade0-f3-3.png",
      "sourceX": 72,
      "sourceY": 0,
      "sourceWidth": 36,
@@ -1114,7 +1056,7 @@
    "time": 100,
    "properties": {
     "image": {
-     "name": "fire.png",
+     "name": "fire-f3-1.png",
      "sourceX": 0,
      "sourceY": 0,
      "sourceWidth": 120,
@@ -1126,7 +1068,7 @@
    "time": 100,
    "properties": {
     "image": {
-     "name": "fire.png",
+     "name": "fire-f3-2.png",
      "sourceX": 120,
      "sourceY": 0,
      "sourceWidth": 120,
@@ -1138,7 +1080,7 @@
    "time": 100,
    "properties": {
     "image": {
-     "name": "fire.png",
+     "name": "fire-f3-3.png",
      "sourceX": 240,
      "sourceY": 0,
      "sourceWidth": 120,
