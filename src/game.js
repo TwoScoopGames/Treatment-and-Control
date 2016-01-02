@@ -29,14 +29,4 @@ require.context("./images", true, /\.(jpe?g|png|gif|svg)$/i);
 require.context("./textures", true, /\.(jpe?g|png|gif|svg)$/i);
 require.context("./sounds", true, /\.(mp3|ogg|wav)$/i);
 
-var game = new Splat.Game(canvas, customRequire);
-
-function percentLoaded() {
-	return Object.keys(game.sprites).length > 0 ? 1 : 0;
-	// if (game.images.totalImages + game.sounds.totalSounds === 0) {
-	// 	return 1;
-	// }
-	// return (game.images.loadedImages + game.sounds.loadedSounds) / (game.images.totalImages + game.sounds.totalSounds);
-}
-var loading = Splat.loadingScene(canvas, percentLoaded, game.scene);
-loading.start(game.context);
+new Splat.Game(canvas, customRequire);
