@@ -1,5 +1,5 @@
 "use strict";
 
-module.exports = function(data) { // eslint-disable-line no-unused-vars
-	data.sounds.stop("end");
+module.exports = function(game) { // eslint-disable-line no-unused-vars
+	game.sounds.stop("end");
 };

@@ -1,8 +1,8 @@
 "use strict";
 
-module.exports = function(ecs, data) { // eslint-disable-line no-unused-vars
+module.exports = function(ecs, game) { // eslint-disable-line no-unused-vars
 	ecs.addEach(function trackLastPosition(entity, elapsed) { // eslint-disable-line no-unused-vars
-		var position = data.entities.get(entity, "position");
-		data.entities.set(entity, "lastPosition", { x: position.x, y: position.y });
+		var position = game.entities.get(entity, "position");
+		game.entities.set(entity, "lastPosition", { x: position.x, y: position.y });
 	}, "position");
 };

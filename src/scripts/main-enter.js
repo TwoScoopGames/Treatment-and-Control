@@ -41,44 +41,44 @@ schedule[0].unaffectedOn = 0;
 schedule[2].unaffectedOn = 2;
 shuffle(schedule);
 
-function showMessage(data, entity, message) {
-	data.entities.set(entity, "message", { text: message, len: 0 });
-	data.entities.get(entity, "timers").text.running = true;
-	data.sounds.play("textpopup2");
+function showMessage(game, entity, message) {
+	game.entities.set(entity, "message", { text: message, len: 0 });
+	game.entities.get(entity, "timers").text.running = true;
+	game.sounds.play("textpopup2");
 }
 
-module.exports = function(data) {
-	var day = data.arguments.day || 0;
-	data.sounds.play(songs[day], true);
+module.exports = function(game) {
+	var day = game.arguments.day || 0;
+	game.sounds.play(songs[day], true);
 
 	var cart = 3;
 	var deliveries = [];
-	data.entities.set(cart, "deliveries", deliveries);
+	game.entities.set(cart, "deliveries", deliveries);
 
 	if (day === 0) {
-		showMessage(data, 11, "GUARD: The night shift left your cart over there.");
+		showMessage(game, 11, "GUARD: The night shift left your cart over there.");
 	}
 
 	var worker = 0;
-	data.entities.find("fadePercent").forEach(function(entity) {
+	game.entities.find("fadePercent").forEach(function(entity) {
 		var s = schedule[worker];
-		data.entities.set(entity, "name", s.name);
+		game.entities.set(entity, "name", s.name);
 		if (day === s.day) {
-			data.entities.set(entity, "fadePercent", { fadePercent: 0 });
+			game.entities.set(entity, "fadePercent", { fadePercent: 0 });
 			var effective = s.unaffectedOn !== day;
 			deliveries.push({ name: s.name, pill: "blue", effective: effective });
 		} else if (s.unaffectedOn < day) {
-			data.entities.set(entity, "fadePercent", { fadePercent: 0 });
+			game.entities.set(entity, "fadePercent", { fadePercent: 0 });
 			if (s.unaffectedOn === day - 2) {
 				deliveries.push({ name: s.name, pill: "red", effective: true });
 			}
 			if (s.unaffectedOn < day - 2) {
-				data.entities.remove(entity, "animation");
-				data.entities.remove(entity, "image");
-				data.entities.set(entity, "message", { text: "I wonder where " + entity.name + " is..." });
+				game.entities.remove(entity, "animation");
+				game.entities.remove(entity, "image");
+				game.entities.set(entity, "message", { text: "I wonder where " + entity.name + " is..." });
 			}
 		} else {
-			data.entities.set(entity, "fadePercent", { fadePercent: 100 });
+			game.entities.set(entity, "fadePercent", { fadePercent: 100 });
 		}
 
 		worker++;

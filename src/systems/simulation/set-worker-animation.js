@@ -21,11 +21,11 @@ var anims = {
 	}
 };
 
-module.exports = function(ecs, data) { // eslint-disable-line no-unused-vars
-	data.entities.registerSearch("setWorkerAnimation", ["fadePercent", "animation"]);
+module.exports = function(ecs, game) { // eslint-disable-line no-unused-vars
+	game.entities.registerSearch("setWorkerAnimation", ["fadePercent", "animation"]);
 	ecs.addEach(function setWorkerAnimation(entity, elapsed) { // eslint-disable-line no-unused-vars
-		var fadePercent = data.entities.get(entity, "fadePercent");
-		var animation = data.entities.get(entity, "animation");
+		var fadePercent = game.entities.get(entity, "fadePercent");
+		var animation = game.entities.get(entity, "animation");
 		var fade = fadePercent.fadePercent;
 		if (animation === undefined) {
 			return;

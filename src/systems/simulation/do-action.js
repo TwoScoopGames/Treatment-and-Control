@@ -69,9 +69,9 @@ var responses = {
 	]
 };
 
-function pickMessage(entity, other, cart, data) {
+function pickMessage(entity, other, cart, game) {
 	var arr = ["..."];
-	var fade = parseInt(data.entities.get(other, "fadePercent").fadePercent);
+	var fade = parseInt(game.entities.get(other, "fadePercent").fadePercent);
 	if (fade === 0) {
 		arr = responses.peopleColorful;
 	} else if (fade === 50) {
@@ -79,19 +79,19 @@ function pickMessage(entity, other, cart, data) {
 	} else if (fade === 100) {
 		arr = responses.peopleGrey;
 	}
-	var target = data.entities.get(entity, "target");
-	var otherName = data.entities.get(other, "name");
-	var otherFadePercent = data.entities.get(other, "fadePercent");
+	var target = game.entities.get(entity, "target");
+	var otherName = game.entities.get(other, "name");
+	var otherFadePercent = game.entities.get(other, "fadePercent");
 	if (target && target.name === otherName) {
 		if (target.pill === "blue") {
 			arr = responses.bluePill;
-			data.sounds.play(bluePillSounds[Math.floor(Math.random() * bluePillSounds.length)]);
+			game.sounds.play(bluePillSounds[Math.floor(Math.random() * bluePillSounds.length)]);
 		} else if (target.pill === "red") {
 			arr = responses.redPill;
-			data.sounds.play("redpill2");
+			game.sounds.play("redpill2");
 		}
 
-		var deliveries = data.entities.get(cart, "deliveries");
+		var deliveries = game.entities.get(cart, "deliveries");
 		for (var i = 0; i < deliveries.length; i++) {
 			var d = deliveries[i];
 			if (d.name === target.name) {
@@ -101,51 +101,51 @@ function pickMessage(entity, other, cart, data) {
 				}
 			}
 		}
-		data.entities.remove(entity, "target");
+		game.entities.remove(entity, "target");
 	}
 	var msg = Math.floor(Math.random() * arr.length);
 	return otherName.toUpperCase() + ": " + arr[msg];
 }
 
-function showMessage(data, entity, message) {
-	data.entities.set(entity, "message", { text: message, len: 0 });
-	data.entities.get(entity, "timers").text.running = true;
-	data.sounds.play("textpopup2");
+function showMessage(game, entity, message) {
+	game.entities.set(entity, "message", { text: message, len: 0 });
+	game.entities.get(entity, "timers").text.running = true;
+	game.sounds.play("textpopup2");
 }
 
-module.exports = function(ecs, data) { // eslint-disable-line no-unused-vars
+module.exports = function(ecs, game) { // eslint-disable-line no-unused-vars
 	ecs.addEach(function doAction(entity, elapsed) { // eslint-disable-line no-unused-vars
 		var cart = 3;
-		var action = data.entities.get(entity, "action");
-		var message = data.entities.get(entity, "message");
-		var collisions = data.entities.get(entity, "collisions");
+		var action = game.entities.get(entity, "action");
+		var message = game.entities.get(entity, "message");
+		var collisions = game.entities.get(entity, "collisions");
 
-		if (data.input.button("action")) {
+		if (game.input.button("action")) {
 			var risingEdge = !action;
-			data.entities.set(entity, "action", true);
+			game.entities.set(entity, "action", true);
 			if (risingEdge) {
 				if (message) {
 					if (message.len < message.text.length) {
 						message.len = message.text.length;
 					} else {
-						data.entities.remove(entity, "message");
-						data.sounds.play("textpopup10");
+						game.entities.remove(entity, "message");
+						game.sounds.play("textpopup10");
 					}
-				} else if (data.entities.get(entity, "clipboard")) {
-					data.entities.remove(entity, "clipboard");
-					data.sounds.play("textpopup10");
+				} else if (game.entities.get(entity, "clipboard")) {
+					game.entities.remove(entity, "clipboard");
+					game.sounds.play("textpopup10");
 				} else {
 					for (var i = 0; i < collisions.length; i++) {
 						var other = collisions[i];
-						var otherMessage = data.entities.get(other, "message");
-						var otherFadePercent = data.entities.get(other, "fadePercent");
-						var otherDeliveries = data.entities.get(other, "deliveries");
+						var otherMessage = game.entities.get(other, "message");
+						var otherFadePercent = game.entities.get(other, "fadePercent");
+						var otherDeliveries = game.entities.get(other, "deliveries");
 						if (otherMessage) {
-							showMessage(data, entity, otherMessage.text);
+							showMessage(game, entity, otherMessage.text);
 							break;
 						}
 						if (otherFadePercent) {
-							showMessage(data, entity, pickMessage(entity, other, cart, data));
+							showMessage(game, entity, pickMessage(entity, other, cart, game));
 							break;
 						}
 						if (otherDeliveries) {
@@ -153,24 +153,24 @@ module.exports = function(ecs, data) { // eslint-disable-line no-unused-vars
 								return !d.done;
 							});
 							if (left.length === 0) {
-								//showMessage(data, entity, "No pills left");
-								var day = data.arguments.day || 0;
+								//showMessage(game, entity, "No pills left");
+								var day = game.arguments.day || 0;
 								if (day === 4) {
-									data.switchScene("ending");
+									game.switchScene("ending");
 								} else {
-									data.switchScene("day-intro", { day: day + 1 });
+									game.switchScene("day-intro", { day: day + 1 });
 								}
 							} else {
-								data.entities.set(entity, "target", left[0]);
-								data.entities.set(entity, "clipboard", true);
-								data.sounds.play("textpopup2");
+								game.entities.set(entity, "target", left[0]);
+								game.entities.set(entity, "clipboard", true);
+								game.sounds.play("textpopup2");
 							}
 						}
 					}
 				}
 			}
 		} else {
-			data.entities.set(entity, "action", false);
+			game.entities.set(entity, "action", false);
 		}
 	}, "actionZone");
 };

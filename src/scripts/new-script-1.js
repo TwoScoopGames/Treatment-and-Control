@@ -11,7 +11,7 @@ var footsteps = [
 	"footsteps8"
 ];
 
-module.exports = function(entity, data) { // eslint-disable-line no-unused-vars
-	data.sounds.play(footsteps[Math.floor(Math.random() * footsteps.length)]);
-	data.entities.get(entity, "timers").footsteps.running = true;
+module.exports = function(entity, game) { // eslint-disable-line no-unused-vars
+	game.sounds.play(footsteps[Math.floor(Math.random() * footsteps.length)]);
+	game.entities.get(entity, "timers").footsteps.running = true;
 };

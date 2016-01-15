@@ -13,21 +13,21 @@ function wasBelow(entityLastPosition, otherPosition, otherSize) {
 	return entityLastPosition.y >= otherPosition.y + otherSize.height;
 }
 
-module.exports = function(ecs, data) { // eslint-disable-line no-unused-vars
-	data.entities.registerSearch("resolveCollisions", ["collisions","velocity","player","lastPosition","position"]);
+module.exports = function(ecs, game) { // eslint-disable-line no-unused-vars
+	game.entities.registerSearch("resolveCollisions", ["collisions","velocity","player","lastPosition","position"]);
 	ecs.addEach(function resolveCollisions(entity, elapsed) { // eslint-disable-line no-unused-vars
-		var entityCollisions = data.entities.get(entity, "collisions");
-		var entityPosition = data.entities.get(entity, "position");
-		var entitySize = data.entities.get(entity, "size");
-		var entityVelocity = data.entities.get(entity, "velocity");
-		var entityLastPosition = data.entities.get(entity, "lastPosition");
+		var entityCollisions = game.entities.get(entity, "collisions");
+		var entityPosition = game.entities.get(entity, "position");
+		var entitySize = game.entities.get(entity, "size");
+		var entityVelocity = game.entities.get(entity, "velocity");
+		var entityLastPosition = game.entities.get(entity, "lastPosition");
 
 		for (var i = 0; i < entityCollisions.length; i++) {
 			var other = entityCollisions[i];
-			var otherActionZone = data.entities.get(other, "actionZone");
-			var otherImage = data.entities.get(other, "image");
-			var otherPosition = data.entities.get(other, "position");
-			var otherSize = data.entities.get(other, "size");
+			var otherActionZone = game.entities.get(other, "actionZone");
+			var otherImage = game.entities.get(other, "image");
+			var otherPosition = game.entities.get(other, "position");
+			var otherSize = game.entities.get(other, "size");
 
 			if (otherActionZone || otherImage === undefined) {
 				continue;

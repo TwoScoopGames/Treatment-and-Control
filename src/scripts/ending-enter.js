@@ -1,5 +1,5 @@
 "use strict";
 
-module.exports = function(data) {
-	data.sounds.play("end", true);
+module.exports = function(game) {
+	game.sounds.play("end", true);
 };

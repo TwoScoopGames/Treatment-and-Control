@@ -1,15 +1,15 @@
 "use strict";
 
-module.exports = function(ecs, data) { // eslint-disable-line no-unused-vars
+module.exports = function(ecs, game) { // eslint-disable-line no-unused-vars
 	ecs.add(function startGame(entities, elapsed) { // eslint-disable-line no-unused-vars
 		var title = 0;
-		if (data.input.button("action")) {
-			data.entities.set(title, "action", true);
+		if (game.input.button("action")) {
+			game.entities.set(title, "action", true);
 		} else {
-			if (data.entities.get(title, "action")) {
-				data.switchScene("day-intro");
+			if (game.entities.get(title, "action")) {
+				game.switchScene("day-intro");
 			}
-			data.entities.set(title, "action", false);
+			game.entities.set(title, "action", false);
 		}
 	});
 };
