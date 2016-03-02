@@ -1,14 +1,14 @@
 "use strict";
 
 var footsteps = [
-	"footsteps1",
-	"footsteps2",
-	"footsteps3",
-	"footsteps4",
-	"footsteps5",
-	"footsteps6",
-	"footsteps7",
-	"footsteps8"
+	"footsteps1.mp3",
+	"footsteps2.mp3",
+	"footsteps3.mp3",
+	"footsteps4.mp3",
+	"footsteps5.mp3",
+	"footsteps6.mp3",
+	"footsteps7.mp3",
+	"footsteps8.mp3"
 ];
 
 module.exports = function(entity, data) { // eslint-disable-line no-unused-vars

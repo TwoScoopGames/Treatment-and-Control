@@ -32,21 +32,21 @@ module.exports = function(ecs, data) { // eslint-disable-line no-unused-vars
 			var cart = 3;
 			var deliveries = data.entities.get(cart, "deliveries");
 
-			context.drawImage(data.images.get("clipboard-big"), 400, 50);
+			context.drawImage(data.images.get("clipboard-big.png"), 400, 50);
 			context.font = "24px minecraftia";
 			context.fillStyle = "#666";
 
 			for (var i = 0; i < deliveries.length; i++) {
 				y = 200 + (i * 60);
 				context.fillText(deliveries[i].name, 560, y + 45);
-				context.drawImage(data.images.get("pill-" + deliveries[i].pill), 510, y);
+				context.drawImage(data.images.get("pill-" + deliveries[i].pill + ".png"), 510, y);
 				if (deliveries[i].done) {
-					context.drawImage(data.images.get("strikeout"), 480, y + 18);
+					context.drawImage(data.images.get("strikeout.png"), 480, y + 18);
 				}
 			}
 		}
 		if (message) {
-			context.drawImage(data.images.get("textbox-big"), x, y);
+			context.drawImage(data.images.get("textbox-big.png"), x, y);
 			context.fillStyle = "white";
 			context.font = "24px minecraftia";
 			var msg = message.text.substr(0, message.len);

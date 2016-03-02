@@ -28,7 +28,7 @@ var names = [
 	"Mark"
 ];
 
-var songs = ["day1", "day2", "day3", "day4", "day4"];
+var songs = ["day1.mp3", "day2.mp3", "day3.mp3", "day4.mp3", "day4.mp3"];
 
 shuffle(names);
 var schedule = names.map(function(name, i) {
@@ -44,7 +44,7 @@ shuffle(schedule);
 function showMessage(data, entity, message) {
 	data.entities.set(entity, "message", { text: message, len: 0 });
 	data.entities.get(entity, "timers").text.running = true;
-	data.sounds.play("textpopup2");
+	data.sounds.play("textpopup2.mp3");
 }
 
 module.exports = function(data) {

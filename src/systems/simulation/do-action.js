@@ -1,14 +1,14 @@
 "use strict";
 
 var bluePillSounds = [
-	"bluepills1",
-	"bluepills2",
-	"bluepills3",
-	"bluepills4",
-	"bluepills5",
-	"bluepills6",
-	"bluepills7",
-	"bluepills8"
+	"bluepills1.mp3",
+	"bluepills2.mp3",
+	"bluepills3.mp3",
+	"bluepills4.mp3",
+	"bluepills5.mp3",
+	"bluepills6.mp3",
+	"bluepills7.mp3",
+	"bluepills8.mp3"
 ];
 var responses = {
 	"peopleGrey": [
@@ -88,7 +88,7 @@ function pickMessage(entity, other, cart, data) {
 			data.sounds.play(bluePillSounds[Math.floor(Math.random() * bluePillSounds.length)]);
 		} else if (target.pill === "red") {
 			arr = responses.redPill;
-			data.sounds.play("redpill2");
+			data.sounds.play("redpill2.mp3");
 		}
 
 		var deliveries = data.entities.get(cart, "deliveries");
@@ -110,7 +110,7 @@ function pickMessage(entity, other, cart, data) {
 function showMessage(data, entity, message) {
 	data.entities.set(entity, "message", { text: message, len: 0 });
 	data.entities.get(entity, "timers").text.running = true;
-	data.sounds.play("textpopup2");
+	data.sounds.play("textpopup2.mp3");
 }
 
 module.exports = function(ecs, data) { // eslint-disable-line no-unused-vars
@@ -120,7 +120,7 @@ module.exports = function(ecs, data) { // eslint-disable-line no-unused-vars
 		var message = data.entities.get(entity, "message");
 		var collisions = data.entities.get(entity, "collisions");
 
-		if (data.input.button("action")) {
+		if (data.inputs.button("action")) {
 			var risingEdge = !action;
 			data.entities.set(entity, "action", true);
 			if (risingEdge) {
@@ -129,11 +129,11 @@ module.exports = function(ecs, data) { // eslint-disable-line no-unused-vars
 						message.len = message.text.length;
 					} else {
 						data.entities.remove(entity, "message");
-						data.sounds.play("textpopup10");
+						data.sounds.play("textpopup10.mp3");
 					}
 				} else if (data.entities.get(entity, "clipboard")) {
 					data.entities.remove(entity, "clipboard");
-					data.sounds.play("textpopup10");
+					data.sounds.play("textpopup10.mp3");
 				} else {
 					for (var i = 0; i < collisions.length; i++) {
 						var other = collisions[i];
@@ -163,7 +163,7 @@ module.exports = function(ecs, data) { // eslint-disable-line no-unused-vars
 							} else {
 								data.entities.set(entity, "target", left[0]);
 								data.entities.set(entity, "clipboard", true);
-								data.sounds.play("textpopup2");
+								data.sounds.play("textpopup2.mp3");
 							}
 						}
 					}

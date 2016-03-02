@@ -22,21 +22,21 @@ module.exports = function(ecs, data) {
 		var speed = 0.2;
 		animation.speed = 0;
 
-		if (data.input.button("left")) {
+		if (data.inputs.button("left")) {
 			velocity.x = -speed;
-			if (!data.input.button("up") && !data.input.button("down")) {
+			if (!data.inputs.button("up") && !data.inputs.button("down")) {
 				setAnimation(animation, timers, "cartboy-walk-left-3x");
 			}
-		} else if (data.input.button("right")) {
+		} else if (data.inputs.button("right")) {
 			velocity.x = speed;
-			if (!data.input.button("up") && !data.input.button("down")) {
+			if (!data.inputs.button("up") && !data.inputs.button("down")) {
 				setAnimation(animation, timers, "cartboy-walk-right-3x");
 			}
 		}
-		if (data.input.button("up")) {
+		if (data.inputs.button("up")) {
 			velocity.y = -speed;
 			setAnimation(animation, timers, "cartboy-walk-up-3x");
-		} else if (data.input.button("down")) {
+		} else if (data.inputs.button("down")) {
 			velocity.y = speed;
 			setAnimation(animation, timers, "cartboy-walk-down-3x");
 		}

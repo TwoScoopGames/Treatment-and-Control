@@ -1,8 +1,8 @@
 "use strict";
 
 var sounds = [
-	"texttyping17",
-	"texttyping21"
+	"texttyping17.mp3",
+	"texttyping21.mp3"
 ];
 module.exports = function(entity, data) { // eslint-disable-line no-unused-vars
 	var message = data.entities.get(entity, "message");
